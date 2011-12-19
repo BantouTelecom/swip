@@ -1,0 +1,26 @@
+1. Introduction
+
+SIP Applet is a Java applet implementation of a software SIP phone. It is inteded to be
+embedded into a web page and thus has no built in user interface. However a simple reference
+HTML user interface is provided. JavaScript is used for communicatoin between a web page and
+the applet. SIP Applet is open source licensed under GNU General Public License version 2.
+SIP Applet uses modified MjSip 1.6 SIP stack.
+ 
+2. Package contents
+
+Java source code is located in src directory
+
+Compiled executable code with reference HTML user interface is located in deploy directory
+
+Documentation is located in doc folder. Documentation includes:
+ -Architectore specification
+ -Installation
+ -Tunneling
+ -UI interface specification
+Documents are in OpenDocument form.
+
+3. Getting started
+
+For a quick start, read Architecture specification chapter 4 and get a couple of SIP accounts
+from www.idial.fi and open idial.html from deploy folder in a web browser. If you have your
+own SIP server running, refer to Installation document on how to install and configure SIP Applet.

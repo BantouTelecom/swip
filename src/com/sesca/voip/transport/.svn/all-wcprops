@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/transport
+END
+HttpTunnelServerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/transport/HttpTunnelServerListener.java
+END
+HttpTunnelTransport.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/transport/HttpTunnelTransport.java
+END
+HttpTunnelConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/transport/HttpTunnelConnection.java
+END
+HttpTunnelConnectionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/transport/HttpTunnelConnectionListener.java
+END
+HttpTunnelServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/transport/HttpTunnelServer.java
+END
+HttpTunnelSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/transport/HttpTunnelSocket.java
+END

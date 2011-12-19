@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/ua/modules
+END
+CallModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/ua/modules/CallModule.java
+END
+IMModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/ua/modules/IMModule.java
+END
+commandJs.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/ua/modules/commandJs.java
+END

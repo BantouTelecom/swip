@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua
+END
+call.gif
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/call.gif
+END
+hangup.gif
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/hangup.gif
+END
+off.wav
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/off.wav
+END
+on.wav
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/on.wav
+END
+ringing.wav
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/ringing.wav
+END
+ring.wav
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/ring.wav
+END
+busy.wav
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/sipappletphone/!svn/ver/2/trunk/media/local/ua/busy.wav
+END

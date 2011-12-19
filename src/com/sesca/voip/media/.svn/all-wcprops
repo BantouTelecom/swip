@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/media
+END
+AudioOffTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/media/AudioOffTask.java
+END
+AudioSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/media/AudioSettings.java
+END
+RtpHttpBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/media/RtpHttpBridge.java
+END
+TunneledAudioLauncher.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/media/TunneledAudioLauncher.java
+END
+AudioRecorder.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/sipappletphone/!svn/ver/2/trunk/src/com/sesca/voip/media/AudioRecorder.java
+END
+JAudioLauncher.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/sipappletphone/!svn/ver/4/trunk/src/com/sesca/voip/media/JAudioLauncher.java
+END
