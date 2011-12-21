@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski, Antti Alho - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski, Antti Alho - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -845,7 +845,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	{
 		//Logger.debug("kutsutaan ua.generateTonea ("+i+")");
 		ua.generateTone(i, 1000);
-		//Logger.debug("jamdlˆekeypadevent loppuu");		
+		//Logger.debug("jamdl√∂ekeypadevent loppuu");		
 
 	}
 
@@ -932,7 +932,7 @@ class checkJavaScriptEvent extends Thread
 			}
 			if(applet.keyPadButton != -1)
 			{
-				//Logger.debug("Kakkah‰ndleri her‰‰");
+				//Logger.debug("Kakkah√§ndleri her√§√§");
 				applet.handleKeyPadEvent(applet.keyPadButton);
 				//Logger.debug("Kakkapolku suoritettu");
 				applet.keyPadButton = -1;

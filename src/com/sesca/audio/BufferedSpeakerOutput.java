@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -71,7 +71,7 @@ public class BufferedSpeakerOutput implements AudioDestination
 	public void onReceivedFrame(byte[] b)
 	{
 
-		// TƒTƒ EI KƒYTETƒ!
+		// T√ÑT√Ñ EI K√ÑYTET√Ñ!
 
 		line.write(b, 0, b.length);
 
@@ -81,9 +81,9 @@ public class BufferedSpeakerOutput implements AudioDestination
 	{
 		//format=new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,7900,16,1,2,7900,false);
 		//format=new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,16000,16,1,2,16000,false);		
-		DataLine.Info lineInfo = new DataLine.Info(SourceDataLine.class, format); // t‰h‰n
+		DataLine.Info lineInfo = new DataLine.Info(SourceDataLine.class, format); // t√§h√§n
 		// voi
-		// lis‰t‰
+		// lis√§t√§
 		// buffer
 		// sizen
 		//format=new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,7000,16,1,2,7000,false);
@@ -95,7 +95,7 @@ public class BufferedSpeakerOutput implements AudioDestination
 		{
 			line = (SourceDataLine) AudioSystem.getLine(lineInfo);
 			// if (DEBUG) println("SourceDataLine: "+source_line);
-			line.open(format,2*8192); // t‰h‰n voi lis‰t‰ buffer sizen
+			line.open(format,2*8192); // t√§h√§n voi lis√§t√§ buffer sizen
 			
 			Logger.debug("Line opened");
 		}

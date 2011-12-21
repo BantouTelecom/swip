@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto Känsäkoski, Antti Alho - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto KÃ¤nsÃ¤koski, Antti Alho - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -462,8 +462,8 @@ public void onDlgSubscriptionSuccess(SubscriberDialog dialog, int code,
 	// TODO Auto-generated method stub
 //	System.out.println("PresenceAgent.onDlgSubscriptionSuccess: "+msg.getToHeader().getNameAddress().toString().replace("<", "").replace(">",""));
 	String s =msg.getToHeader().getNameAddress().toString().replace("<", "").replace(">",""); 
-//	if (presentities.containsKey(s)) System.out.println("LÖYTYY "+s);
-//	else System.out.println("EI LÖYDY "+s);
+//	if (presentities.containsKey(s)) System.out.println("LÃ–YTYY "+s);
+//	else System.out.println("EI LÃ–YDY "+s);
 	//printPresentities();
 	onPresenceUpdate();
 }
@@ -481,7 +481,7 @@ public void onDlgSubscriptionTerminated(SubscriberDialog dialog) {
 		String key = (String)it.next();
 		if (dialogs.get(key).equals(dialog))
 		{
-//			System.out.println("--->LÖYTYI<---");
+//			System.out.println("--->LÃ–YTYI<---");
 			to=key;
 			break;
 		}

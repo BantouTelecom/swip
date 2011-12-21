@@ -192,7 +192,7 @@ public class MessageAgent implements SipInterfaceListener, TransactionClientList
 			qop = (qop_options != null) ? "auth" : null;
 			RequestLine rl = req.getRequestLine();
 			// SESCA
-			// BUGI client ei saa l‰hett‰‰ qop:ia 
+			// BUGI client ei saa l√§hett√§√§ qop:ia 
 			//DigestAuthentication digest=new DigestAuthentication(rl.getMethod(),rl.getAddress().toString(),wah,qop,null,username,passwd);
 			DigestAuthentication digest = new DigestAuthentication(rl.getMethod(), rl.getAddress().toString(), wah, null, null, user_profile.authID, user_profile.passwd);
 			AuthorizationHeader ah;
@@ -204,8 +204,8 @@ public class MessageAgent implements SipInterfaceListener, TransactionClientList
 			//	         transactions.remove(tc.getTransactionId());
 			// SESCA
 			// BUGI
-			// P‰ivitet‰‰n invite_req:uun uusin invite-viesti.
-			// L‰het‰mme uuden inviten, joten teemme uuden invitetransactionclientin, eik‰ transaction clientia
+			// P√§ivitet√§√§n invite_req:uun uusin invite-viesti.
+			// L√§het√§mme uuden inviten, joten teemme uuden invitetransactionclientin, eik√§ transaction clientia
 			//	         if (method.equals(SipMethods.INVITE)) { 
 			//	        	 invite_req = req;
 			//	        	 tc=new InviteTransactionClient(sip_provider,req,this);

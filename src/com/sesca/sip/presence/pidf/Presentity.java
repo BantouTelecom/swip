@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /

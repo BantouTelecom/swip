@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -93,7 +93,7 @@ public class PCMUCodec2 implements AudioTranscoder{
 		
 		int compressedByte=linear2ulaw(sample);
 	     
-	     // enkoodaus p‰‰ttyy
+	     // enkoodaus p√§√§ttyy
 	     
 	     encodedFrame[j]=(byte)compressedByte;
 	     j++;

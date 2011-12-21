@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -89,7 +89,7 @@ public class SineInput extends Thread implements AudioSource
 		format = f;
 		frameSize = fs;
 		frame = new byte[fs];
-		DataLine.Info lineInfo = new DataLine.Info(TargetDataLine.class, format, BUFFER_SIZE); // T‰h‰n
+		DataLine.Info lineInfo = new DataLine.Info(TargetDataLine.class, format, BUFFER_SIZE); // T√§h√§n
 		bitRate=format.getSampleSizeInBits();		
 		int bytespersecond = (int) (f.getSampleRate() * f.getFrameSize() * f.getChannels());
 		int framespersecond = bytespersecond / frameSize;

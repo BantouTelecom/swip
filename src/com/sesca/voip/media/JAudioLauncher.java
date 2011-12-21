@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto Känsäkoski - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto KÃ¤nsÃ¤koski - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /  This file is modified from MjSip (http://www.mjsip.org)
@@ -109,10 +109,10 @@ public class JAudioLauncher implements MediaLauncher
    int dir; // duplex= 0, recv-only= -1, send-only= +1; 
 
    DatagramSocket socket=null; //luettava socketti
-   RtpStreamSender sender=null;  //äänen digitoija+lähettäjä => AudioSource+AudioSender
-   RtpStreamReceiver receiver=null;  //lukee socketista ja lähettää striiminä jonnekin =>AudioReceiver+AudioDestination
-   AudioInput audio_input=null; //Äänikortilta tuleva striimi
-   AudioOutput audio_output=null; //Äänikortille menevä striimi
+   RtpStreamSender sender=null;  //Ã¤Ã¤nen digitoija+lÃ¤hettÃ¤jÃ¤ => AudioSource+AudioSender
+   RtpStreamReceiver receiver=null;  //lukee socketista ja lÃ¤hettÃ¤Ã¤ striiminÃ¤ jonnekin =>AudioReceiver+AudioDestination
+   AudioInput audio_input=null; //Ã„Ã¤nikortilta tuleva striimi
+   AudioOutput audio_output=null; //Ã„Ã¤nikortille menevÃ¤ striimi
    
    AudioProcessor processor=null;
    AudioSource source=null;
@@ -201,8 +201,8 @@ public class JAudioLauncher implements MediaLauncher
             }
          }
          else
-         if (dir>=0) // Tänne
-         {  //Logger.debug("Tänne mentiin");
+         if (dir>=0) // TÃ¤nne
+         {  //Logger.debug("TÃ¤nne mentiin");
         	 printLog("new audio sender to "+remote_addr+":"+remote_port,LogLevel.MEDIUM);
         	 AudioFormat format=new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,8000,16,1,2,8000,big_endian);            
             //AudioFormat format=new AudioFormat(codec,sample_rate,8*sample_size,1,sample_size,sample_rate,big_endian);
@@ -228,10 +228,10 @@ public class JAudioLauncher implements MediaLauncher
             receiver=new RtpStreamReceiver(output_stream,socket);
          }
          else
-         if (dir<=0) // Ja tänne
+         if (dir<=0) // Ja tÃ¤nne
         	 
          {  
-        	 //Logger.debug("Ja tännekin mentiin");
+        	 //Logger.debug("Ja tÃ¤nnekin mentiin");
 	        	if (audioBuffering==AUDIO_BUFFER_YES) 
 	        		destination= new BufferedSpeakerOutput();
 	        	else if (audioBuffering==AUDIO_BUFFER_NO)

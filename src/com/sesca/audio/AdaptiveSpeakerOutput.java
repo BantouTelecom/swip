@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -66,9 +66,9 @@ public class AdaptiveSpeakerOutput implements AudioDestination
 	private void init(AudioFormat format)
 	{
 
-		DataLine.Info lineInfo = new DataLine.Info(SourceDataLine.class, format); // t‰h‰n
+		DataLine.Info lineInfo = new DataLine.Info(SourceDataLine.class, format); // t√§h√§n
 		// voi
-		// lis‰t‰
+		// lis√§t√§
 		// buffer
 		// sizen
 
@@ -80,7 +80,7 @@ public class AdaptiveSpeakerOutput implements AudioDestination
 		{
 			line = (SourceDataLine) AudioSystem.getLine(lineInfo);
 			// if (DEBUG) println("SourceDataLine: "+source_line);
-			line.open(format); // t‰h‰n voi lis‰t‰ buffer sizen
+			line.open(format); // t√§h√§n voi lis√§t√§ buffer sizen
 			Logger.debug("Line opened");
 		}
 		catch (LineUnavailableException e)

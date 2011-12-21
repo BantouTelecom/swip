@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 Risto K‰ns‰koski - Sesca ISW Ltd
+ * Copyright (C) 2009 Risto K√§ns√§koski - Sesca ISW Ltd
  * Copyright (C) 2005 Luca Veltri - University of Parma - Italy
  * 
  *  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
@@ -148,7 +148,7 @@ public class Call implements InviteDialogListener
    } 
 
    /** Starts a new call, inviting a remote user (<i>callee</i>) */
-   // T‰h‰m ei koskaan menn‰. Kts ExtendedCall
+   // T√§h√§m ei koskaan menn√§. Kts ExtendedCall
    public void call(String callee, String from, String contact, String sdp)
    {  printLog("calling "+callee,LogLevel.HIGH);
       Logger.debug("Call.call()");   

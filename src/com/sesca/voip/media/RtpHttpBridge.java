@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /  This file is modified from MjSip (http://www.mjsip.org)
@@ -116,9 +116,9 @@ public class RtpHttpBridge implements TransportListener
 
 			Logger.info("connection " + conn + " opened");
 			Logger.info("Adding connection: " + conn);
-			Logger.info("Lis‰‰ pooliin:" + System.currentTimeMillis());
+			Logger.info("Lis√§√§ pooliin:" + System.currentTimeMillis());
 			addConnection(conn);
-			Logger.info("Lis‰tty pooliin:" + System.currentTimeMillis());
+			Logger.info("Lis√§tty pooliin:" + System.currentTimeMillis());
 			Logger.debug(connections);
 
 		}
@@ -139,9 +139,9 @@ public class RtpHttpBridge implements TransportListener
 				Logger.info("Luo Http-viesti:" + System.currentTimeMillis());
 				Message msg = new Message("GET / HTTP/1.1\r\nUdpHost: " + IpAddress.getByName(outbound_addr) + ":" + outbound_port + "\r\n\r\n");
 				// conn.sendMessage(msg);
-				Logger.info("L‰het‰ viesti:" + System.currentTimeMillis());
+				Logger.info("L√§het√§ viesti:" + System.currentTimeMillis());
 				conn.sendMessage(msg.toString().getBytes(), true);
-				Logger.info("Viesti l‰hetetty:" + System.currentTimeMillis());
+				Logger.info("Viesti l√§hetetty:" + System.currentTimeMillis());
 				Logger.info("Tunnel opened succesfully");
 			}
 			catch (IOException e)
@@ -202,7 +202,7 @@ public class RtpHttpBridge implements TransportListener
 
 	public void onReceivedMessage(Transport transport, Message msg)
 	{
-		Logger.warning("T‰nne ei pit‰isi koskaan tulla");
+		Logger.warning("T√§nne ei pit√§isi koskaan tulla");
 
 	}
 

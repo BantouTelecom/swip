@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 Risto K‰ns‰koski - Sesca ISW Ltd
+ * Copyright (C) 2009 Risto K√§ns√§koski - Sesca ISW Ltd
  * Copyright (C) 2005 Luca Veltri - University of Parma - Italy
  * 
  *  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
@@ -413,7 +413,7 @@ public class UserAgent extends CallListenerAdapter
 			clip_ring.stop();
 		}
 
-		//audio_app:lle pit‰‰ tehd‰ jotain.
+		//audio_app:lle pit√§√§ tehd√§ jotain.
 
 		closeAudioSocket();
 		if(call != null)
@@ -1276,7 +1276,7 @@ public class UserAgent extends CallListenerAdapter
 			tau.walker(i,duration);
 		}
 		else
-			System.out.println("audio_app ei tue dtmf:‰‰");
+			System.out.println("audio_app ei tue dtmf:√§√§");
 			
 //		System.out.println("generatetone loppuu");		
 	}

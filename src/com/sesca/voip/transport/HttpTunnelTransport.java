@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /  This file is modified from MjSip (http://www.mjsip.org)
@@ -129,7 +129,7 @@ public class HttpTunnelTransport implements ConnectedTransport, HttpTunnelConnec
 		if(tcp_conn != null)
 		{
 			last_time = System.currentTimeMillis();
-			Logger.paranoia("L‰htev‰ viesti:");
+			Logger.paranoia("L√§htev√§ viesti:");
 			Logger.paranoia(msg.toString());
 
 			byte[] data = msg.toString().getBytes();
@@ -305,7 +305,7 @@ public class HttpTunnelTransport implements ConnectedTransport, HttpTunnelConnec
 					cLen = (data[p] & 0xFF) + 0x100 * (data[p + 1] & 0xFF) + 0x10000 * (data[p + 2] & 0xFF) + 0x1000000 * (data[p + 3] & 0xFF);
 				}
 				else if(p == len)
-					cLen = 0; // paketti lopussa, ei jakoj‰‰nnˆksi‰
+					cLen = 0; // paketti lopussa, ei jakoj√§√§nn√∂ksi√§
 				else
 					cLen = l + 1; // paketti on lopussa, jakokohta sattui
 										// kokoinfromaation kohdalle

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 Risto K‰ns‰koski - Sesca ISW Ltd
+ * Copyright (C) 2009 Risto K√§ns√§koski - Sesca ISW Ltd
  * Copyright (C) 2005 Luca Veltri - University of Parma - Italy
  * 
  *  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
@@ -301,7 +301,7 @@ public class RegisterAgent implements Runnable, TransactionClientListener
             String qop_options=wah.getQopOptionsParam();
             //printLog("DEBUG: qop-options: "+qop_options,LogLevel.MEDIUM);
             qop=(qop_options!=null)? (char)34+"auth"+(char)34 : null;
-            // BUGI client ei saa l‰hett‰‰ qop:ia 
+            // BUGI client ei saa l√§hett√§√§ qop:ia 
             //AuthorizationHeader ah=(new DigestAuthentication(SipMethods.REGISTER,req.getRequestLine().getAddress().toString(),wah,qop,null,username,passwd)).getAuthorizationHeader();
             AuthorizationHeader ah=(new DigestAuthentication(SipMethods.REGISTER,req.getRequestLine().getAddress().toString(),wah,null,null,username,passwd)).getAuthorizationHeader();
             req.setAuthorizationHeader(ah);

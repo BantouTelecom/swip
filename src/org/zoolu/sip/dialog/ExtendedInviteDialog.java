@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2009 Risto K‰ns‰koski - Sesca ISW Ltd
+ * Copyright (C) 2009 Risto K√§ns√§koski - Sesca ISW Ltd
  * Copyright (C) 2005 Luca Veltri - University of Parma - Italy
  * 
  *  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
@@ -264,7 +264,7 @@ public class ExtendedInviteDialog extends org.zoolu.sip.dialog.InviteDialog
          qop=(qop_options!=null)? "auth" : null;
          RequestLine rl=req.getRequestLine();
          // SESCA
-         // BUGI client ei saa l‰hett‰‰ qop:ia 
+         // BUGI client ei saa l√§hett√§√§ qop:ia 
          //DigestAuthentication digest=new DigestAuthentication(rl.getMethod(),rl.getAddress().toString(),wah,qop,null,username,passwd);
          DigestAuthentication digest=new DigestAuthentication(rl.getMethod(),rl.getAddress().toString(),wah,null,null,authId,passwd);         
          AuthorizationHeader ah;
@@ -274,8 +274,8 @@ public class ExtendedInviteDialog extends org.zoolu.sip.dialog.InviteDialog
          transactions.remove(tc.getTransactionId());
          // SESCA
          // BUGI
-         // P‰ivitet‰‰n invite_req:uun uusin invite-viesti.
-         // L‰het‰mme uuden inviten, joten teemme uuden invitetransactionclientin, eik‰ transaction clientia
+         // P√§ivitet√§√§n invite_req:uun uusin invite-viesti.
+         // L√§het√§mme uuden inviten, joten teemme uuden invitetransactionclientin, eik√§ transaction clientia
          if (method.equals(SipMethods.INVITE)) { 
         	 invite_req = req;
         	 tc=new InviteTransactionClient(sip_provider,req,this);

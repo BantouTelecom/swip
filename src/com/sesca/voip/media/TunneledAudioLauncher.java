@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto Känsäkoski - Sesca ISW Ltd
+/  Copyright (C) 2009  Risto KÃ¤nsÃ¤koski - Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /  This file is modified from MjSip (http://www.mjsip.org)
@@ -140,7 +140,7 @@ public class TunneledAudioLauncher implements MediaLauncher
 	public TunneledAudioLauncher(int local_port, String remote_addr, int remote_port, int direction, Log logger)
 	{
 		
-		// TÄHÄN EI TULLA KOSKAAN
+		// TÃ„HÃ„N EI TULLA KOSKAAN
 		
 		log = logger;
 		//Logger.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
@@ -210,7 +210,7 @@ public class TunneledAudioLauncher implements MediaLauncher
 
 				sender = new RtpHttpBridge(tone, true, payload_type, frame_rate, frame_size, null, remote_addr, remote_port, audiochannel, agent);
 				microphone = new AudioRecorder(tone, true, payload_type, frame_rate, frame_size, null, remote_addr, remote_port, sender);
-				Logger.debug("fjsdfjklfdljköfdjklöadjklfösd, sender=" + sender + ", microphpne=" + microphone);
+				Logger.debug("fjsdfjklfdljkÃ¶fdjklÃ¶adjklfÃ¶sd, sender=" + sender + ", microphpne=" + microphone);
 
 			}
 			else if(dir >= 0 && audiofile_in != null)
@@ -226,7 +226,7 @@ public class TunneledAudioLauncher implements MediaLauncher
 
 					sender = new RtpHttpBridge(input_stream, true, payload_type, frame_rate, frame_size, null, remote_addr, remote_port, audiochannel, agent);
 					microphone = new AudioRecorder(input_stream, true, payload_type, frame_rate, frame_size, null, remote_addr, remote_port, sender);
-					Logger.debug("fjsdfjklfdljköfdjklöadjklfösd, sender=" + sender + ", microphpne=" + microphone);
+					Logger.debug("fjsdfjklfdljkÃ¶fdjklÃ¶adjklfÃ¶sd, sender=" + sender + ", microphpne=" + microphone);
 				}
 				else
 				{
@@ -240,7 +240,7 @@ public class TunneledAudioLauncher implements MediaLauncher
 			else if(dir >= 0)
 			{
 
-				// TÄNNE MENNÄÄN
+				// TÃ„NNE MENNÃ„Ã„N
 
 
 	        	 AudioFormat format=new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,8000,16,1,2,8000,big_endian);            
@@ -288,9 +288,9 @@ public class TunneledAudioLauncher implements MediaLauncher
 			else if(dir <= 0)
 			{
 
-				// TÄNNEKIN MENNÄÄN
+				// TÃ„NNEKIN MENNÃ„Ã„N
 
-	        	 //Logger.debug("Ja tännekin mentiin");
+	        	 //Logger.debug("Ja tÃ¤nnekin mentiin");
 	        	if (audioBuffering==AUDIO_BUFFER_YES) 
 	        		destination= new BufferedSpeakerOutput();
 	        	else if (audioBuffering==AUDIO_BUFFER_NO)

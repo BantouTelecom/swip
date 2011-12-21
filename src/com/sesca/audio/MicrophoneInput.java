@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -68,10 +68,10 @@ import com.sesca.misc.Logger;
 		format = f;
 		frameSize = fs;
 		frame = new byte[fs];
-		DataLine.Info lineInfo = new DataLine.Info(TargetDataLine.class, format, BUFFER_SIZE); // T‰h‰n
+		DataLine.Info lineInfo = new DataLine.Info(TargetDataLine.class, format, BUFFER_SIZE); // T√§h√§n
 		// voi
-		// liitt‰‰
-		// myˆs
+		// liitt√§√§
+		// my√∂s
 		// buffer
 		// sizen
 		if (!AudioSystem.isLineSupported(lineInfo)) {
@@ -82,7 +82,7 @@ import com.sesca.misc.Logger;
 		} else {
 			try {
 				line = (TargetDataLine) AudioSystem.getLine(lineInfo);
-				line.open(format); // T‰h‰n voi liitt‰‰ myˆs buffer sizen
+				line.open(format); // T√§h√§n voi liitt√§√§ my√∂s buffer sizen
 			} catch (LineUnavailableException e) {
 				e.printStackTrace();
 			}

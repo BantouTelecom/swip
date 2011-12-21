@@ -344,7 +344,7 @@
 
 
 
-     <applet id="PHDial" archive="idial.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
+     <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
     <param name="mayscript" value="true" />
         <param name="scriptable" value="true" />
         <param name="callTo" value="<?= $phone ?>" />

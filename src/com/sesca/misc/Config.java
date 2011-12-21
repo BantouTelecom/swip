@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -105,7 +105,7 @@ public class Config
 	{
 		if(file == null)
 		{
-			return; // pit‰‰ suorittaa default construktori
+			return; // pit√§√§ suorittaa default construktori
 		}
 
 		BufferedReader in = null;

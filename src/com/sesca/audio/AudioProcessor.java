@@ -1,5 +1,5 @@
 /* 
-/  Copyright (C) 2009  Risto K‰ns‰koski- Sesca ISW Ltd
+/  Copyright (C) 2009  Risto K√§ns√§koski- Sesca ISW Ltd
 /  
 /  This file is part of SIP-Applet (www.sesca.com, www.purplescout.com)
 /
@@ -318,7 +318,7 @@ public class AudioProcessor implements AudioSourceListener, AudioTranscoderListe
 //		System.out.println("audioprosessori.generateDTMF alkaa");
 		if (!(source instanceof MicrophoneInput))
 		{
-//			System.out.println("Mets‰‰n meni!");
+//			System.out.println("Mets√§√§n meni!");
 			return;
 		}
 		else

@@ -130,9 +130,9 @@ public class Base64
       
       if (i==iter)
       {
-         // per come è costruita la codifica a base64
+         // per come Ã¨ costruita la codifica a base64
          // togliendo gli eventuali caratteri "=" di padding
-         // il resto può essere 0, 2 o 3
+         // il resto puÃ² essere 0, 2 o 3
      	   if (resto==0)
      	   {
      	   } 
