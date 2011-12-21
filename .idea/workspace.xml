@@ -6,81 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AdaptiveSpeakerOutput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AdaptiveSpeakerOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioCodecConfiguration.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioCodecConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioCodecInfo.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioCodecInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioDestination.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioDestination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioDestinationListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioDestinationListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioProcessor.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioReceiver.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioReceiverListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioReceiverListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioSender.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioSource.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioSourceListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioSourceListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoder.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoderListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoderListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/BufferedSpeakerOutput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/BufferedSpeakerOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/FileInput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/FileInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/FileSender.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/FileSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/MicrophoneInput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/MicrophoneInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/PCMACodec.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/PCMACodec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec2.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec3.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/RtpFileSender.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/RtpFileSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/RtpReceiver.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/RtpReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/RtpSender.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/RtpSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/SineInput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/SineInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/SpeakerFileOutput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/SpeakerFileOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/SpeakerOutput.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/SpeakerOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/audio/TunnelSenderReceiver.java" afterPath="$PROJECT_DIR$/src/com/sesca/audio/TunnelSenderReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/misc/Config.java" afterPath="$PROJECT_DIR$/src/com/sesca/misc/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" afterPath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishScheduler.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishScheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Presentity.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Presentity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/SimpleParser.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/SimpleParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Tester.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Tester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Tuple.java" afterPath="$PROJECT_DIR$/src/com/sesca/sip/presence/pidf/Tuple.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/media/AudioOffTask.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/media/AudioOffTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/media/AudioRecorder.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/media/AudioRecorder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/media/JAudioLauncher.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/media/JAudioLauncher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/media/RtpHttpBridge.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/media/RtpHttpBridge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/media/TunneledAudioLauncher.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/media/TunneledAudioLauncher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelConnection.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelConnectionListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelConnectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelServer.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelServerListener.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelServerListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelSocket.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelTransport.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/transport/HttpTunnelTransport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/RegisterAgent.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/RegisterAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgentProfile.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgentProfile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/IMModule.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/IMModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/local/ua/MessageAgent.java" afterPath="$PROJECT_DIR$/src/local/ua/MessageAgent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/address/NameAddress.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/address/NameAddress.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/call/Call.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/call/Call.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/call/ExtendedCall.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/call/ExtendedCall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/Dialog.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/Dialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/ExtendedInviteDialog.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/ExtendedInviteDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/InviteDialog.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/InviteDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/NotifierDialog.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/NotifierDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/SubscriberDialog.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/dialog/SubscriberDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/header/PPreferredIdentityHeader.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/header/PPreferredIdentityHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/header/PrivacyHeader.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/header/PrivacyHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/header/SipHeaders.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/header/SipHeaders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/message/Message.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/message/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/message/MessageFactory.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/message/MessageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/transaction/InviteTransactionClient.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/transaction/InviteTransactionClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/transaction/InviteTransactionServer.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/transaction/InviteTransactionServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/tools/Base64.java" afterPath="$PROJECT_DIR$/src/org/zoolu/tools/Base64.java" />
-    </list>
+    <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="" />
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -160,7 +86,7 @@
       <file leaf-file-name="PresenceAgent.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="13" selection-start="1869" selection-end="1869" vertical-scroll-proportion="0.11042945">
+            <state line="20" column="42" selection-start="902" selection-end="902" vertical-scroll-proportion="0.036809817">
               <folding />
             </state>
           </provider>
@@ -197,8 +123,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="491" />
-    <option name="y" value="24" />
+    <option name="x" value="131" />
+    <option name="y" value="441" />
     <option name="width" value="1686" />
     <option name="height" value="1009" />
   </component>
@@ -379,11 +305,11 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.externalResources" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -543,7 +469,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="491" y="24" width="1686" height="1009" extended-state="0" />
+    <frame x="131" y="441" width="1686" height="1009" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -558,7 +484,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3051788" sideWeight="0.2974239" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3051788" sideWeight="0.6943794" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3051788" sideWeight="0.6943794" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -648,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="13" selection-start="1869" selection-end="1869" vertical-scroll-proportion="0.11042945">
+        <state line="20" column="42" selection-start="902" selection-end="902" vertical-scroll-proportion="0.036809817">
           <folding />
         </state>
       </provider>
@@ -658,7 +584,12 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="artifact" />
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
           <last-edited>Swip:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
