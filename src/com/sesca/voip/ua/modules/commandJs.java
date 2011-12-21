@@ -20,7 +20,6 @@
 
 package com.sesca.voip.ua.modules;
 
-import com.sesca.misc.Logger;
 import com.sesca.voip.ua.AppletUANG;
 import java.net.*;
 
@@ -54,12 +53,14 @@ public class commandJs implements SipProviderListener
 
 	}
 
+
+
 	public void IMMessageReceived(String message, String from)
 	{
 		
-		Logger.paranoia("commandJs.IMMessageReceived");
-		Logger.paranoia("       from"+from);
-		Logger.paranoia("       message:"+message);
+		debug("commandJs.IMMessageReceived");
+		debug("       from"+from);
+		debug("       message:"+message);
 		
 		try
 		{
