@@ -1,4 +1,26 @@
-﻿<html>
+﻿<?php
+
+   if ( isset($_GET['phone']) ) $phone = $_GET['phone'];
+
+   else {
+
+      $ERR = "Error: Missing phone number !";
+
+   }
+
+   if ( isset($_GET['uid'])) $uid = $_GET['uid'];
+
+
+   else {
+
+     $ERR = "Error: Missing user id ! ";
+
+   }
+
+
+?>
+
+<html>
 	<head>
 		 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
 		 <meta http-equiv="cache-control" content="no-cache" />
@@ -32,7 +54,7 @@
                       background-image: url(images/deg_2.png);
                       background-repeat: no-repeat;
                       background-color:#c4c5c3;
-                      background-position: center 50px;
+                      background-position: 0px 50px;
                       border:0px;
                       padding:0px;
                       margin:0px;
@@ -315,19 +337,7 @@
 
      <div id="head">
 
-       <img src="images/swiplogo.png" style="margin-left:30px;margin-top:20px">
-
-
-
-       <div id="toolbarz">
-
-       <div style="float:left;margin-left:4px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();"></div>
-
-       <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();"></div>
-
-      </div>
-
-
+       <img src="images/swip_powered.png" style="margin-left:30px;margin-top:20px">
 
      </div>
 
@@ -337,23 +347,18 @@
      <applet id="PHDial" archive="idial.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
     <param name="mayscript" value="true" />
         <param name="scriptable" value="true" />
-        <param name="callTo" value="" />
+        <param name="callTo" value="<?= $phone ?>" />
         <param name="username" value="" />
         <param name="password" value="" />
-        <param name="realm" value="sip.ovh.net" />
+        <param name="realm" value="sip.idial.fi" />
         <param name="port" value="5060" />
-        <!-- <param name="proxyname" value="test.idialserver.com" /> -->
-
-        <!-- <param name="tunnel" value="194.79.17.140:443" /> -->
+        <param name="proxyname" value="test.idialserver.com" />
+        <param name="tunnel" value="194.79.17.140:443" />
 		<param name="codebaseUrl" value="file:///C:/SIP Applet/" />
-                <!-- <param name="forceTunnel" value="true"/> -->
+		<param name="forceTunnel" value="true"/>
 		<param name="privacy" value="false"/>		
-	    <param name="allowOutsideProxyConnections" value="true"/>				
-		
+	    <param name="allowOutsideProxyConnections" value="true"/>	
     </applet>
-    
-		<div id="signature"></div>
-		<br/>
 			<div id="login">
                               <div style="padding:15px;">
                                 <div style="margin-bottom:20px">
@@ -363,164 +368,17 @@
 				<input id="password" type="password" tabindex="3"/>
                                 </div>
 				<div id="registerbuttontext" >
-				<button class="btn" onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="register();">Login</button>
+				<button class="btn" onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="preCustomRegister(); register();">Login</button>
 				</div>				
 			</div>
 
-                        <script type="text/javascript">
-               
-                           $('#login').draggable();
-        
-                
-                        </script>
-
-		<div id="callbuttons">
-			<!-- Recipient:
-			<input id="callto" type="text"> -->
-			<br/>
-                        <!--
-			<div id="callbutton">
-				<div id="startbuttontext" >
-					<button type="button" onclick="preCustomStartCall(); startCall();">Call</button>
-					</br/>
-				</div>
-			</div>
-                        -->
-			<div id="stopcallbutton">
-				<div id="stopbuttontext" ">
-					<button type="button" onclick="preCustomEndCall(); endCall();">Hang up</button>
-				</div>
-			</div>
-		</div>
-		<div id="toolbar">
-			<table>
-				<tr>
-					<td><button type="button" onclick="togglePresence();">Presence</button></td>
-				</tr>
-			</table>
-		</div>
-		<!-- div for IM-message -->
-		<div id="immessagewindow">
-
-                        <div style="position:relative;left:15px;top:5px"><b>Chat</b></div> 
-
-                        <div style="padding:15px">
-
-
-			<form id="immessageform" name="mail" method="post" action="">
-				<table width="300" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td>
-							<div id="immessages" style="width: 420px; height: 150px; overflow-y: scroll;
-								 scrollbar-arrow-color: blue; scrollbar- face-color: #e7e7e7;
-								 scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888;background:white;border:1px solid #333333">
-						    </div>
-						</td>
-					</tr>
-					<tr>
-						<td id="typingStateField" align="left" valign="top">
-							&nbsp;
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<textarea id="imMessageArea" name="message" cols="40" rows="4" maxlength="250" style="width:420px;border: 1px solid #90FF32"></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td>
-
-							<input style="float:right;margin-top:15px;" class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');"     id="sendIMButton" type="submit" name="Submit" value="Send" onclick="onIMSend(); return false;" />
-						</td>
-					</tr>
-				</table>
-			</form>
-                   </div>
-		</div>
-		<!-- /div for IM-message -->
-                <script type="text/javascript">
-                    $('#immessagewindow').draggable();
-                </script>
-
-		<!-- div for keypad -->
-		<div id="keypadwindow">
-			<form id="keypadform" name="pad" method="post" action="">
-				<table width="200" border="0" cellpadding="3" cellspacing="0">
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(1);">1</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(2);">2</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(3);">3</button></td>						
-					</tr>
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(4);">4</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(5);">5</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(6);">6</button></td>						
-					</tr>
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(7);">7</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(8);">8</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(9);">9</button></td>						
-					</tr>
-					<tr>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(10);">*&nbsp;</button></td>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(0);">0</button></td>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(11);">#</button></td>						
-					</tr>
-                                   </form>
-                                   <tr>
-                                   <td colspan="3">
-
-                                      <input id="callto" type="text">
-                                   </td>
-                                        
-                                   </tr>
-                                   <tr>
-                                   <td colspan="3">
-                                      <button class="callbtn" onmouseover="$(this).attr('class','callbtn_over');" onmouseout="$(this).attr('class','callbtn');" type="button" onclick="preCustomStartCall(); startCall();">Call</button>
-                                   </td>
-                                   </tr>
-
-				</table>
-                   
-
-		</div>
-		<!-- /div for keypad -->
-		<!-- div for presence -->
-		<div id="presencewindow">
-			<form id="presenceform" name="pres" method="post" action="">
-			My presence:
-			<select id="presenceState">
-			<option value="open">Open</option>
-			<option value="closed">Closed</option>
-			</select>
-			<br/>
-			Personal note:
-			<input id="presenceNote" type="text"/>
-			<button type="button" onclick="customPublish();">Publish</button>
-			<br/><br/>
-						Presentity to subscribe:
-						<input id="presentity" type="text" >
-						<button type="button" onclick="customSubscribe();">Subscribe</button>
-						<button type="button" onclick="customUnSubscribe();">Unsubscribe</button>																
-						<br/><br/>
-			Current subscriptions:			
-			<div id="presentityTable"></div>			
-			</form>
-		</div>
-		<!-- /div for presence -->		
 		<div id="statusbar">
 		</div>
 
                 <script type="text/javascript">
-
                    stickToBottom();
-
                 </script>
-
-
-      <div id="footer"></div>
-    </div>
-    <div id="noscript">Testing browser's JavaScript support... If this message won't go away, check the JavaScript settings of your browser.</div>
+       </div> 
 	</body>
 </html>
 

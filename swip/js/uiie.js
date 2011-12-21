@@ -67,8 +67,8 @@ function refuseCall()
 
 function register()
 {
-	//document.getElementById("PHDial").jsSetUsername(document.getElementById("username").value);
-	//document.getElementById("PHDial").jsSetPassword(document.getElementById("password").value);
+	document.getElementById("PHDial").jsSetUsername(document.getElementById("username").value);
+	document.getElementById("PHDial").jsSetPassword(document.getElementById("password").value);
 	document.getElementById("PHDial").set_event(101);
 	//startActive();
 }
