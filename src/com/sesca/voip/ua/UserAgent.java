@@ -45,7 +45,7 @@ import org.zoolu.tools.Archive;
 
 import com.sesca.audio.AudioCodecConfiguration;
 import com.sesca.misc.Config;
-import com.sesca.misc.Logger;
+import com.sesca.voip.ua.modules.debugjs;
 import com.sesca.voip.media.JAudioLauncher;
 import com.sesca.voip.media.TunneledAudioLauncher;
 
@@ -77,7 +77,7 @@ public class UserAgent extends CallListenerAdapter
 
 	public boolean tunnel = false;
 
-	/** Event logger. */
+	/** Event debugjs. */
 	Log log;
 
 	public int lastResponseCode = 0;
@@ -241,7 +241,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Gets the local SDP */
 	public String getSessionDescriptor()
 	{
-		Logger.paranoia("UserAgent.getSessioDescriptor(): local_session="+local_session);
+		debugjs.paranoia("UserAgent.getSessioDescriptor(): local_session="+local_session);
 		return local_session;
 	}
 
@@ -257,7 +257,7 @@ public class UserAgent extends CallListenerAdapter
 	{
 		SessionDescriptor sdp = new SessionDescriptor(user_profile.from_url, sip_provider.getViaAddress());
 		local_session = sdp.toString();
-		Logger.paranoia("UserAgent.initSessioDescriptor(): local_session="+local_session);
+		debugjs.paranoia("UserAgent.initSessioDescriptor(): local_session="+local_session);
 	}
 
 	/** Adds a media to the SDP */
@@ -271,7 +271,7 @@ public class UserAgent extends CallListenerAdapter
 //			attr_param += " " + codec + "/" + rate;
 //		sdp.addMedia(new MediaField(media, port, 0, "RTP/AVP", String.valueOf(avp)), new AttributeField("rtpmap", attr_param));
 //		local_session = sdp.toString();
-//		Logger.paranoia("UserAgent.addMediaDescriptor(): local_session="+local_session);
+//		debugjs.paranoia("UserAgent.addMediaDescriptor(): local_session="+local_session);
 //	}
 
 	// *************************** Public Methods **************************
@@ -312,19 +312,19 @@ public class UserAgent extends CallListenerAdapter
 				{
 
 					if (CLIP_ON!=null)clip_on = new AudioClipPlayer(Archive.getAudioInputStream(new URL(codeBase, CLIP_ON)), null);
-					//Logger.debug("clip_on="+clip_on);
+					debugjs.debug("clip_on="+clip_on);
             
 					if (CLIP_OFF!=null)clip_off = new AudioClipPlayer(Archive.getAudioInputStream(new URL(codeBase, CLIP_OFF)), null);
-					//Logger.debug("clip_off="+clip_off);
+					debugjs.debug("clip_off="+clip_off);
 
 					if (CLIP_RING!=null)clip_ring = new AudioClipPlayer(Archive.getAudioInputStream(new URL(codeBase, CLIP_RING)), null);
-					//Logger.debug("clip_ring="+clip_ring);
+					debugjs.debug("clip_ring="+clip_ring);
 
 				}
 			}
 			catch (Exception e)
 			{
-				Logger.error("Error occured while loading audio files");
+				debugjs.error("Error occured while loading audio files");
 				//printException(e, LogLevel.HIGH);
 				e.printStackTrace();
 			}
@@ -339,7 +339,7 @@ public class UserAgent extends CallListenerAdapter
 			{
 			//addMediaDescriptor("audio", user_profile.audio_port, user_profile.audio_avp, user_profile.audio_codec, user_profile.audio_sample_rate);
 			//addMediaDescriptor("audio", 21000, 8, "PCMA", 8000);
-			Logger.paranoia("UserAgent.UserAgent(): local_session="+local_session);
+			debugjs.paranoia("UserAgent.UserAgent(): local_session="+local_session);
 			SessionDescriptor sdp = new SessionDescriptor(local_session);
 			AudioCodecConfiguration acc = new AudioCodecConfiguration();
 			String audioSdp = acc.createSdpAudioAttributes();
@@ -374,14 +374,14 @@ public class UserAgent extends CallListenerAdapter
 		//if (clip_on!=null) clip_on.loop();
 		if(user_profile.no_offer)
 		{
-			Logger.debug("user_profile.no_offer");
+			debugjs.debug("user_profile.no_offer");
 			if(tunnel)
 				preOpenSocketForAudioTunneling();
 			call.call(target_url);
 		}
 		else
 		{
-			Logger.debug("!user_profile.no_offer");
+			debugjs.debug("!user_profile.no_offer");
 			if(tunnel)
 				preOpenSocketForAudioTunneling();
 			call.call(target_url, local_session);
@@ -392,10 +392,10 @@ public class UserAgent extends CallListenerAdapter
 	public void listen()
 	{
 		sip_provider.removeSipProviderListener(new TransactionIdentifier(SipMethods.INVITE)); // try to remove old INVITE listener if any. 
-		Logger.debug("UA is listening");
+		debugjs.debug("UA is listening");
 		changeStatus(UA_IDLE);
 		call = new ExtendedCall(sip_provider, user_profile.from_url, user_profile.contact_url, user_profile.username, user_profile.realm, user_profile.passwd, this);
-		Logger.paranoia("       call="+call);
+		debugjs.paranoia("       call="+call);
 		call.listen();
 		
 	}
@@ -405,7 +405,7 @@ public class UserAgent extends CallListenerAdapter
 	{
 		if(clip_off != null)
 			if (!call_state.equals(UA_IDLE) && !call_state.equals(UA_INCOMING_CALL)) clip_off.loop(); // was clip_off.stop();
-		else Logger.warning("clip_off==null");		
+		else debugjs.warning("clip_off==null");		
 
 		if(clip_ring != null)
 		{
@@ -420,7 +420,7 @@ public class UserAgent extends CallListenerAdapter
 		{
 			if(clip_on != null)
 				clip_on.stop();
-			else Logger.warning("clip_on==null");			
+			else debugjs.warning("clip_on==null");			
     	  
 			call.hangup();
 		}
@@ -448,12 +448,12 @@ public class UserAgent extends CallListenerAdapter
 	/** Launches the Media Application (currently, the RAT audio tool) */
 	protected void launchMediaApplication(boolean incoming)
 	{
-		Logger.debug("UserAgent.launchMediaApplication");
+		debugjs.debug("UserAgent.launchMediaApplication");
 		// exit if the Media Application is already running  
 		if(audio_app != null || video_app != null)
 		{
-			Logger.warning("DEBUG: media application is already running");
-			Logger.debug("Stopping media application...");
+			debugjs.warning("DEBUG: media application is already running");
+			debugjs.debug("Stopping media application...");
 			if (audio_app!=null) 
 				{
 				audio_app.stopMedia();
@@ -465,12 +465,12 @@ public class UserAgent extends CallListenerAdapter
 				video_app=null;
 				}
 		}
-		Logger.debug("audio_app="+audio_app);
-		Logger.paranoia("call="+call);
+		debugjs.debug("audio_app="+audio_app);
+		debugjs.paranoia("call="+call);
 		String localSdp=call.getLocalSessionDescriptor();
-		Logger.paranoia("localSdp="+localSdp);
+		debugjs.paranoia("localSdp="+localSdp);
 		SessionDescriptor local_sdp = new SessionDescriptor(localSdp);
-		Logger.paranoia("local_sdp="+local_sdp);		
+		debugjs.paranoia("local_sdp="+local_sdp);		
 		String local_media_address = (new Parser(local_sdp.getConnection().toString())).skipString().skipString().getString();
 		int local_audio_port = 0;
 		int local_video_port = 0;
@@ -478,7 +478,7 @@ public class UserAgent extends CallListenerAdapter
 		int payloadType=-1;
 		
 		// parse local sdp
-		Logger.paranoia("UserAgent.launcMediaApplication: local sdp="+local_sdp.toString());
+		debugjs.paranoia("UserAgent.launcMediaApplication: local sdp="+local_sdp.toString());
 		for (Enumeration e = local_sdp.getMediaDescriptors().elements(); e.hasMoreElements();)
 		{
 			MediaField media = ((MediaDescriptor) e.nextElement()).getMedia();
@@ -493,7 +493,7 @@ public class UserAgent extends CallListenerAdapter
 		String remote_media_address = (new Parser(remote_sdp.getConnection().toString())).skipString().skipString().getString();
 		int remote_audio_port = 0;
 		int remote_video_port = 0;
-		Logger.hysteria("UserAgent.launcMediaApplication: remote sdp="+remote_sdp.toString());
+		debugjs.hysteria("UserAgent.launcMediaApplication: remote sdp="+remote_sdp.toString());
 		for (Enumeration e = remote_sdp.getMediaDescriptors().elements(); e.hasMoreElements();)
 		{
 			MediaField media = ((MediaDescriptor) e.nextElement()).getMedia();
@@ -501,7 +501,7 @@ public class UserAgent extends CallListenerAdapter
 				{
 				remote_audio_port = media.getPort();
 				if (!incoming) payloadType=Integer.parseInt(media.getFormatList().elementAt(0).toString());
-				Logger.debug("parsed media format="+payloadType);
+				debugjs.debug("parsed media format="+payloadType);
 				}
 			
 			if(media.getMedia().equals("video"))
@@ -547,18 +547,24 @@ public class UserAgent extends CallListenerAdapter
 				else if(user_profile.send_file != null)
 					audio_in = user_profile.send_file;
 				String audio_out = null;
-				if(user_profile.recv_file != null)
+				if(user_profile.recv_file != null) {
 					audio_out = user_profile.recv_file;
-				//audio_app=new JAudioLauncher(local_audio_port,remote_media_address,remote_audio_port,dir,log);
-				Logger.debug("Audio_out=" + audio_out);
+				    //audio_app=new JAudioLauncher(local_audio_port,remote_media_address,remote_audio_port,dir,log);
+				    debugjs.debug("Audio_out=" + audio_out);
+                }
+
+                else  debugjs.debug("Audio_out=Speakers");
+
 				if(tunnel)
 				{
-					Logger.info("New tunneledaudiolauncher");
+					debugjs.info("New tunneledaudiolauncher");
 					//audio_app = new TunneledAudioLauncher(local_audio_port, remote_media_address, remote_audio_port, dir, audio_in, audio_out, user_profile.audio_sample_rate, user_profile.audio_sample_size, user_profile.audio_frame_size, log, audiochannel, this);
 					audio_app = new TunneledAudioLauncher(local_audio_port, remote_media_address, remote_audio_port, dir, audio_in, audio_out, payloadType, 8000, 1, 160, log, audiochannel, this);
 				}
 				else
 					//audio_app = new JAudioLauncher(local_audio_port, remote_media_address, remote_audio_port, dir, audio_in, audio_out, user_profile.audio_sample_rate, user_profile.audio_sample_size, user_profile.audio_frame_size, log);
+
+                    debugjs.info("New Audiolauncher");
 					audio_app = new JAudioLauncher(local_audio_port, remote_media_address, remote_audio_port, dir, audio_in, audio_out, payloadType, 8000, 1, 160, log);
 
 			}
@@ -614,19 +620,19 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a new INVITE method (incoming call) */
 	public void onCallIncoming(Call call, NameAddress callee, NameAddress caller, String sdp, Message invite)
 	{
-		Logger.paranoia("UserAgent.onCallIncoming");
+		debugjs.paranoia("UserAgent.onCallIncoming");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
-			Logger.paranoia("NOT the current call");
-			Logger.paranoia("       incoming="+call);
-			Logger.paranoia("       current="+this.call);
+			debugjs.paranoia("NOT the current call");
+			debugjs.paranoia("       incoming="+call);
+			debugjs.paranoia("       current="+this.call);
 			return;
 		}
 		printLog("INCOMING", LogLevel.HIGH);
 		
 		changeStatus(UA_INCOMING_CALL);
-		Logger.paranoia("       invoking call.ring()");
+		debugjs.paranoia("       invoking call.ring()");
 		call.ring();
 		if(sdp != null)
 		{ // Create the new SDP
@@ -642,7 +648,7 @@ public class UserAgent extends CallListenerAdapter
 			local_session = new_sdp.toString();
 			*/
 			local_session=new_sdp.toString()+new AudioCodecConfiguration().createSdpAudioAttributes(remote_sdp);
-			Logger.paranoia("UserAgent.onCallIncoming(): local_session="+local_session);
+			debugjs.paranoia("UserAgent.onCallIncoming(): local_session="+local_session);
 		}
 		// play "ring" sound
 		if(clip_ring != null)
@@ -650,16 +656,16 @@ public class UserAgent extends CallListenerAdapter
 		if(listener != null)
 			{
 			listener.onUaCallIncoming(this, callee, caller);
-			Logger.paranoia("       listener="+listener);
+			debugjs.paranoia("       listener="+listener);
 			}
-		else Logger.paranoia("       listener=NULL!");
+		else debugjs.paranoia("       listener=NULL!");
 		
 	}
 
 	/** Callback function called when arriving a new Re-INVITE method (re-inviting/call modify) */
 	public void onCallModifying(Call call, String sdp, Message invite)
 	{
-		Logger.paranoia("UserAgent.onCallModifying");
+		debugjs.paranoia("UserAgent.onCallModifying");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -674,7 +680,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function that may be overloaded (extended). Called when arriving a 180 Ringing */
 	public void onCallRinging(Call call, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallRinging");
+		debugjs.paranoia("UserAgent.onCallRinging");
 		if(call != this.call && call != call_transfer)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -691,7 +697,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a 2xx (call accepted) */
 	public void onCallAccepted(Call call, String sdp, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallAccepted: sdp="+sdp);
+		debugjs.paranoia("UserAgent.onCallAccepted: sdp="+sdp);
 		
 		printLog("onCallAccepted()", LogLevel.LOW);
 		if(call != this.call && call != call_transfer)
@@ -703,7 +709,7 @@ public class UserAgent extends CallListenerAdapter
 		changeStatus(UA_ONCALL);
 		if(user_profile.no_offer)
 		{ // Create the new SDP
-			Logger.debug("UserAgent.onCallAccepted: user:profile.no_offer");
+			debugjs.debug("UserAgent.onCallAccepted: user:profile.no_offer");
 			SessionDescriptor remote_sdp = new SessionDescriptor(sdp);
 			SessionDescriptor local_sdp = new SessionDescriptor(local_session);
 			SessionDescriptor new_sdp = new SessionDescriptor(remote_sdp.getOrigin(), remote_sdp.getSessionName(), local_sdp.getConnection(), local_sdp.getTime());
@@ -719,7 +725,7 @@ public class UserAgent extends CallListenerAdapter
 		// play "on" sound
 		if(clip_on != null)
 			clip_on.stop();
-		else Logger.warning("clip_on==null");		
+		else debugjs.warning("clip_on==null");		
 		if(listener != null)
 			listener.onUaCallAccepted(this);
 
@@ -737,9 +743,9 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving an ACK method (call confirmed) */
 	public void onCallConfirmed(Call call, String sdp, Message ack)
 	{
-		Logger.paranoia("onCallConfirmed()");
-		Logger.paranoia("sdp="+sdp);
-		Logger.paranoia("local_session="+local_session);
+		debugjs.paranoia("onCallConfirmed()");
+		debugjs.paranoia("sdp="+sdp);
+		debugjs.paranoia("local_session="+local_session);
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -751,10 +757,10 @@ public class UserAgent extends CallListenerAdapter
 /*
 		if(clip_on != null)
 			{
-				Logger.debug("Starting clip_on");
+				debugjs.debug("Starting clip_on");
 				clip_on.replay();
 			}
-		else Logger.warning("clip_on==null");
+		else debugjs.warning("clip_on==null");
 */
 		launchMediaApplication(true);
 		if(user_profile.hangup_time > 0)
@@ -764,7 +770,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a 2xx (re-invite/modify accepted) */
 	public void onCallReInviteAccepted(Call call, String sdp, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallReInviteAccepted");
+		debugjs.paranoia("UserAgent.onCallReInviteAccepted");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -776,7 +782,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a 4xx (re-invite/modify failure) */
 	public void onCallReInviteRefused(Call call, String reason, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallReInviteRefused");
+		debugjs.paranoia("UserAgent.onCallReInviteRefused");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -790,7 +796,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a 4xx (call failure) */
 	public void onCallRefused(Call call, String reason, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallRefused");
+		debugjs.paranoia("UserAgent.onCallRefused");
 
 		lastResponseCode = resp.getStatusLine().getCode();
 		if(call != this.call)
@@ -812,7 +818,7 @@ public class UserAgent extends CallListenerAdapter
 
 		if(clip_on != null)
 			clip_on.stop();
-		else Logger.warning("clip_on==null");
+		else debugjs.warning("clip_on==null");
 		// play "off" sound
 		if(clip_off != null)
 		{
@@ -820,7 +826,7 @@ public class UserAgent extends CallListenerAdapter
 				clip_off.loop();
 
 		}
-		else Logger.warning("clip_off==null");		
+		else debugjs.warning("clip_off==null");		
 		if(listener != null)
 			listener.onUaCallFailed(this);
 	}
@@ -828,7 +834,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a 3xx (call redirection) */
 	public void onCallRedirection(Call call, String reason, Vector contact_list, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallRedirection");
+		debugjs.paranoia("UserAgent.onCallRedirection");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -841,7 +847,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function that may be overloaded (extended). Called when arriving a CANCEL request */
 	public void onCallCanceling(Call call, Message cancel)
 	{
-		Logger.paranoia("UserAgent.onCallCanceling");
+		debugjs.paranoia("UserAgent.onCallCanceling");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -852,11 +858,11 @@ public class UserAgent extends CallListenerAdapter
 		// stop ringing
 		if(clip_ring != null)
 			clip_ring.stop();
-		else Logger.warning("clip_ring==null");		
+		else debugjs.warning("clip_ring==null");		
 		// play "off" sound
 		if(clip_off != null)
 			clip_off.loop();
-		else Logger.warning("clip_off==null");		
+		else debugjs.warning("clip_off==null");		
 		if(listener != null)
 			listener.onUaCallCancelled(this);
 	}
@@ -864,7 +870,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a BYE request */
 	public void onCallClosing(Call call, Message bye)
 	{
-		Logger.paranoia("UserAgent.onCallClosing");
+		debugjs.paranoia("UserAgent.onCallClosing");
 		if(call != this.call && call != call_transfer)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -883,10 +889,10 @@ public class UserAgent extends CallListenerAdapter
 		// play "off" sound
 		if(clip_off != null)
 		{
-			if (!callInProgress) Logger.error("!! Call is not in progress !!");
+			if (!callInProgress) debugjs.error("!! Call is not in progress !!");
 			clip_off.loop();
 			}
-		else Logger.warning("clip_off==null");		
+		else debugjs.warning("clip_off==null");		
 		if(listener != null)
 			listener.onUaCallClosed(this);
 		changeStatus(UA_IDLE);
@@ -895,7 +901,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a response after a BYE request (call closed) */
 	public void onCallClosed(Call call, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallClosed");
+		debugjs.paranoia("UserAgent.onCallClosed");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -910,7 +916,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when the invite expires */
 	public void onCallTimeout(Call call)
 	{
-		Logger.paranoia("UserAgent.onCallTimeout");
+		debugjs.paranoia("UserAgent.onCallTimeout");
 		lastResponseCode = 408;
 		if(call != this.call)
 		{
@@ -928,11 +934,11 @@ public class UserAgent extends CallListenerAdapter
 		}
 		if(clip_on != null)
 			clip_on.stop();
-		else Logger.warning("clip_on==null");		
+		else debugjs.warning("clip_on==null");		
 		// play "off" sound
 		if(clip_off != null)
 			clip_off.replay();
-		else Logger.warning("clip_off==null");		
+		else debugjs.warning("clip_off==null");		
 		if(listener != null)
 			listener.onUaCallFailed(this);
 	}
@@ -942,7 +948,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when arriving a new REFER method (transfer request) */
 	public void onCallTransfer(ExtendedCall call, NameAddress refer_to, NameAddress refered_by, Message refer)
 	{
-		Logger.paranoia("UserAgent.onCallTransfer: local_session="+local_session);
+		debugjs.paranoia("UserAgent.onCallTransfer: local_session="+local_session);
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -961,7 +967,7 @@ public class UserAgent extends CallListenerAdapter
 	protected void initMedia() {
 		if(user_profile.audio || !user_profile.video)
 		{
-		Logger.paranoia("UserAgent.initMedia(): local_session="+local_session);
+		debugjs.paranoia("UserAgent.initMedia(): local_session="+local_session);
 		SessionDescriptor sdp = new SessionDescriptor(local_session);
 		AudioCodecConfiguration acc = new AudioCodecConfiguration();
 		String audioSdp = acc.createSdpAudioAttributes();
@@ -975,7 +981,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when a call transfer is accepted. */
 	public void onCallTransferAccepted(ExtendedCall call, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallTransferAccepted");
+		debugjs.paranoia("UserAgent.onCallTransferAccepted");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -987,7 +993,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when a call transfer is refused. */
 	public void onCallTransferRefused(ExtendedCall call, String reason, Message resp)
 	{
-		Logger.paranoia("UserAgent.onCallTransferRefused");
+		debugjs.paranoia("UserAgent.onCallTransferRefused");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -999,7 +1005,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when a call transfer is successfully completed */
 	public void onCallTransferSuccess(ExtendedCall call, Message notify)
 	{
-		Logger.paranoia("UserAgent.onCallTransferSuccess");
+		debugjs.paranoia("UserAgent.onCallTransferSuccess");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -1014,7 +1020,7 @@ public class UserAgent extends CallListenerAdapter
 	/** Callback function called when a call transfer is NOT sucessfully completed */
 	public void onCallTransferFailure(ExtendedCall call, String reason, Message notify)
 	{
-		Logger.paranoia("UserAgent.onCallTransferFailure");
+		debugjs.paranoia("UserAgent.onCallTransferFailure");
 		if(call != this.call)
 		{
 			printLog("NOT the current call", LogLevel.LOW);
@@ -1187,7 +1193,7 @@ public class UserAgent extends CallListenerAdapter
 
 	public void onCallProvisionalResponse(Call call, int code)
 	{
-		Logger.paranoia("UserAgent.onCallProvisionalResponse");
+		debugjs.paranoia("UserAgent.onCallProvisionalResponse");
 		listener.onUaCallProvisionalResponse(code, this);
 		// TODO Auto-generated method stub
 
@@ -1195,10 +1201,10 @@ public class UserAgent extends CallListenerAdapter
 
 	public void preOpenSocketForAudioTunneling()
 	{
-		Logger.paranoia("UserAgent.onCallOpenSocketForAudioTunneling");
+		debugjs.paranoia("UserAgent.onCallOpenSocketForAudioTunneling");
 		try
 		{
-			Logger.info("Preparing connection to http tunnel");
+			debugjs.info("Preparing connection to http tunnel");
 			//Config c=new Config();
 			//audiosocket = new Socket(InetAddress.getByName(user_profile.tunnelServer), user_profile.tunnelPort);
 			audiochannel = SocketChannel.open();
@@ -1213,7 +1219,7 @@ public class UserAgent extends CallListenerAdapter
 //			audiosocket.setTcpNoDelay(false);
 			
 			//audiosocket.setPerformancePreferences(0, 3, 2);
-//			Logger.debug("socket(audiosocket) tcpnodelay="+audiosocket.getTcpNoDelay());
+//			debugjs.debug("socket(audiosocket) tcpnodelay="+audiosocket.getTcpNoDelay());
 		}
 		catch (UnknownHostException e1)
 		{
@@ -1231,12 +1237,12 @@ public class UserAgent extends CallListenerAdapter
 	{
 		return;
 //		hangup();
-//		Logger.warning(clip_off.toString());
+//		debugjs.warning(clip_off.toString());
 //		if(clip_off != null)
 //		{
 //			clip_off.loop();
 //		}
-//		else Logger.warning("clip_off==null");
+//		else debugjs.warning("clip_off==null");
 //		//closeMediaApplication();
 //		listener.onUaCallClosed(this);
 	}
@@ -1246,7 +1252,7 @@ public class UserAgent extends CallListenerAdapter
 		{
 			try
 			{
-				Logger.info("Trying to close audiosocket");
+				debugjs.info("Trying to close audiosocket");
 				audiochannel.close();
 			}
 			catch (IOException e)
@@ -1255,7 +1261,7 @@ public class UserAgent extends CallListenerAdapter
 			}
 		}
 		else
-			Logger.info("Audiosocketti oli jo kiinni");
+			debugjs.info("Audiosocketti oli jo kiinni");
 		closeMediaApplication();	
 	}
 	void generateTone(int i, int duration)

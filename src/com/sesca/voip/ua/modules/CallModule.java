@@ -25,10 +25,10 @@ import java.util.Timer;
 import org.zoolu.sip.address.NameAddress;
 import local.ua.UserAgentListener;
 import com.sesca.misc.Config;
-import com.sesca.misc.Logger;
 import com.sesca.voip.media.AudioOffTask;
 import com.sesca.voip.ua.AppletUANG;
 import com.sesca.voip.ua.UserAgent;
+import com.sesca.voip.ua.modules.debugjs;
 
 public class CallModule implements	UserAgentListener
 {
@@ -124,7 +124,7 @@ public class CallModule implements	UserAgentListener
 
 	public void onUaCallCancelled(UserAgent ua)
 	{
-		Logger.paranoia("CallModule.onUaCallCancelled");
+		debugjs.paranoia("CallModule.onUaCallCancelled");
 		//host.commJs.sendMessageToHTML("lang_call_ended");
 		host.commJs.onCallEnded();
 		//host.commJs.deactivate_cancel_button();
@@ -239,8 +239,8 @@ public class CallModule implements	UserAgentListener
 
 	public void onUaCallClosed(UserAgent ua)
 	{
-		Logger.paranoia("CallModule.onUaCallClosed");
-		Logger.info("CALL ENDED!");
+		debugjs.paranoia("CallModule.onUaCallClosed");
+		debugjs.info("CALL ENDED!");
 		host.commJs.onCallEnded();
 		host.ua.closeAudioSocket();
 		//host.commJs.sendMessageToHTML("lang_call_ended");
@@ -260,7 +260,7 @@ public class CallModule implements	UserAgentListener
 
 	public void onUaCallProvisionalResponse(int code, UserAgent ua)
 	{
-		Logger.paranoia("Inside CallModule.unUaCallProvisionalResponse");
+		debugjs.paranoia("Inside CallModule.unUaCallProvisionalResponse");
 		if(code == 183 && host.ua.clip_on != null && !host.ua.clip_on.isPlaying())
 		{
 			host.ua.clip_on.loop();

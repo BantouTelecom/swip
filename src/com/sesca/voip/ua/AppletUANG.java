@@ -61,9 +61,6 @@ import com.sesca.voip.ua.modules.IMModule;
 import com.sesca.voip.ua.modules.commandJs;
 import com.sesca.voip.ua.modules.debugjs;
 
-import com.sesca.misc.Logger;
-
-
 
 public class AppletUANG extends Applet implements RegisterAgentListener, TimerListener, PresenceAgentListener
 {
@@ -163,10 +160,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	public void init()
 	{
-		System.out.println(System.getProperty("java.version"));
-		System.out.println("OS: " + System.getProperty("os.name").toUpperCase());
+        
 		speedTestURL = getParameter("speedtesturl");
-
+        
 		//get computer name
 		String localhostName=null;
 		try{
@@ -177,15 +173,20 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		 
 		 String random=Random.nextHexString(4).toUpperCase();
 		 identity=localhostName+"/"+random;		
-
-		 debugjs.debug("Identity string:"+identity);
-		 System.out.println("Applet version "+version);
-		 //debugjs.debug("On se hienoa");
-		eventChecker = new checkJavaScriptEvent(this);
+ 
+	    eventChecker = new checkJavaScriptEvent(this);
 		eventChecker.start();
 		commJs = new commandJs(this);
 
 		commJs.onLoaded();
+        debugjs.setApplet(this);
+
+        debugjs.info("Identity string:"+identity);
+        debugjs.info("Applet version "+version);
+        debugjs.info(System.getProperty("java.version"));
+        debugjs.info("OS: " + System.getProperty("os.name").toUpperCase());
+        
+        
 	}
 
 	private void testNetworkSpeed()
@@ -424,7 +425,30 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		if (rp!=null && rp.toLowerCase().equals("true")) uap.requestPrivacy=true;
 		else uap.requestPrivacy=false;
 				
-		String appletCodeBaseUrl = getParameter("codebaseUrl");
+		//String appletCodeBaseUrl = getParameter("codebaseUrl");
+
+        String raw_codebase = this.getDocumentBase().toString();
+        String appletCodeBaseUrl = "";
+
+
+        if ( raw_codebase.endsWith("/") ) {
+
+            appletCodeBaseUrl = raw_codebase;
+
+        }
+
+        else {
+
+           String[] url_decomp = raw_codebase.split("/");
+
+           for (int l=0;l<url_decomp.length-1;l++) {
+               appletCodeBaseUrl += url_decomp[l] + "/";
+           }
+
+        }
+
+        debugjs.info("codeBase:" + appletCodeBaseUrl );
+        
 		try
 		{
 			appletCodeBase = new URL(appletCodeBaseUrl);

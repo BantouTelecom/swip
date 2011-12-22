@@ -15,7 +15,10 @@
                    function stickToBottom() {
 
                       var spos = $(window).height()-20;
+                      var dpos = $(window).height()-120;
+
                       $('#statusbar').offset({top: spos, left: 0});
+                      $('#swip_debug').offset({top: dpos, left: 0});
 
                    }
 
@@ -255,6 +258,16 @@
                     }
 
 
+                    #swip_debug {
+		      
+                      background: rgba(255,255,255,0.4);
+                      height:100px;
+                      width:100%;
+                      position:absolute;
+                      //display:none;
+                      
+                    }
+
                     #statusbar {
 
                       height:20px;
@@ -345,7 +358,7 @@
         <param name="proxyname" value="iptel.org"/>
 
              <!-- <param name="tunnel" value="localhost:443" /> -->
-             <param name="codebaseUrl" value="file:///C:/SIP Applet/" />
+             <param id="codebaseUrl" name="codebaseUrl" value="" />
                 <!-- <param name="forceTunnel" value="true"/> -->
 		<param name="privacy" value="false"/>		
 	    <param name="allowOutsideProxyConnections" value="true"/>				
@@ -370,7 +383,6 @@
                         <script type="text/javascript">
                
                            $('#login').draggable();
-        
                 
                         </script>
 
@@ -508,6 +520,14 @@
 			</form>
 		</div>
 		<!-- /div for presence -->		
+
+                <div id="swip_debug">
+
+                   <b>Debug</b>
+                   <div id="swip_debug_ct" style="overflow-y: scroll;height:80px;margin-top:4px">
+                   </div>
+
+                </div>
 		<div id="statusbar">
 		</div>
 

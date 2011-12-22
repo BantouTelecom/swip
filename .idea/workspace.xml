@@ -7,8 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/Swip.jar" afterPath="$PROJECT_DIR$/swip/Swip.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" afterPath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/index.html" afterPath="$PROJECT_DIR$/swip/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/js/uiie.js" afterPath="$PROJECT_DIR$/swip/js/uiie.js" />
     </list>
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,46 +72,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PublishScheduler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PublishScheduler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="13" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PresenceAgentListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgentListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PresenceAgent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="42" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Logger.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/misc/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="21" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
+            <state line="31" column="7" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UdpTransport.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/UdpTransport.java">
+      <file leaf-file-name="CallModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="6" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+            <state line="7" column="25" selection-start="291" selection-end="291" vertical-scroll-proportion="11.4">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterAgent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/RegisterAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="13" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAgent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="279" column="21" selection-start="7262" selection-end="7272" vertical-scroll-proportion="-7.88">
+              <folding>
+                <element signature="e#0#38424#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAudioLauncher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/media/JAudioLauncher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="32" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AudioOutput.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/local/media/AudioOutput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="37" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AudioOutputStream.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/local/media/AudioOutputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="6" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,28 +147,19 @@
       <file leaf-file-name="AppletUANG.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="950" column="24" selection-start="22568" selection-end="22568" vertical-scroll-proportion="20.678446">
+            <state line="438" column="10" selection-start="11938" selection-end="11938" vertical-scroll-proportion="0.4679054">
               <folding>
-                <element signature="e#0#22651#0" expanded="true" />
+                <element signature="e#0#23146#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SipProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swip/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="26" selection-start="4168" selection-end="4168" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commandJs.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="81" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.0">
+            <state line="384" column="51" selection-start="10973" selection-end="10973" vertical-scroll-proportion="-3.857143">
               <folding />
             </state>
           </provider>
@@ -144,16 +168,7 @@
       <file leaf-file-name="debugjs.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="22" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PublishSchedulerListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
+            <state line="56" column="17" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,8 +193,11 @@
         <option value="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishScheduler.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java" />
-        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
+        <option value="$PROJECT_DIR$/swip/index.html" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
       </list>
     </option>
@@ -188,10 +206,10 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="59" />
-    <option name="y" value="30" />
-    <option name="width" value="1686" />
-    <option name="height" value="1009" />
+    <option name="x" value="-8" />
+    <option name="y" value="24" />
+    <option name="width" value="1696" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -232,6 +250,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Swip" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="swip" />
@@ -306,19 +338,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sesca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ua" />
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,101 +356,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sesca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ua" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppletUANG.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sesca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sesca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sesca" />
+              <option name="myItemId" value="media" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -623,27 +553,47 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="30" width="1686" height="1009" extended-state="1" />
+    <frame x="-8" y="24" width="1696" height="1010" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.48458692" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20843092" sideWeight="0.50678176" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20818713" sideWeight="0.533701" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20843092" sideWeight="0.4889026" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34956843" sideWeight="0.33957845" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20818713" sideWeight="0.46200982" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.49753392" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34742647" sideWeight="0.34035087" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34956843" sideWeight="0.44379392" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34742647" sideWeight="0.44327486" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.49425286" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -704,11 +654,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PublishScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgentListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="17" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" />
@@ -717,16 +662,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PresenceAgent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="42" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/misc/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="21" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/UdpTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
@@ -741,21 +676,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/misc/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="22" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" />
+        <state line="31" column="7" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0" />
+        <state line="22" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.09538951">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/UdpTransport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="936" selection-end="936" vertical-scroll-proportion="-1.9809221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="291" selection-end="291" vertical-scroll-proportion="11.4">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/RegisterAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="13" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="17" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/media/JAudioLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/local/media/AudioOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="6" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/local/media/AudioOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="37" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="21" selection-start="7262" selection-end="7272" vertical-scroll-proportion="-7.88">
+          <folding>
+            <element signature="e#0#38424#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swip/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="384" column="51" selection-start="10973" selection-end="10973" vertical-scroll-proportion="-3.857143">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="950" column="24" selection-start="22568" selection-end="22568" vertical-scroll-proportion="20.678446">
+        <state line="438" column="10" selection-start="11938" selection-end="11938" vertical-scroll-proportion="0.4679054">
           <folding>
-            <element signature="e#0#22651#0" expanded="true" />
+            <element signature="e#0#23146#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

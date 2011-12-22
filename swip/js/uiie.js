@@ -130,3 +130,12 @@ function publish(st, note)
 	document.getElementById("PHDial").jsPublish(st, note);
 	document.getElementById("PHDial").set_event(123); // publish
 }
+
+function swipDebug(msg) {
+
+     var sdd = document.getElementById("swip_debug_ct");
+
+     sdd.innerHTML += '<br/>' + msg;
+     sdd.scrollTop = sdd.scrollHeight;
+
+}

@@ -30,7 +30,7 @@ public class debugjs {
     public static void debug(String s) {
 
        try {
-          hostApplet.getAppletContext().showDocument(new URL("javascript:debug('" + s + "');"));
+          hostApplet.getAppletContext().showDocument(new URL("javascript:swipDebug('" + s + "');"));
        }
        catch (MalformedURLException e)
        {
@@ -51,6 +51,28 @@ public class debugjs {
         debug("[Error]: " + s);
 
     }
+
+    public static void warning(String s) {
+
+        debug("[Warning]: " + s);
+
+    }
+
+
+    public static void paranoia(String s) {
+
+        debug("[Parano]: " + s);
+
+    }
+
+    public static void hysteria(String s) {
+
+        debug("[Hysteria]: " + s);
+
+    }
+
+
+
 
 
 

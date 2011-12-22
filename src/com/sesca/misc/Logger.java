@@ -30,7 +30,7 @@ public class Logger
 
 	public static final boolean log = true;
 	
-	public static final boolean file = true;
+	public static final boolean file = false;
 
 	public static final int HYSTERIA = 0;
 	
