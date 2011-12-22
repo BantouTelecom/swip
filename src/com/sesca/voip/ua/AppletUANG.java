@@ -59,6 +59,8 @@ import com.sesca.voip.media.AudioSettings;
 import com.sesca.voip.ua.modules.CallModule;
 import com.sesca.voip.ua.modules.IMModule;
 import com.sesca.voip.ua.modules.commandJs;
+import com.sesca.voip.ua.modules.debugjs;
+
 import com.sesca.misc.Logger;
 
 
@@ -176,9 +178,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		 String random=Random.nextHexString(4).toUpperCase();
 		 identity=localhostName+"/"+random;		
 
-		 Logger.debug("Identity string:"+identity);
+		 debugjs.debug("Identity string:"+identity);
 		 System.out.println("Applet version "+version);
-		 //Logger.debug("On se hienoa");
+		 //debugjs.debug("On se hienoa");
 		eventChecker = new checkJavaScriptEvent(this);
 		eventChecker.start();
 		commJs = new commandJs(this);
@@ -229,7 +231,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	private void initSIP()
 	{
-		Logger.debug("in initSIP, callingIsPossible="+callingIsPossible);
+		debugjs.debug("in initSIP, callingIsPossible="+callingIsPossible);
 		if(callingIsPossible)
 		{
 			protocol="udp";
@@ -254,7 +256,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 			{
 				sp = new SipProvider(null, Integer.parseInt(port), protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
-				Logger.debug("Proxy="+sp.getOutboundProxy().toString());
+				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				sp.setIdentity(identity);
 				sp.addSipProviderPromisqueListener(commJs);
 				if (authName==null || authName.length()==0)
@@ -287,7 +289,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				Timer t = new Timer(5000, "UDP_REGISTER", this);
 				t.start();
 				registerTimedOut = false;
-				Logger.info("Ilman tunnelia");
+				debugjs.info("Ilman tunnelia");
 				this.register();
 
 				do
@@ -311,20 +313,20 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				protocol="tunnel";
 				//callingIsPossible=false;
 				config(false);
-				Logger.info("Tunneling needed");
+				debugjs.info("Tunneling needed");
 				uap.tunnelPort = conf.tunnelPort;
 				//uap.tunnelServer = conf.tunnelServer;
 				uap.tunnelServer = tunnel_address;
-				Logger.debug("Halt sip provider");
+				debugjs.debug("Halt sip provider");
 				if (sp!=null) sp.halt();
 
 				sp = null;
-				Logger.debug("Create new sip provider");
+				debugjs.debug("Create new sip provider");
 				sp = new SipProvider(null, Integer.parseInt(port), protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
-				Logger.debug("Proxy="+sp.getOutboundProxy().toString());
+				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				try {
-					Logger.debug("Proxy="+IpAddress.getByName(proxyname));
+					debugjs.debug("Proxy="+IpAddress.getByName(proxyname));
 				} catch (UnknownHostException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -361,7 +363,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				
 				
 
-				Logger.debug("Register via tunnel");
+				debugjs.debug("Register via tunnel");
 				this.register();
 				
 			}
@@ -377,16 +379,16 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 			for (Iterator iter = l.iterator(); iter.hasNext();)
 			{
 				Proxy proxy = (Proxy) iter.next();
-				Logger.info("proxy hostname : " + proxy.type());
+				debugjs.info("proxy hostname : " + proxy.type());
 				InetSocketAddress addr = (InetSocketAddress) proxy.address();
 				if(addr == null)
 				{
-					Logger.info("No Proxy");
+					debugjs.info("No Proxy");
 				}
 				else
 				{
-					Logger.info("proxy hostname : " + addr.getHostName());
-					Logger.info("proxy port : " + addr.getPort());
+					debugjs.info("proxy hostname : " + addr.getHostName());
+					debugjs.info("proxy port : " + addr.getPort());
 				}
 			}
 		}
@@ -490,7 +492,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	public void setKeyPadPressed(String key)
 	{
-		//Logger.debug("Keypad button pressed:"+key);
+		//debugjs.debug("Keypad button pressed:"+key);
 
 		
 		
@@ -561,11 +563,11 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	public void handle_event(int event)
 	{
-		Logger.debug("in handle_event ("+event+")");
+		debugjs.debug("in handle_event ("+event+")");
 		switch (event)
 		{
 		case 101:
-			Logger.debug("event 101");
+			debugjs.debug("event 101");
 			//register
 			initSIP();
 			break;
@@ -643,7 +645,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 //				//this.IMMessage = null;
 //				break;
 //			case 999: // webpage is unloaded
-//				Logger.info("event 999");
+//				debugjs.info("event 999");
 //				destroy();
 //				break;
 			default:
@@ -751,7 +753,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	{
 		//commJs.sendMessageToHTML("lang_no_connection");
 		commJs.onRegistrationFailure();
-		Logger.info("Registeration failure");
+		debugjs.info("Registeration failure");
 		//commJs.activateMailModule();
 
 	}
@@ -843,9 +845,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	public void handleKeyPadEvent(int i)
 	{
-		//Logger.debug("kutsutaan ua.generateTonea ("+i+")");
+		//debugjs.debug("kutsutaan ua.generateTonea ("+i+")");
 		ua.generateTone(i, 1000);
-		//Logger.debug("jamdlöekeypadevent loppuu");		
+		//debugjs.debug("jamdlöekeypadevent loppuu");		
 
 	}
 
@@ -932,9 +934,9 @@ class checkJavaScriptEvent extends Thread
 			}
 			if(applet.keyPadButton != -1)
 			{
-				//Logger.debug("Kakkahändleri herää");
+				//debugjs.debug("Kakkahändleri herää");
 				applet.handleKeyPadEvent(applet.keyPadButton);
-				//Logger.debug("Kakkapolku suoritettu");
+				//debugjs.debug("Kakkapolku suoritettu");
 				applet.keyPadButton = -1;
 
 			}
@@ -946,7 +948,7 @@ class checkJavaScriptEvent extends Thread
 			}
 			catch (Exception e)
 			{
-				Logger.error("Exception! Stopping applet");
+				debugjs.error("Exception! Stopping applet");
 				applet.handle_event(999);
 			}
 

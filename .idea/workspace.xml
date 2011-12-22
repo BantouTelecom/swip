@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/Swip.jar" afterPath="$PROJECT_DIR$/swip/Swip.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" afterPath="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/jarsign.sh" afterPath="$PROJECT_DIR$/tools/jarsign.sh" />
     </list>
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,9 +114,9 @@
       <file leaf-file-name="AppletUANG.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="24" selection-start="5502" selection-end="5509" vertical-scroll-proportion="-0.4119171">
+            <state line="950" column="24" selection-start="22568" selection-end="22568" vertical-scroll-proportion="20.678446">
               <folding>
-                <element signature="e#0#22583#0" expanded="true" />
+                <element signature="e#0#22651#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -140,10 +135,8 @@
       <file leaf-file-name="commandJs.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="81" selection-start="4422" selection-end="4422" vertical-scroll-proportion="-6.96">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="224" column="81" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,9 +145,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="49" column="22" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
-        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/misc/Logger.java" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
       </list>
     </option>
   </component>
@@ -197,10 +188,10 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="29" />
-    <option name="width" value="1450" />
-    <option name="height" value="847" />
+    <option name="x" value="59" />
+    <option name="y" value="30" />
+    <option name="width" value="1686" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -228,6 +219,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -462,7 +454,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -505,24 +496,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -548,6 +521,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -633,26 +624,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="29" width="1450" height="847" extended-state="7" />
-    <editor active="true" />
+    <frame x="59" y="30" width="1686" height="1009" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.49425286" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5007184" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20843092" sideWeight="0.50678176" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20940171" sideWeight="0.49137932" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20843092" sideWeight="0.4889026" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34985632" sideWeight="0.094017096" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34956843" sideWeight="0.33957845" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34985632" sideWeight="0.5669516" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34956843" sideWeight="0.44379392" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.49425286" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -728,55 +719,43 @@
         <state line="20" column="42" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/misc/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="21" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/UdpTransport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="26" selection-start="4168" selection-end="4168" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="81" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="22" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/sip/presence/PublishSchedulerListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="17" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="22" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="81" selection-start="4422" selection-end="4422" vertical-scroll-proportion="-6.96">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/misc/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="21" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/UdpTransport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="26" selection-start="4168" selection-end="4168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="24" selection-start="5502" selection-end="5509" vertical-scroll-proportion="-0.4119171">
+        <state line="950" column="24" selection-start="22568" selection-end="22568" vertical-scroll-proportion="20.678446">
           <folding>
-            <element signature="e#0#22583#0" expanded="true" />
+            <element signature="e#0#22651#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
