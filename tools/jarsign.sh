@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ $# -lt 2 ]; then
+if [ $# -lt 1 ]; then
 
    echo "Usage: $0 <Keystore_password>"
    exit

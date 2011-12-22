@@ -30,7 +30,7 @@ public class Logger
 
 	public static final boolean log = true;
 	
-	public static final boolean file = false;
+	public static final boolean file = true;
 
 	public static final int HYSTERIA = 0;
 	
@@ -62,7 +62,7 @@ public class Logger
 		}
 		
 		if (file){
-			File aFile=new File("c:\\iDial.log");
+			File aFile=new File("/home/toor/swip_debug.txt");
 			if (!aFile.exists())
 				try {
 					aFile.createNewFile();

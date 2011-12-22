@@ -26,6 +26,7 @@ import java.net.*;
 import org.zoolu.sip.message.Message;
 import org.zoolu.sip.provider.SipProvider;
 import org.zoolu.sip.provider.SipProviderListener;
+import com.sesca.voip.ua.modules.debugjs;
 
 public class commandJs implements SipProviderListener
 {
@@ -58,9 +59,9 @@ public class commandJs implements SipProviderListener
 	public void IMMessageReceived(String message, String from)
 	{
 		
-		debug("commandJs.IMMessageReceived");
-		debug("       from"+from);
-		debug("       message:"+message);
+		debugjs.debug("commandJs.IMMessageReceived");
+		debugjs.debug("       from"+from);
+		debugjs.debug("       message:"+message);
 		
 		try
 		{

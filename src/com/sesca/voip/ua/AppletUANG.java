@@ -51,7 +51,6 @@ import org.zoolu.net.SocketAddress;
 import org.zoolu.sip.address.NameAddress;
 import org.zoolu.sip.provider.SipProvider;
 import com.sesca.misc.Config;
-import com.sesca.misc.Logger;
 import com.sesca.sip.presence.PresenceAgent;
 import com.sesca.sip.presence.PresenceAgentListener;
 import com.sesca.sip.presence.pidf.Presentity;
@@ -60,6 +59,7 @@ import com.sesca.voip.media.AudioSettings;
 import com.sesca.voip.ua.modules.CallModule;
 import com.sesca.voip.ua.modules.IMModule;
 import com.sesca.voip.ua.modules.commandJs;
+import com.sesca.misc.Logger;
 
 
 
@@ -182,7 +182,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		eventChecker = new checkJavaScriptEvent(this);
 		eventChecker.start();
 		commJs = new commandJs(this);
-		
+
 		commJs.onLoaded();
 	}
 
