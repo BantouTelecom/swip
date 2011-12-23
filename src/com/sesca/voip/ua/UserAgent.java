@@ -109,18 +109,18 @@ public class UserAgent extends CallListenerAdapter
 	/** UserAgent listener */
 	protected UserAgentListener listener = null;
 
-	/** Media file path */
-	final String MEDIA_PATH = "media/local/ua/";
-
 	/** On wav file */
-	//final String CLIP_ON="ringing_8k.wav";
+    String AUDIO_PATH="/resources/audio/";
+
+
 	final String CLIP_ON = "ringing_8k.wav";
+    final String CLIP_RING = "ringing_8k.wav";
+    final String CLIP_OFF = "busy_8k.wav";
 
-	/** Off wav file */
-	final String CLIP_OFF = "busy_8k.wav";
+    InputStream is_clip_on;
+    InputStream is_clip_off;
+    InputStream is_clip_ring;
 
-	/** Ring wav file */
-	final String CLIP_RING = null;
 
 	/** Ring sound */
 	public AudioClipPlayer clip_ring;
@@ -311,6 +311,7 @@ public class UserAgent extends CallListenerAdapter
 				if(true) //patched to work with modular structures, where listener is not an applet       
 				{
 
+                    /*
 					if (CLIP_ON!=null)clip_on = new AudioClipPlayer(Archive.getAudioInputStream(new URL(codeBase, CLIP_ON)), null);
 					debugjs.debug("clip_on="+clip_on);
             
@@ -318,7 +319,24 @@ public class UserAgent extends CallListenerAdapter
 					debugjs.debug("clip_off="+clip_off);
 
 					if (CLIP_RING!=null)clip_ring = new AudioClipPlayer(Archive.getAudioInputStream(new URL(codeBase, CLIP_RING)), null);
-					debugjs.debug("clip_ring="+clip_ring);
+					debugjs.debug("clAip_ring="+clip_ring);
+
+					              */
+
+                    is_clip_on =  getClass().getResourceAsStream(AUDIO_PATH + CLIP_ON);
+                    is_clip_off = getClass().getResourceAsStream(AUDIO_PATH + CLIP_OFF);
+                    is_clip_ring = getClass().getResourceAsStream(AUDIO_PATH + CLIP_RING);
+
+
+
+                    if(CLIP_ON != null)clip_on = new AudioClipPlayer(is_clip_on, null);
+                    debugjs.debug("clip_on="+clip_on);
+
+                    if (CLIP_OFF!=null)clip_off = new AudioClipPlayer(is_clip_off, null);
+                    debugjs.debug("clip_off="+clip_off);
+
+                    if (CLIP_RING!=null)clip_ring = new AudioClipPlayer(is_clip_ring, null);
+                    debugjs.debug("clAip_ring="+clip_ring);
 
 				}
 			}
@@ -328,9 +346,7 @@ public class UserAgent extends CallListenerAdapter
 				//printException(e, LogLevel.HIGH);
 				e.printStackTrace();
 			}
-			//clip_ring=new AudioClipPlayer(CLIP_RING,null);
-			//clip_on=new AudioClipPlayer(CLIP_ON,null);
-			//clip_off=new AudioClipPlayer(CLIP_OFF,null);
+
 		}
 
 		// set local sdp
@@ -403,6 +419,9 @@ public class UserAgent extends CallListenerAdapter
 	/** Closes an ongoing, incoming, or pending call */
 	public void hangup()
 	{
+
+
+        debugjs.warning("hangup() fct called ");
 		if(clip_off != null)
 			if (!call_state.equals(UA_IDLE) && !call_state.equals(UA_INCOMING_CALL)) clip_off.loop(); // was clip_off.stop();
 		else debugjs.warning("clip_off==null");		
@@ -1248,6 +1267,9 @@ public class UserAgent extends CallListenerAdapter
 	}
 	public void closeAudioSocket()
 	{
+
+        debugjs.paranoia("closeAudioSocket() called");
+
 	if(audiochannel != null)
 		{
 			try
@@ -1261,7 +1283,7 @@ public class UserAgent extends CallListenerAdapter
 			}
 		}
 		else
-			debugjs.info("Audiosocketti oli jo kiinni");
+			debugjs.info("Audiosocket was already closed");
 		closeMediaApplication();	
 	}
 	void generateTone(int i, int duration)

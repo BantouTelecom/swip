@@ -1,11 +1,16 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Swip:jar">
+  <artifact type="jar" build-on-make="true" name="Swip:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Swip_jar</output-path>
     <root id="archive" name="Swip.jar">
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="Swip" />
+      <element id="directory" name="resources">
+        <element id="directory" name="audio">
+          <element id="dir-copy" path="$PROJECT_DIR$/src/resources/audio" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

@@ -121,6 +121,7 @@
                       position:absolute;
                       left:200px;
                       top:49px;
+                      display:none;
 
 
                     }
@@ -236,6 +237,28 @@
 
 
 
+
+                    #subscribewindow {
+
+                    text-align:center;
+                    width:0px;
+                    height:350px;
+                    -moz-border-radius: 7px 0px 0px 7px;
+                    -webkit-border-radius: 7px 0px 0px 7px;
+                    border: 2px solid white;
+                    border-right:0px;
+                    background: rgba(0,0,0,0.6);
+                    position:absolute;
+                    left:100%;
+                    margin-left:0px;
+                    top:50%;
+                    margin-top:-175px;
+                    //display:none;
+                    overflow:visible;
+
+                    }
+
+
                     #callwindow {
 
                       text-align:center;
@@ -252,6 +275,26 @@
                       display:none;
 
                     }
+
+
+                    #loadwindow {
+
+                    text-align:center;
+                    width:400px;
+                    height:80px;
+                    -moz-border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    border: 2px solid white;
+                    background: rgba(0,0,0,0.6);
+                    position:absolute;
+                    left:50%;
+                    margin-left:-200px;
+                    top:255px;
+
+
+                    }
+
+
 
                     #callstatus {
 
@@ -276,6 +319,7 @@
                        left:50%;
                        margin-left:-147px;
                        top:230px;
+                       display:none;
                        
 
                     }
@@ -352,6 +396,36 @@
                    }
 
 
+                    .subsbtn {
+
+                    background: url(images/swip_sprites.png) ;
+                    background-position: -174px -70px;
+                    width:33px;
+                    border:0px;
+                    height:137px;
+                    color:white;
+                    position:relative;
+                    left:-33px;
+                    top: 105px;
+
+                    }
+
+                    .subsbtn_over {
+
+                    background: url(images/swip_sprites.png) ;
+                    background-position: -137px -70px;
+                    width:33px;
+                    border:0px;
+                    height:137px;
+                    color:white;
+                    position:relative;
+                    left:-33px;
+                    top: 105px;
+                    }
+
+
+
+
 
 
 
@@ -405,7 +479,7 @@
 
        <div id="toolbarz">
 
-       <div style="float:left;margin-left:7px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();" title="Give a Call"é></div>
+       <div style="float:left;margin-left:7px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();" title="Give a Call"></div>
 
        <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();" title="Open Chat Window"></div>
 
@@ -465,13 +539,30 @@
                         </script>
 
 
+
+     <div id="loadwindow">
+
+         <div style="padding:15px;">
+
+             <div id="loadstatus">Loading Swip Application..</div>
+
+             <img src="images/load.gif"/>
+
+         </div>
+     </div>
+
+
+
                 <div id="callwindow">
 
                   <div style="padding:15px;">
 
                  <div id="callstatus">Calling 00339122331..</div>
 
-                 <button class="hangbtn" onmouseover="$(this).attr('class','hangbtn_over');" onmouseout="$(this).attr('class','hangbtn');" type="button" onclick="preCustomEndCall(); endCall();">Hang up</button>
+                 <button class="hangbtn"
+                         onmouseover="$(this).attr('class','hangbtn_over');"
+                         onmouseout="$(this).attr('class','hangbtn');" type="button"
+                         onclick="preCustomEndCall(); endCall();">Hang up</button>
 
 
                 </div>
@@ -589,7 +680,16 @@
 		</div>
 		<!-- /div for keypad -->
 		<!-- div for presence -->
-		<div id="presencewindow">
+		<div id="subscribewindow">
+
+            <button class="subsbtn"
+                    onmouseover="$(this).attr('class','subsbtn_over');"
+                    onmouseout="$(this).attr('class','subsbtn');" type="button"
+                    onclick="toggleSubscribe();"></button>
+
+
+            <div style="display:none">
+
 			<form id="presenceform" name="pres" method="post" action="">
 			My presence:
 			<select id="presenceState">
@@ -609,6 +709,8 @@
 			Current subscriptions:			
 			<div id="presentityTable"></div>			
 			</form>
+
+         </div>
 		</div>
 		<!-- /div for presence -->		
 

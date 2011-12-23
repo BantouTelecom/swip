@@ -65,7 +65,7 @@ import com.sesca.voip.ua.modules.debugjs;
 public class AppletUANG extends Applet implements RegisterAgentListener, TimerListener, PresenceAgentListener
 {
 	private static final long serialVersionUID = 1L;
-	private static final String version = "0.7.64";
+	private static final String version = "0.8.10";
 
 	// modules
 	public IMModule imm = null;
@@ -267,7 +267,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				cm = new CallModule();
 				conf.freeCall = true;
 				conf.allowIM = true;
-				cm.init(this, conf, "sip:dtilaaja@sesca.com");
+				cm.init(this, conf, callTo);
 				imm = new IMModule(this);
 				ua = new UserAgent(sp, uap, cm, appletCodeBase);
 				//if(tunnelPort != 0)
@@ -342,7 +342,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				cm = new CallModule();
 				conf.freeCall = true;
 				conf.allowIM = true;
-				cm.init(this, conf, "sip:dtilaaja@sesca.com");
+				cm.init(this, conf, callTo);
 				imm = new IMModule(this);
 				ua = new UserAgent(sp, uap, cm, appletCodeBase);
 				if(tunnelPort != 0)
@@ -514,7 +514,10 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		this.eventFromJavascript = event;
 	}
 
-	public void setKeyPadPressed(String key)
+    
+    
+    
+    public void setKeyPadPressed(String key)
 	{
 		//debugjs.debug("Keypad button pressed:"+key);
 
@@ -585,6 +588,8 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		this.IMMessage = message;
 	}
 
+    
+    
 	public void handle_event(int event)
 	{
 		debugjs.debug("in handle_event ("+event+")");
@@ -822,6 +827,12 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	public void jsSetCallTo (String c)
 	{
 		callTo=c;
+
+        if (! callTo.startsWith("sip:")) callTo = "sip:" + callTo;
+        if (! callTo.contains(realm) ) callTo += "@" + realm;
+        debugjs.info("** callTo: " + callTo + " **");
+        
+        
 	}
 	public void jsSetRealm (String r)
 	{

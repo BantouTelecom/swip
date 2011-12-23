@@ -54,19 +54,18 @@ function togglePresence(){
 
 function statusBar(msg){
       if (document.getElementById("statusbar")) {
-       // for better debugging
-	   //document.getElementById("statusbar").innerHTML += '<br/>' + msg;
-	   
-	  // for normal use
+
 	  document.getElementById("statusbar").innerHTML = msg;	   
       }
 }
 function customOnRegistrationSuccess(s){
 	$('#login').hide();
-	$('#callbuttons').show();
-	$('#toolbar').show();
+	//$('#callbuttons').show();
+	$('#toolbarz').show();
 	//statusBar(strings[15].item+":"+s);
-	statusBar("Ready. Using transport: "+s);
+	//statusBar("Ready. Using transport: "+s);
+	statusBar("Ready.");
+
 }
 function customOnRegistrationFailure(x){
 	//statusBar(strings[22].item);
@@ -78,7 +77,11 @@ function customOnRegistering(){
 }
 function customOnLoaded()
 {
-	statusBar("Waiting for user action");
+	//statusBar("Waiting for user action");
+	$('#loadwindow').hide();
+	$('#login').show();
+
+
 }
 function preCustomRegister()
 {
@@ -104,7 +107,10 @@ function customOnNoAnswer()
 }
 function customOnCallEnded()
 {
+
 	statusBar("Call ended");
+	$('#callwindow').hide();
+
 }
 function customOnNotAvailable()
 {
@@ -117,6 +123,8 @@ function customOnRinging()
 function customOnCalling()
 {
 	statusBar("Calling");
+	$('#callwindow').show();
+
 }
 function customOnWrongAddress()
 {
