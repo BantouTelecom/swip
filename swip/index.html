@@ -99,8 +99,8 @@
 
                       border: 2px solid white;
                       padding-top:15px;
-                      -moz-border-radius: 7px 7px 7px 7px;
-                      -webkit-border-radius: 0px 0px 7px 7px;
+                      -moz-border-radius: 7px;
+                      -webkit-border-radius: 7px;
                       background: rgba(0,0,0,0.6);
                       position:absolute;
                       left:190px;
@@ -113,7 +113,7 @@
                     #toolbarz {
 
                       padding-top:3px;
-                      width:150px;
+                      width:125px;
                       background: rgba(0,0,0,0.7);
                       -moz-border-radius:7px 7px 0px 0px;
                       border: 2px solid #c4c5c3;
@@ -147,32 +147,54 @@
                      }
 
 
-                      .chatbtn {
+                    .chatbtn {
 
                       background-image:url(images/swip_sprites.png);
                       background-position: -5px -40px;
                       width:33px;
                       height:26px;
-                  
-
-
-
+                
                     }
-
-
                     .chatbtn_over {
 
                       background-image:url(images/swip_sprites.png);
                       background-position: -48px -40px;
                       width:33px;
                       height:26px;
+                     }
 
+                     .presbtn {
 
+                      background-image:url(images/swip_sprites.png);
+                      background-position: -96px -39px;
+                      width:18px;
+                      height:24px;
 
+                    }
+                    .presbtn_over {
+
+                      background-image:url(images/swip_sprites.png);
+                      background-position: -144px -39px;
+                      width:18px;
+                      height:24px;
                      }
 
 
+		     .aboutbtn {
 
+                      background-image:url(images/swip_sprites.png);
+                      background-position: -96px -4px;
+                      width:18px;
+                      height:24px;
+
+                    }
+                    .aboutbtn_over {
+
+                      background-image:url(images/swip_sprites.png);
+                      background-position: -144px -4px;
+                      width:18px;
+                      height:24px;
+                     }
 
 
 
@@ -212,6 +234,32 @@
 
                     }
 
+
+
+                    #callwindow {
+
+                      text-align:center;
+                      width:400px;
+                      height:100px;
+                      -moz-border-radius: 7px;
+                      -webkit-border-radius: 7px;
+                      border: 2px solid white;
+                      background: rgba(0,0,0,0.6);
+                      position:absolute;
+                      left:50%;
+                      margin-left:-200px;
+                      top:245px;
+                      display:none;
+
+                    }
+
+                    #callstatus {
+
+                      font-size: 22px;
+                      font-weight: bold;
+                      color:white;
+                      padding-bottom:15px;
+                    }
 
 
                     #login {
@@ -281,6 +329,32 @@
  
                     }
 
+
+                    .hangbtn {
+
+                     background: url(images/swip_sprites.png) ;
+                     background-position: -5px -110px;
+                     width:127px;
+                     border:0px;
+                     height:31px;
+                     color:white;
+
+                   }
+
+                   .hangbtn_over {
+
+                     background: url(images/swip_sprites.png) ;
+                     background-position: -5px -76px;
+                     width:127px;
+                     border:0px;
+                     height:31px;
+                     color:white;
+                   }
+
+
+
+
+
                     .btn {
 
                      background: url(images/swip_sprites.png) ;
@@ -300,9 +374,6 @@
                      border:0px;
                      height:27px;
                      color:white;
-
-
-
                    }
 
 
@@ -334,9 +405,16 @@
 
        <div id="toolbarz">
 
-       <div style="float:left;margin-left:4px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();"></div>
+       <div style="float:left;margin-left:7px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();" title="Give a Call"é></div>
 
-       <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();"></div>
+       <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();" title="Open Chat Window"></div>
+
+       <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','presbtn_over');" onmouseout="$(this).attr('class','presbtn');"  class="presbtn" onclick="togglePresenceMenu();" title="Presence and Status"></div>
+
+        <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','aboutbtn_over');" onmouseout="$(this).attr('class','aboutbtn');"  class="aboutbtn" onclick="toggleAbout();" title="About swip"></div>
+
+
+
 
       </div>
 
@@ -385,6 +463,19 @@
                            $('#login').draggable();
                 
                         </script>
+
+
+                <div id="callwindow">
+
+                  <div style="padding:15px;">
+
+                 <div id="callstatus">Calling 00339122331..</div>
+
+                 <button class="hangbtn" onmouseover="$(this).attr('class','hangbtn_over');" onmouseout="$(this).attr('class','hangbtn');" type="button" onclick="preCustomEndCall(); endCall();">Hang up</button>
+
+
+                </div>
+                 </div>
 
 		<div id="callbuttons">
 			<!-- Recipient:
