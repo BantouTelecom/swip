@@ -43,7 +43,7 @@
 
                     }
 
-                    input {
+                    input,textarea {
 
                       width:200px;
                       border: 1px solid #99FF32;
@@ -55,6 +55,7 @@
                        width:163px;
                        height:27px;
                        -moz-border-radius:5px;
+                       -webkit-border-radius:5px;
                        background: rgba(150,150,150,0.7);
                        font-weight:bold;
                        color:white;
@@ -64,6 +65,46 @@
 
 
                     }
+
+                    #presentityTable {
+
+                      width:170px;
+                      height:220px;
+                      -moz-border-radius:5px;
+                      -webkit-border-radius:5px;
+                      background: rgba(150,150,150,0.7);
+
+
+
+                    }
+
+                    #presentity {
+
+                    width:170px;
+                    -moz-border-radius:10px;
+                    -webkit-border-radius:10px;
+                     height:25px;
+                    background: rgba(150,150,150,0.7);
+                    border:0px;
+                    color:white;
+                    padding-left:4px;
+
+                    }
+
+
+                    #sublist {
+
+                       background:transparent;
+                       width:170px;
+                       border:0px;
+                       height:205px;
+                       margin-top:7px;
+                       color:white;
+
+
+                    }
+
+
 
                     .callbtn {
 
@@ -103,8 +144,10 @@
                       -webkit-border-radius: 7px;
                       background: rgba(0,0,0,0.6);
                       position:absolute;
-                      left:190px;
-                      top: 80px;
+                      left:50%;
+                      margin-left:-102px;
+                      width:205px;
+                      top:150px;
 
                     }
 
@@ -125,6 +168,41 @@
 
 
                     }
+
+
+                    #presencewindow {
+
+                    width:125px;
+                    background: #4d4d4d;
+                    -moz-border-radius:0px 0px 7px 7px;
+                    -webkit-border-radius:0px 0px 7px 7px;
+                    border: 2px solid white;
+                    border-top: 0px;
+                    position:absolute;
+                    left:187px;
+                    top:70px;
+                     color:white;
+                     font-weight:bold;
+                     border-top:0px;
+
+                    }
+
+
+                    #presenceNote {
+
+                      width:107px;
+                      height:40px;
+                     -moz-border-radius:5px;
+                     -webkit-border-radius:5px;
+                     background: rgba(150,150,150,0.7);
+                     color:white;
+                     font-size:10px;
+                     margin-bottom:5px;
+
+
+                    }
+
+
 
                     .phonebtn {
 
@@ -240,9 +318,8 @@
 
                     #subscribewindow {
 
-                    text-align:center;
                     width:0px;
-                    height:350px;
+                    height:380px;
                     -moz-border-radius: 7px 0px 0px 7px;
                     -webkit-border-radius: 7px 0px 0px 7px;
                     border: 2px solid white;
@@ -252,10 +329,11 @@
                     left:100%;
                     margin-left:0px;
                     top:50%;
-                    margin-top:-175px;
-                    //display:none;
+                    margin-top:-185px;
+                    display:none;
                     overflow:visible;
-
+                    color:white;
+                    font-weight:bold;
                     }
 
 
@@ -324,6 +402,28 @@
 
                     }
 
+
+
+                    #aboutwindow {
+
+
+
+                    background: rgba(255,255,255,0.4);
+                    -moz-border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    width: 400px;
+                    height:300px;
+                    position:absolute;
+                    left:50%;
+                    margin-left:-200px;
+                    top:50%;
+                    margin-top:-150px;
+                    display:none;
+
+
+                    }
+
+
  
                     #immessagewindow {
 
@@ -335,7 +435,7 @@
                        position:absolute;
                        left:50%;
                        margin-left:-225px;
-                       top:200px;
+                       top:150px;
                        
 
                      }
@@ -404,9 +504,8 @@
                     border:0px;
                     height:137px;
                     color:white;
-                    position:relative;
-                    left:-33px;
-                    top: 105px;
+                    margin-left:-33px;
+                    margin-top: 120px;
 
                     }
 
@@ -418,9 +517,9 @@
                     border:0px;
                     height:137px;
                     color:white;
-                    position:relative;
-                    left:-33px;
-                    top: 105px;
+                    margin-left:-33px;
+                    margin-top: 120px;
+
                     }
 
 
@@ -483,19 +582,40 @@
 
        <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();" title="Open Chat Window"></div>
 
-       <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','presbtn_over');" onmouseout="$(this).attr('class','presbtn');"  class="presbtn" onclick="togglePresenceMenu();" title="Presence and Status"></div>
+       <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','presbtn_over');" onmouseout="$(this).attr('class','presbtn');"  class="presbtn" onclick="togglePresence();" title="Presence and Status"></div>
 
         <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','aboutbtn_over');" onmouseout="$(this).attr('class','aboutbtn');"  class="aboutbtn" onclick="toggleAbout();" title="About swip"></div>
-
-
-
 
       </div>
 
 
-
      </div>
 
+
+     <div id="presencewindow">
+
+         <div style="padding:5px;padding-bottom:0px">
+
+         <form id="presenceform" name="pres" method="post" action="">
+             Presence:
+             <select id="presenceState">
+                 <option value="open">Open</option>
+                 <option value="closed">Closed</option>
+             </select>
+             <br/>
+             Status:
+
+             <div style="text-align:center">
+             <textarea id="presenceNote"></textarea>
+
+             <button class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();">Update</button>
+             </div>
+         </form>
+
+      </div>
+
+     </div>
+     
 
 
 
@@ -505,9 +625,16 @@
         <param name="callTo" value="" />
         <param name="username" value="" />
         <param name="password" value="" />
+        <!--
         <param name="realm" value="iptel.org" />
-        <param name="port" value="5060" />
         <param name="proxyname" value="iptel.org"/>
+              -->
+         <param name="realm" value="sip.ovh.net" />
+         <param name="proxyname" value="sip.ovh.net" />
+         
+         
+        <param name="port" value="5060" />
+        
 
              <!-- <param name="tunnel" value="localhost:443" /> -->
              <param id="codebaseUrl" name="codebaseUrl" value="" />
@@ -519,13 +646,38 @@
     
 		<div id="signature"></div>
 		<br/>
+
+            <div id="aboutwindow">
+
+                <div style="padding:15px">
+
+                <img src="images/swiplogo.png">
+
+                <div style="margin-top:20px">
+                Version: 0.8.10<br/><br/>
+                Swip is a web-based SIP client, released under the GPL V2 License.
+                Original credits go to Risto Känsäkoski and Antti Alho from sesca.<br/><br/>
+                You can find the swip source code at: <br/><br/><a href="http://github.com/digination/swip">
+                http://github.com/digination/swip
+                </a>.<br/><br/> Use it, copy it, customize it, knowledge belongs to everybody !<br/><br/>
+
+                 Datalove from Paris,<br/>
+                 Wintermew ~~====:)<br/>
+
+                </div>
+
+
+                </div>
+            </div>
+
+
 			<div id="login">
                               <div style="padding:15px;">
                                 <div style="margin-bottom:20px">
 				Username:
 				<input id="username" type="text" tabindex="1"/></div>
 				Password:
-				<input id="password" type="password" tabindex="3"/>
+				<input id="password" type="password" tabindex="3" onkeydown="if (event.keyCode==13) register();"/>
                                 </div>
 				<div id="registerbuttontext" >
 				<button class="btn" onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="register();">Login</button>
@@ -679,40 +831,67 @@
 
 		</div>
 		<!-- /div for keypad -->
-		<!-- div for presence -->
+
+     <script type="text/javascript">
+
+         $('#keypadwindow').draggable();
+
+     </script>
+
 		<div id="subscribewindow">
 
-            <button class="subsbtn"
+            <button id="subsbtn" class="subsbtn"
                     onmouseover="$(this).attr('class','subsbtn_over');"
                     onmouseout="$(this).attr('class','subsbtn');" type="button"
                     onclick="toggleSubscribe();"></button>
 
 
-            <div style="display:none">
+            <div id="subct" style="display:none;padding:15px;margin-top:-255px;">
 
-			<form id="presenceform" name="pres" method="post" action="">
-			My presence:
-			<select id="presenceState">
-			<option value="open">Open</option>
-			<option value="closed">Closed</option>
-			</select>
-			<br/>
-			Personal note:
-			<input id="presenceNote" type="text"/>
-			<button type="button" onclick="customPublish();">Publish</button>
-			<br/><br/>
-						Presentity to subscribe:
+
+                        Current subscriptions:
+
+                         <div style="text-align:center">
+
+                        <div id="presentityTable">
+
+                            <select id="sublist" size="10"></select>
+
+                        </div>
+
+                         </div>
+
+                        <div style="text-align:right">
+                        <button style="margin-top:5px;" type="button" class="hangbtn"
+                        onmouseover="$(this).attr('class','hangbtn_over');"
+                        onmouseout="$(this).attr('class','hangbtn');"
+                        onclick="customUnSubscribe();">Unsubscribe</button><br/>
+                        </div>
+
+                        <div style="height:10px;"></div>
+
+						Add Subscription:
+
+                        <div style="text-align:center">
+
 						<input id="presentity" type="text" >
-						<button type="button" onclick="customSubscribe();">Subscribe</button>
-						<button type="button" onclick="customUnSubscribe();">Unsubscribe</button>																
-						<br/><br/>
-			Current subscriptions:			
-			<div id="presentityTable"></div>			
-			</form>
 
-         </div>
+                        </div>
+
+                <div style="text-align:right">
+                <button style="margin-top:5px" type="button" class="btn"
+                        onmouseover="$(this).attr('class','btn_over');"
+                        onmouseout="$(this).attr('class','btn');"
+                        onclick="customSubscribe();">Subscribe</button>
+                </div>
+
+
+
+            </div>
+            <!--  /div for subct-->
+
 		</div>
-		<!-- /div for presence -->		
+		<!-- /div for subscriptions -->
 
                 <div id="swip_debug">
 

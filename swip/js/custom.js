@@ -42,9 +42,40 @@ function customOnCallIncoming()
 	}
 }
 
+
+function toggleSubscribe() {
+
+  if ( $('#subscribewindow').width() == 0 ) {
+
+    $('#subscribewindow').animate({width:200,
+                                   'margin-left': -200},1000,
+                                   'linear',
+                                   function() {$('#subct').show();});
+
+  }
+
+  else {
+
+    $('#subct').hide();
+    $('#subscribewindow').animate({width: 0,
+                          'margin-left': 0},1000);
+
+
+  }
+
+}
+
+
 function toggleIM(){
    $('#immessagewindow').toggle();
 }
+
+function toggleAbout(){
+
+   $('#aboutwindow').toggle();
+
+}
+
 function togglePad(){
    $('#keypadwindow').toggle();
 }
@@ -62,6 +93,7 @@ function customOnRegistrationSuccess(s){
 	$('#login').hide();
 	//$('#callbuttons').show();
 	$('#toolbarz').show();
+	$('#subscribewindow').show();
 	//statusBar(strings[15].item+":"+s);
 	//statusBar("Ready. Using transport: "+s);
 	statusBar("Ready.");
