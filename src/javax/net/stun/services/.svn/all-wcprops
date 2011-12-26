@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/services
+END
+BindingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/services/BindingService.java
+END
+UserHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/stun~svn/!svn/ver/19/trunk/src/javax/net/stun/services/UserHolder.java
+END
+SharedSecretService.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/stun~svn/!svn/ver/42/trunk/src/javax/net/stun/services/SharedSecretService.java
+END

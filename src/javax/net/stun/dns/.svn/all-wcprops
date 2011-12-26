@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/dns
+END
+DResourceComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/stun~svn/!svn/ver/20/trunk/src/javax/net/stun/dns/DResourceComparator.java
+END
+DType.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/stun~svn/!svn/ver/12/trunk/src/javax/net/stun/dns/DType.java
+END
+DNSResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/stun~svn/!svn/ver/20/trunk/src/javax/net/stun/dns/DNSResolver.java
+END
+DMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/dns/DMessage.java
+END
+DClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stun~svn/!svn/ver/12/trunk/src/javax/net/stun/dns/DClass.java
+END
+DResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/dns/DResource.java
+END

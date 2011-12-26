@@ -60,7 +60,9 @@ import com.sesca.voip.ua.modules.CallModule;
 import com.sesca.voip.ua.modules.IMModule;
 import com.sesca.voip.ua.modules.commandJs;
 import com.sesca.voip.ua.modules.debugjs;
-
+import javax.net.stun.StunClient;
+import javax.net.stun.SharedSecret;
+import javax.net.stun.DiscoveryInfo;
 
 public class AppletUANG extends Applet implements RegisterAgentListener, TimerListener, PresenceAgentListener
 {
@@ -121,7 +123,11 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	private String targetURL = null;
 
 	private String tunnel_address = null;
+    
+    private String stun_server = null;
 
+    private int stun_port = 0;
+    
 	private String identity=null;
 	
 	private int tunnelPort = 0;
@@ -253,9 +259,30 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 			//uap.tunnelServer = conf.tunnelServer;
 
 			//sp = new SipProvider(null, 5060, protocols, null, proxyname, uap);
+           
+            
+            String used_ip = null;
+            int binded_port = Integer.parseInt(port);
+
+
+            // *** Using STUN NAT CHECK if requested
+            if (stun_server != null) {
+
+               SharedSecret secret = null;
+               debugjs.info("Staring STUN check width parameters " + stun_server + ":" + stun_port);
+               StunClient sc = new StunClient(stun_server,stun_port);
+               DiscoveryInfo info = sc.binding(secret);
+               used_ip =  info.getPublicIpAddress();
+               debugjs.debug("Found Public IP:" + used_ip);
+               binded_port = sc.mappedAddress.getPort();
+               debugjs.debug("Using binding on port:" + binded_port);
+
+            }
+            
+            
 			if (!uap.forcedTunneling)
 			{
-				sp = new SipProvider(null, Integer.parseInt(port), protocols, null, proxyname, uap);
+				sp = new SipProvider(used_ip, binded_port , protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				sp.setIdentity(identity);
@@ -323,7 +350,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 				sp = null;
 				debugjs.debug("Create new sip provider");
-				sp = new SipProvider(null, Integer.parseInt(port), protocols, null, proxyname, uap);
+				sp = new SipProvider(used_ip, binded_port, protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				try {
@@ -416,7 +443,11 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		String ft = getParameter("forceTunnel");
 		if (ft!=null && ft.toLowerCase().equals("true")) uap.forcedTunneling=true;
 		else uap.forcedTunneling=false;
-		
+
+        stun_server = getParameter("stun_server");
+        stun_port = Integer.parseInt(getParameter("stun_port"));
+
+
 		String pro = getParameter("allowOutsideProxyConnections");
 		if (pro!=null && pro.toLowerCase().equals("true")) uap.allowOutsideProxyConnections=true;
 		else uap.allowOutsideProxyConnections=false;

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/stun~svn/!svn/ver/42/trunk/src/javax/net/stun/Utils.java
+END
+DiscoveryInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/DiscoveryInfo.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/stun~svn/!svn/ver/42/trunk/src/javax/net/stun/Main.java
+END
+StunServerAddress.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stun~svn/!svn/ver/8/trunk/src/javax/net/stun/StunServerAddress.java
+END
+MessageAttribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/MessageAttribute.java
+END
+StunClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/StunClient.java
+END
+SharedSecret.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/SharedSecret.java
+END
+MessageHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/stun~svn/!svn/ver/44/trunk/src/javax/net/stun/MessageHeader.java
+END
