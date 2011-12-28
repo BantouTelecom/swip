@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/index.html" afterPath="$PROJECT_DIR$/swip/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/js/custom.js" afterPath="$PROJECT_DIR$/swip/js/custom.js" />
     </list>
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +68,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swip/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="689" column="48" selection-start="19562" selection-end="19562" vertical-scroll-proportion="0.58126724">
+            <state line="660" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="27.272728">
               <folding />
             </state>
           </provider>
@@ -688,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swip/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="689" column="48" selection-start="19562" selection-end="19562" vertical-scroll-proportion="0.58126724">
+        <state line="660" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="27.272728">
           <folding />
         </state>
       </provider>
