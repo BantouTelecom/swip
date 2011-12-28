@@ -83,6 +83,25 @@ function togglePresence(){
    $('#presencewindow').toggle();
 }
 
+
+function toggleConnState() {
+
+  if ( $('#presence_status').html() == 'Online') {
+
+     $('#presence_status').html('Offline');
+     $('#presence_led').attr('class','presence_led_off');
+
+  }
+
+  else {
+
+   $('#presence_status').html('Online');
+   $('#presence_led').attr('class','presence_led_on');
+
+  }
+
+}
+
 function statusBar(msg){
       if (document.getElementById("statusbar")) {
 

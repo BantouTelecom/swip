@@ -146,8 +146,9 @@
                       position:absolute;
                       left:50%;
                       margin-left:-102px;
-                      width:205px;
+                      width:200px;
                       top:150px;
+                      display:none;
 
                     }
 
@@ -184,9 +185,58 @@
                      color:white;
                      font-weight:bold;
                      border-top:0px;
+                     padding-bottom:7px;
+                     display:none;
 
                     }
 
+
+                    #presencestate {
+
+                    width:110px;
+                    height:24px;
+                    -moz-border-radius:10px;
+                    -webkit-border-radius:10px;
+                    background: rgba(150,150,150,0.7);
+
+                    overflow:hidden;
+
+
+                    }
+
+                    #presence_led {
+
+                       width:20px;
+                       height:20px;
+                       -moz-border-radius: 10px;
+                       -webkit-border-radius: 10px;
+                        margin-top:2px;
+                        margin-left:2px;
+                        float:left;
+
+
+                    }
+
+                    .presence_led_on {
+
+                       background:#00FF00;
+
+                    }
+
+
+                    .presence_led_off {
+
+                      background:#FF0000;
+
+                    }
+
+                    #presence_status {
+
+                      float:left;
+                      margin-top:5px;
+                      margin-left:5px;
+
+                    }
 
                     #presenceNote {
 
@@ -368,7 +418,9 @@
                     left:50%;
                     margin-left:-200px;
                     top:255px;
-
+                    color:white;
+                    font-weight:bold;
+                    font-size:22px;
 
                     }
 
@@ -436,6 +488,7 @@
                        left:50%;
                        margin-left:-225px;
                        top:150px;
+                       display:none;
                        
 
                      }
@@ -596,13 +649,23 @@
 
          <div style="padding:5px;padding-bottom:0px">
 
-         <form id="presenceform" name="pres" method="post" action="">
              Presence:
-             <select id="presenceState">
+
+             <div id="presencestate" onclick="toggleConnState();">
+
+                 <div id="presence_led" class="presence_led_on"></div>
+                 <div id="presence_status">Online</div>
+
+
+            </div>
+
+             <!--
+             <select id="presenceState_sel">
                  <option value="open">Open</option>
                  <option value="closed">Closed</option>
              </select>
              <br/>
+             -->
              Status:
 
              <div style="text-align:center">
@@ -610,45 +673,33 @@
 
              <button class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();">Update</button>
              </div>
-         </form>
-
       </div>
 
      </div>
-     
-
 
 
      <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
-    <param name="mayscript" value="true" />
+        <param name="mayscript" value="true" />
         <param name="scriptable" value="true" />
         <param name="callTo" value="" />
         <param name="username" value="" />
         <param name="password" value="" />
 
+        <param name="stun_server" value="77.72.169.160" />
+        <param name="stun_port" value="3478" />
         <param name="realm" value="iptel.org" />
         <param name="proxyname" value="iptel.org"/>
 
-
          <!--
-         <param name="realm" value="sip.ovh.net" />
-         <param name="proxyname" value="sip.ovh.net" />
-
-         -->
-
-         <param name="stun_server" value="77.72.169.160" />
-         <param name="stun_port" value="3478" />
-         
-         
+                 <param name="realm" value="sip.ovh.net" />
+                 <param name="proxyname" value="sip.ovh.net" />
+               -->
         <param name="port" value="5060" />
-        
-
-             <!-- <param name="tunnel" value="localhost:443" /> -->
-             <param id="codebaseUrl" name="codebaseUrl" value="" />
-                <!-- <param name="forceTunnel" value="true"/> -->
+        <!-- <param name="tunnel" value="localhost:443" /> -->
+        <param id="codebaseUrl" name="codebaseUrl" value="" />
+        <!-- <param name="forceTunnel" value="true"/> -->
 		<param name="privacy" value="false"/>		
-	    <param name="allowOutsideProxyConnections" value="true"/>				
-		
+	    <param name="allowOutsideProxyConnections" value="true"/>
     </applet>
     
 		<div id="signature"></div>
@@ -705,7 +756,7 @@
 
              <div id="loadstatus">Loading Swip Application..</div>
 
-             <img src="images/load.gif"/>
+             <img style="margin-top:10px" src="images/load.gif"/>
 
          </div>
      </div>

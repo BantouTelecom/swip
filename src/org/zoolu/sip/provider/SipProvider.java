@@ -159,6 +159,8 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 	/** Local SIP port */
 	int host_port = 0;
 
+    int rport_num = 0;
+
 	public boolean halted=false;
 	
 	/**
@@ -283,6 +285,20 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 		startTrasport();
 	}
 
+    public SipProvider(String via_addr,int rport, int port, String[] protocols, String ifaddr, String outbound_addr, UserAgentProfile uap)
+    {
+        // port=80;
+        // setOutboundProxy(new SocketAddress(outbound_proxy, port));
+        this.user_profile=uap;
+        this.outbound_addr = outbound_addr;
+        this.rport_num = rport;
+        init(via_addr, port, protocols, ifaddr);
+        initlog();
+        startTrasport();
+    }
+    
+    
+    
 	/**
 	 * Creates a new SipProvider. The SipProvider attributres are read from file.
 	 */

@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/Swip.jar" afterPath="$PROJECT_DIR$/swip/Swip.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java" afterPath="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/index.html" afterPath="$PROJECT_DIR$/swip/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/js/custom.js" afterPath="$PROJECT_DIR$/swip/js/custom.js" />
     </list>
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,46 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="uiie.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swip/js/uiie.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="49" selection-start="1553" selection-end="1555" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swip/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="632" column="13" selection-start="18046" selection-end="18046" vertical-scroll-proportion="0.41666666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SipProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="325" column="26" selection-start="10476" selection-end="10476" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViaHeader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/header/ViaHeader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="20" selection-start="2743" selection-end="2753" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseMessageFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="402" column="51" selection-start="18028" selection-end="18039" vertical-scroll-proportion="0.0">
+            <state line="689" column="48" selection-start="19562" selection-end="19562" vertical-scroll-proportion="0.58126724">
               <folding />
             </state>
           </provider>
@@ -116,10 +82,44 @@
       <file leaf-file-name="AppletUANG.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="33" selection-start="5850" selection-end="5850" vertical-scroll-proportion="-0.6">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="293" column="40" selection-start="7752" selection-end="7752" vertical-scroll-proportion="-8.76">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseMessageFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="488" column="37" selection-start="22023" selection-end="22023" vertical-scroll-proportion="-11.88">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SipStack.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="3" selection-start="1798" selection-end="1798" vertical-scroll-proportion="-9.48">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SipProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="164" column="22" selection-start="6331" selection-end="6331" vertical-scroll-proportion="-6.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViaHeader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/header/ViaHeader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="7" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +127,7 @@
       <file leaf-file-name="StunClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javax/net/stun/StunClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="518" column="55" selection-start="21769" selection-end="21769" vertical-scroll-proportion="-9.08">
+            <state line="518" column="55" selection-start="21769" selection-end="21769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +145,7 @@
       <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swip/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="33" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0">
+            <state line="131" column="4" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,9 +184,11 @@
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/modules/debugjs.java" />
         <option value="$PROJECT_DIR$/swip/js/uiie.js" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
-        <option value="$PROJECT_DIR$/swip/js/custom.js" />
-        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
         <option value="$PROJECT_DIR$/src/javax/net/stun/StunClient.java" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
+        <option value="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" />
+        <option value="$PROJECT_DIR$/swip/js/custom.js" />
+        <option value="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java" />
         <option value="$PROJECT_DIR$/swip/index.html" />
       </list>
     </option>
@@ -195,10 +197,10 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
+    <option name="x" value="-5" />
     <option name="y" value="29" />
-    <option name="width" value="1440" />
-    <option name="height" value="839" />
+    <option name="width" value="1450" />
+    <option name="height" value="847" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,8 +228,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -519,26 +521,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="29" width="1440" height="839" extended-state="0" />
+    <frame x="-5" y="29" width="1450" height="847" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32763532" sideWeight="0.4066092" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20461094" sideWeight="0.58176553" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32763532" sideWeight="0.5883621" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20461094" sideWeight="0.41316932" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.49753392" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34442836" sideWeight="0.5201729" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3441092" sideWeight="0.15527065" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34442836" sideWeight="0.2651297" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3441092" sideWeight="0.5071225" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32904148" sideWeight="0.43103448" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20461094" sideWeight="0.41316932" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -599,11 +601,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/call/CallListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="15" selection-start="3262" selection-end="3262" vertical-scroll-proportion="0.6209386" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/call/CallListenerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="181" column="15" selection-start="7512" selection-end="7512" vertical-scroll-proportion="0.31608135" />
@@ -634,19 +631,14 @@
         <state line="76" column="49" selection-start="1553" selection-end="1555" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="26" selection-start="10476" selection-end="10476" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/header/ViaHeader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="20" selection-start="2743" selection-end="2753" vertical-scroll-proportion="0.0" />
+        <state line="48" column="7" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/javax/net/stun/StunClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="51" selection-start="18028" selection-end="18039" vertical-scroll-proportion="0.0" />
+        <state line="518" column="55" selection-start="21769" selection-end="21769" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/CallModule.java">
@@ -656,7 +648,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swip/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="33" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0" />
+        <state line="131" column="4" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swip/js/blie.js">
@@ -666,23 +660,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="33" selection-start="5850" selection-end="5850" vertical-scroll-proportion="-0.6">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="293" column="40" selection-start="7752" selection-end="7752" vertical-scroll-proportion="-8.76">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/javax/net/stun/StunClient.java">
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="518" column="55" selection-start="21769" selection-end="21769" vertical-scroll-proportion="-9.08">
+        <state line="488" column="37" selection-start="22023" selection-end="22023" vertical-scroll-proportion="-11.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="22" selection-start="6331" selection-end="6331" vertical-scroll-proportion="-6.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/provider/SipStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="3" selection-start="1798" selection-end="1798" vertical-scroll-proportion="-9.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swip/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="632" column="13" selection-start="18046" selection-end="18046" vertical-scroll-proportion="0.41666666">
+        <state line="689" column="48" selection-start="19562" selection-end="19562" vertical-scroll-proportion="0.58126724">
           <folding />
         </state>
       </provider>

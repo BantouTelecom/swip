@@ -53,12 +53,8 @@ public class SipStack extends Configure
    // *********************** software release ***********************
 
    /** Release */
-   public static final String release="iDial applet";
-   //public static final String release="mjsip stack 1.6";
-   //public static final String release="phapi/eXosip/0.2.0";
-   /** Authors */
-   public static final String authors="Luca Veltri - University of Parma (Italy)";
 
+   public static final String release="SWIP Web Softphone/0.8.10";
 
    // ********************** static attributes ***********************
 

@@ -262,7 +262,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
            
             
             String used_ip = null;
-            int binded_port = Integer.parseInt(port);
+            int binded_port = 0;
 
 
             // *** Using STUN NAT CHECK if requested
@@ -282,7 +282,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
             
 			if (!uap.forcedTunneling)
 			{
-				sp = new SipProvider(used_ip, binded_port , protocols, null, proxyname, uap);
+				sp = new SipProvider(used_ip, Integer.parseInt(port) , protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				sp.setIdentity(identity);
@@ -350,7 +350,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 				sp = null;
 				debugjs.debug("Create new sip provider");
-				sp = new SipProvider(used_ip, binded_port, protocols, null, proxyname, uap);
+				sp = new SipProvider(used_ip, Integer.parseInt(port), protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				try {
