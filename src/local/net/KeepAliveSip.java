@@ -94,7 +94,7 @@ public class KeepAliveSip extends KeepAliveUdp
    public String toString()
    {  String str=null;
       if (sip_provider!=null)
-      {  str="sip:"+sip_provider.getViaAddress()+":"+sip_provider.getPort()+"-->"+target.toString();
+      {  str="sip:"+sip_provider.getViaAddress()+":"+sip_provider.getPortB()+"-->"+target.toString();
       }
       return str+" ("+delta_time+"ms)"; 
    }

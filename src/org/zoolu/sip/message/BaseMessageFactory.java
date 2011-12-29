@@ -76,7 +76,16 @@ public abstract class BaseMessageFactory
 	   Message req=new Message();
       //mandatory headers first (To, From, Via, Max-Forwards, Call-ID, CSeq):
       req.setRequestLine(new RequestLine(method,request_uri));
-      ViaHeader via=new ViaHeader(proto,via_addr,host_port);
+
+       ViaHeader via;
+      if (SipProvider.stat_rport_num != 0)   {
+       
+         via=new ViaHeader(proto,via_addr,SipProvider.stat_rport_num);
+      
+      }
+       
+      else via = new ViaHeader(proto,via_addr,host_port);
+       
       if (rport) via.setRport();
       if (branch==null) branch=SipProvider.pickBranch();
       via.setBranch(branch);
@@ -242,7 +251,7 @@ public abstract class BaseMessageFactory
 	 */
    public Message createRequest(SipProvider sip_provider, String method, NameAddress to, NameAddress from, String body)
    {  String contact_user=from.getAddress().getUserName();
-      NameAddress contact=new NameAddress(new SipURL(contact_user,sip_provider.getViaAddress(),sip_provider.getPort()));
+      NameAddress contact=new NameAddress(new SipURL(contact_user,sip_provider.getViaAddress(),sip_provider.getPortB()));
       setUaInfo(sip_provider);      
       return createRequest(sip_provider,method,to.getAddress(),to,from,contact,body);
    }

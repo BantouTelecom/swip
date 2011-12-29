@@ -187,7 +187,7 @@ public class InviteDialog extends Dialog implements TransactionClientListener, I
       NameAddress contact_url=null;
       if (contact!=null)
       {  if (contact.indexOf("sip:")>=0) contact_url=new NameAddress(contact);
-         else contact_url=new NameAddress(new SipURL(contact,sip_provider.getViaAddress(),sip_provider.getPort()));
+         else contact_url=new NameAddress(new SipURL(contact,sip_provider.getViaAddress(),sip_provider.getPortB()));
       }
       else contact_url=from_url;
       MessageFactory msgf = new MessageFactory();
@@ -242,7 +242,7 @@ public class InviteDialog extends Dialog implements TransactionClientListener, I
       if (contact!=null)
       {  NameAddress contact_url;
          if (contact.indexOf("sip:")>=0) contact_url=new NameAddress(contact);
-         else contact_url=new NameAddress(new SipURL(contact,sip_provider.getViaAddress(),sip_provider.getPort()));
+         else contact_url=new NameAddress(new SipURL(contact,sip_provider.getViaAddress(),sip_provider.getPortB()));
          invite.setContactHeader(new ContactHeader(contact_url));
       }
       reInvite(invite);

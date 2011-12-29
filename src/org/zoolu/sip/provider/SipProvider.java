@@ -144,6 +144,9 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 	 * active concurrently for capturing messages in PROMISQUE mode.
 	 */
 	public static final Identifier PROMISQUE = new Identifier("PROMISQUE");
+    
+    public static int stat_rport_num = 0;
+    
 
 	/** Minimum length for a valid SIP message. */
 	private static final int MIN_MESSAGE_LENGTH = 12;
@@ -285,6 +288,8 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 		startTrasport();
 	}
 
+    
+    //adds a new constructor to handle NAT / STUN
     public SipProvider(String via_addr,int rport, int port, String[] protocols, String ifaddr, String outbound_addr, UserAgentProfile uap)
     {
         // port=80;
@@ -292,6 +297,7 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
         this.user_profile=uap;
         this.outbound_addr = outbound_addr;
         this.rport_num = rport;
+        stat_rport_num = rport;
         init(via_addr, port, protocols, ifaddr);
         initlog();
         startTrasport();
@@ -692,6 +698,13 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 		return host_port;
 	}
 
+    public int getPortB() {
+
+        if ( rport_num != 0 ) return rport_num;
+        else return host_port;
+    }
+    
+    
 	/**
 	 * Whether binding the sip provider to all interfaces or only on the
 	 * specified host address.
@@ -1352,9 +1365,13 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 				String src_addr = msg.getRemoteAddress();
 				int src_port = msg.getRemotePort();
 				String via_addr = vh.getHost();
+
 				int via_port = vh.getPort();
-				if(via_port <= 0)
+				if(via_port<= 0)
 					via_port = SipStack.default_port;
+
+
+
 
 				if(!via_addr.equals(src_addr))
 				{
@@ -1620,7 +1637,7 @@ public class SipProvider implements Configurable, TransportListener, TcpServerLi
 	{
 		StringBuffer sb = new StringBuffer();
 		sb.append(msg.getRequestLine().getAddress().toString());
-		sb.append(getViaAddress() + getPort());
+		sb.append(getViaAddress() + getPortB());
 		ViaHeader top_via = msg.getViaHeader();
 		if(top_via.hasBranch())
 			sb.append(top_via.getBranch());

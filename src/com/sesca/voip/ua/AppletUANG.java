@@ -262,7 +262,7 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
            
             
             String used_ip = null;
-            int binded_port = 0;
+            int bound_port = 0;
 
 
             // *** Using STUN NAT CHECK if requested
@@ -274,23 +274,32 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
                DiscoveryInfo info = sc.binding(secret);
                used_ip =  info.getPublicIpAddress();
                debugjs.debug("Found Public IP:" + used_ip);
-               binded_port = sc.mappedAddress.getPort();
-               debugjs.debug("Using binding on port:" + binded_port);
+               bound_port = sc.mappedAddress.getPort();
+               debugjs.debug("Using binding on port:" + bound_port);
 
             }
             
             
 			if (!uap.forcedTunneling)
 			{
-				sp = new SipProvider(used_ip, Integer.parseInt(port) , protocols, null, proxyname, uap);
+
+
+                if (bound_port != 0 && bound_port != Integer.parseInt(port)) {
+
+                    sp = new SipProvider(used_ip,bound_port,Integer.parseInt(port) , protocols, null, proxyname, uap);
+
+                }
+				else sp = new SipProvider(used_ip, Integer.parseInt(port) , protocols, null, proxyname, uap);
+
+
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				sp.setIdentity(identity);
 				sp.addSipProviderPromisqueListener(commJs);
 				if (authName==null || authName.length()==0)
-					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, realm, password, this);
+					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, realm, password, this);
 				else
-					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, authName, realm, password, this);
+					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), authName, realm, password, this);
 				cm = new CallModule();
 				conf.freeCall = true;
 				conf.allowIM = true;
@@ -307,9 +316,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				oa.receive();
 
 				if (authName==null || authName.length()==0)
-					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, realm, password, this );
+					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, realm, password, this );
 				else
-					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, authName, realm, password, this );
+					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, authName, realm, password, this );
 				
 				
 				//testProxy();
@@ -350,7 +359,15 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 				sp = null;
 				debugjs.debug("Create new sip provider");
-				sp = new SipProvider(used_ip, Integer.parseInt(port), protocols, null, proxyname, uap);
+
+                //STUN binding working along with Tunneling ??
+                if (bound_port != 0 && bound_port != Integer.parseInt(port)) {
+
+                    sp = new SipProvider(used_ip,bound_port, Integer.parseInt(port), protocols, null, proxyname, uap);
+
+                }
+
+                else sp = new SipProvider(used_ip, Integer.parseInt(port), protocols, null, proxyname, uap);
 				sp.setOutboundProxy(new SocketAddress(proxyname, Integer.parseInt(port)));
 				debugjs.debug("Proxy="+sp.getOutboundProxy().toString());
 				try {
@@ -363,9 +380,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				sp.setIdentity(identity);		
 				sp.addSipProviderPromisqueListener(commJs);
 				if (authName==null || authName.length()==0)
-					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, realm, password, this);
+					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, realm, password, this);
 				else
-					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, authName, realm, password, this);
+					ra = new RegisterAgent(sp, targetURL, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), authName, realm, password, this);
 				cm = new CallModule();
 				conf.freeCall = true;
 				conf.allowIM = true;
@@ -383,9 +400,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 				
 
 				if (authName==null || authName.length()==0)
-					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, realm, password, this );
+					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, realm, password, this );
 				else
-					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + port, username, authName, realm, password, this );
+					pa = new PresenceAgent(sp, "sip:" + username + "@" + sp.getViaAddress() + ":" + sp.getPortB(), username, authName, realm, password, this );
 
 				
 				
