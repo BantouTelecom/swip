@@ -28,16 +28,19 @@
                  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
                  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
                  <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-		 <script type="text/javascript" src="js/uiie.js"></script>
-		 <script type="text/javascript" src="js/blie.js"></script>
-		 <script type="text/javascript" src="js/custom.js"></script>
+		         <script type="text/javascript" src="js/uiie.js"></script>
+		         <script type="text/javascript" src="js/blie.js"></script>
+		         <script type="text/javascript" src="js/custom.js"></script>
           
                    <script type="text/javascript">
 
                    function stickToBottom() {
 
                       var spos = $(window).height()-20;
+                      var dpos = $(window).height()-120;
+
                       $('#statusbar').offset({top: spos, left: 0});
+                      $('#swip_debug').offset({top: dpos, left: 0});
 
                    }
 
@@ -46,290 +49,167 @@
                    </script>
 
                  <style type="text/css">
+                                    body {
+
+                                       font-family:Arial,Helvetica,Sans-Serif;
+                                       font-size:12px;
+                                       background-image: url(images/deg_2.png);
+                                       background-repeat: no-repeat;
+                                       background-color:#c4c5c3;
+                                       background-position: center 50px;
+                                       border:0px;
+                                       padding:0px;
+                                       margin:0px;
+                                       overflow:hidden;
 
-                    body {
- 
-                      font-family:Arial,Helvetica,Sans-Serif;
-                      font-size:12px;
-                      background-image: url(images/deg_2.png);
-                      background-repeat: no-repeat;
-                      background-color:#c4c5c3;
-                      background-position: 0px 50px;
-                      border:0px;
-                      padding:0px;
-                      margin:0px;
-                      overflow:hidden;
+                                     }
 
-                    }
 
-                    input {
+                                     #callwindow {
 
-                      width:200px;
-                      border: 1px solid #99FF32;
+                                       text-align:center;
+                                       width:400px;
+                                       height:100px;
+                                       -moz-border-radius: 7px;
+                                       -webkit-border-radius: 7px;
+                                       border: 2px solid white;
+                                       background: rgba(0,0,0,0.6);
+                                       position:absolute;
+                                       left:50%;
+                                       margin-left:-200px;
+                                       top:245px;
+                                       display:none;
 
-                    }
+                                     }
 
-                    #callto {
+
+                                     #callstatus {
 
-                       width:163px;
-                       height:27px;
-                       -moz-border-radius:5px;
-                       background: rgba(150,150,150,0.7);
-                       font-weight:bold;
-                       color:white;
-                       border:0px;
-                       font-size:13px;
-                       margin-top:4px;
+                                          font-size: 22px;
+                                          font-weight: bold;
+                                          color:white;
+                                          padding-bottom:15px;
+                                     }
 
 
-                    }
+                                     #loadwindow {
 
-                    .callbtn {
+                                     text-align:center;
+                                     width:400px;
+                                     height:80px;
+                                     -moz-border-radius: 7px;
+                                     -webkit-border-radius: 7px;
+                                     border: 2px solid white;
+                                     background: rgba(0,0,0,0.6);
+                                     position:absolute;
+                                     left:50%;
+                                     margin-left:-200px;
+                                     top:255px;
+                                     color:white;
+                                     font-weight:bold;
+                                     font-size:22px;
 
-                      background-image:url(images/swip_sprites.png);
-                      background-color:transparent;
-                      background-position: -5px -254px;
-                      width:165px;
-                      height:42px;
-                      border:0px;
-                      font-size:15px;
-                      font-weight:bold;
-                      color:white;
 
-                    }
+                                     }
 
-                    .callbtn_over {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-color:transparent;
-                      background-position: -5px -210px;
-                      width:165px;
-                      height:42px;
-                      border:0px;
-                      font-size:15px;
-                      font-weight:bold;
-                      color:white;
+                                     #aboutwindow {
 
-                     }
+                                     background: rgba(255,255,255,0.4);
+                                     -moz-border-radius: 7px;
+                                     -webkit-border-radius: 7px;
+                                     width: 400px;
+                                     height:300px;
+                                     position:absolute;
+                                     left:50%;
+                                     margin-left:-200px;
+                                     top:50%;
+                                     margin-top:-150px;
+                                     display:none;
 
 
+                                     }
 
-		    #keypadwindow {
+                                     #swip_debug {
 
-                      border: 2px solid white;
-                      padding-top:15px;
-                      -moz-border-radius: 7px 7px 7px 7px;
-                      -webkit-border-radius: 0px 0px 7px 7px;
-                      background: rgba(0,0,0,0.6);
-                      position:absolute;
-                      left:190px;
-                      top: 80px;
+                                       background: rgba(255,255,255,0.4);
+                                       height:100px;
+                                       width:100%;
+                                       position:absolute;
+                                       //display:none;
 
-                    }
+                                     }
 
+                                     #statusbar {
 
+                                       height:20px;
+                                       background:#333333;
+                                       color:white;
+                                       position:absolute;
+                                       left:0px;
+                                       top:0px;
+                                       z-index: 101;
+                                       width:100%;
 
-                    #toolbarz {
+                                     }
 
-                      padding-top:3px;
-                      width:150px;
-                      background: rgba(0,0,0,0.7);
-                      -moz-border-radius:7px 7px 0px 0px;
-                      border: 2px solid #c4c5c3;
-                      border-bottom: 0px;
-                      position:absolute;
-                      left:200px;
-                      top:49px;
 
+                                     .hangbtn {
 
-                    }
+                                      background: url(images/swip_sprites.png) ;
+                                      background-position: -5px -110px;
+                                      width:127px;
+                                      border:0px;
+                                      height:31px;
+                                      color:white;
 
-                    .phonebtn {
+                                    }
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -5px -5px;
-                      width:24px;
-                      height:23px;
-                    
-                      
-                    }
+                                    .hangbtn_over {
 
-                    .phonebtn_over {
+                                      background: url(images/swip_sprites.png) ;
+                                      background-position: -5px -76px;
+                                      width:127px;
+                                      border:0px;
+                                      height:31px;
+                                      color:white;
+                                    }
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -48px -5px;
-                      width:24px;
-                      height:23px;
-               
+                                     .btn {
 
+                                      background: url(images/swip_sprites.png) ;
+                                      background-position: -5px -176px;
+                                      width:110px;
+                                      border:0px;
+                                      height:27px;
+                                      color:white;
 
-                     }
+                                    }
 
+                                    .btn_over {
 
-                      .chatbtn {
+                                      background: url(images/swip_sprites.png) ;
+                                      background-position: -5px -148px;
+                                      width:110px;
+                                      border:0px;
+                                      height:27px;
+                                      color:white;
+                                    }
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -5px -40px;
-                      width:33px;
-                      height:26px;
-                  
 
 
 
-                    }
+                                    #head {
 
+                                     background:white;
+                                     height: 80px;
+                                     box-shadow: 0 0 5px #888;
+                                     width:110%;
+                                     position:relative;
+                                     top:-10px;
+                                     left:-13px;
 
-                    .chatbtn_over {
-
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -48px -40px;
-                      width:33px;
-                      height:26px;
-
-
-
-                     }
-
-
-
-
-
-
-
-                    #keypadwindow td {
-
-                       text-align:center;
-
-
-                    }
-
-
-                    .numkey {
-
-                      border: 1px solid white;
-                      -moz-border-radius: 3px;
-                      -webkit-border-radius: 3px;
-                      background: rgba(0,0,0,0.6);
-                      padding:6px;
-                      padding-top:2px;
-                      padding-bottom:2px;
-                      color:white;
-
-                    }
-
-
-                    .numkey_over {
-
-                      border: 1px solid white;
-                      -moz-border-radius: 3px;
-                      -webkit-border-radius: 3px;
-                      background: rgba(153,255,50,0.6);
-                      padding:6px;
-                      padding-top:2px;
-                      padding-bottom:2px;
-                      color:white;
-
-                    }
-
-
-
-                    #login {
-
-
-                       background: rgba(255,255,255,0.4);
-                       font-weight: bold;
-                       -moz-border-radius: 5px;                       
-                       -webkit-border-radius: 5px;
-
-                       width: 298px;
-                       height:130px;
-                       position:absolute;
-                       left:50%;
-                       margin-left:-147px;
-                       top:230px;
-                       
-
-                    }
-
- 
-                    #immessagewindow {
-
-                       background: rgba(255,255,255,0.4);
-                       font-weight: bold;
-                       -moz-border-radius: 5px;
-                       -webkit-border-radius: 5px;
-                       width:450px;
-                       position:absolute;
-                       left:50%;
-                       margin-left:-225px;
-                       top:200px;
-                       
-
-                     }
-
-
-                    #registerbuttonText {
-
-                      float:right;
-                      position:relative;
-                      left:-15px;
-
-                    }
-
-
-                    #statusbar {
-
-                      height:20px;
-                      background:#333333;
-                      color:white;
-                      position:absolute;
-                      left:0px;
-                      top:0px;
-                      z-index: 101; 
-                      width:100%;
- 
-                    }
-
-                    .btn {
-
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -176px;
-                     width:110px;
-                     border:0px;
-                     height:27px;
-                     color:white;
-
-                   }
-
-                   .btn_over {
-
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -148px;
-                     width:110px;
-                     border:0px;
-                     height:27px;
-                     color:white;
-
-
-
-                   }
-
-
-
-
-                   #head {
-
-                    background:white;
-                    height: 80px;
-                    box-shadow: 0 0 5px #888;
-                    width:110%;
-                    position:relative;
-                    top:-10px;
-                    left:-13px;
-
-                   }
-
-
+                                    }
                  </style>
 
     </head>
@@ -342,35 +222,67 @@
      </div>
 
 
+    <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
+               <param name="mayscript" value="true" />
+               <param name="scriptable" value="true" />
+               <param name="callTo" value="<?= $_GET['phone'] ?>" />
+               <param name="username" value="" />
+               <param name="password" value="" />
 
+               <param name="stun_server" value="77.72.169.160" />
+               <param name="stun_port" value="3478" />
+               <param name="realm" value="iptel.org" />
+               <param name="proxyname" value="iptel.org"/>
 
-     <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
-    <param name="mayscript" value="true" />
-        <param name="scriptable" value="true" />
-        <param name="callTo" value="<?= $phone ?>" />
-        <param name="username" value="" />
-        <param name="password" value="" />
-        <param name="realm" value="sip.idial.fi" />
-        <param name="port" value="5060" />
-        <param name="proxyname" value="test.idialserver.com" />
-        <param name="tunnel" value="194.79.17.140:443" />
-		<param name="codebaseUrl" value="file:///C:/SIP Applet/" />
-		<param name="forceTunnel" value="true"/>
-		<param name="privacy" value="false"/>		
-	    <param name="allowOutsideProxyConnections" value="true"/>	
+               <!--
+               <param name="realm" value="sip.ovh.net" />
+               <param name="proxyname" value="sip.ovh.net" />
+               -->
+               <param name="port" value="5060" />
+               <!-- <param name="tunnel" value="localhost:443" /> -->
+               <param id="codebaseUrl" name="codebaseUrl" value="" />
+               <!-- <param name="forceTunnel" value="true"/> -->
+       		   <param name="privacy" value="false"/>
+       	       <param name="allowOutsideProxyConnections" value="true"/>
     </applet>
-			<div id="login">
-                              <div style="padding:15px;">
-                                <div style="margin-bottom:20px">
-				Username:
-				<input id="username" type="text" tabindex="1"/></div>
-				Password:
-				<input id="password" type="password" tabindex="3"/>
-                                </div>
-				<div id="registerbuttontext" >
-				<button class="btn" onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="preCustomRegister(); register();">Login</button>
-				</div>				
-			</div>
+
+	    <div id="loadwindow">
+
+                 <div style="padding:15px;">
+
+                     <div id="loadstatus">Loading Swip Application..</div>
+
+                     <img style="margin-top:10px" src="images/load.gif"/>
+
+                 </div>
+             </div>
+
+
+        <div id="callwindow">
+
+           <div style="padding:15px;">
+
+                 <div id="callstatus">Calling 00339122331..</div>
+
+                     <button class="hangbtn"
+                      onmouseover="$(this).attr('class','hangbtn_over');"
+                      onmouseout="$(this).attr('class','hangbtn');" type="button"
+                      onclick="preCustomEndCall(); endCall();">Hang up</button>
+
+           </div>
+        </div>
+
+
+
+
+         <div id="swip_debug">
+
+                           <b>Debug</b>
+                           <div id="swip_debug_ct" style="overflow-y: scroll;height:80px;margin-top:4px">
+                           </div>
+
+         </div>
+
 
 		<div id="statusbar">
 		</div>

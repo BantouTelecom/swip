@@ -651,7 +651,7 @@
 
              Presence:
 
-             <div id="presencestate" onclick="toggleConnState();">
+             <div id="presencestate" style="cursor:pointer" onclick="toggleConnState();" title="Click to toggle your presence status">
 
                  <div id="presence_led" class="presence_led_on"></div>
                  <div id="presence_status">Online</div>
@@ -664,7 +664,7 @@
              <div style="text-align:center">
              <textarea id="presenceNote"></textarea>
 
-             <button class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();">Update</button>
+             <button class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();" title="Update your status">Update</button>
              </div>
       </div>
 
@@ -760,16 +760,15 @@
 
                   <div style="padding:15px;">
 
-                 <div id="callstatus">Calling 00339122331..</div>
+                    <div id="callstatus">Calling 00339122331..</div>
 
-                 <button class="hangbtn"
+                       <button class="hangbtn"
                          onmouseover="$(this).attr('class','hangbtn_over');"
                          onmouseout="$(this).attr('class','hangbtn');" type="button"
                          onclick="preCustomEndCall(); endCall();">Hang up</button>
 
-
+                    </div>
                 </div>
-                 </div>
 
 		<!-- div for IM-message -->
 		<div id="immessagewindow">
@@ -848,7 +847,7 @@
                                    </tr>
                                    <tr>
                                    <td colspan="3">
-                                      <button class="callbtn" onmouseover="$(this).attr('class','callbtn_over');" onmouseout="$(this).attr('class','callbtn');" type="button" onclick="preCustomStartCall(); startCall();">Call</button>
+                                      <button class="callbtn" onmouseover="$(this).attr('class','callbtn_over');" onmouseout="$(this).attr('class','callbtn');" type="button" onclick="preCustomStartCall(); startCall();" title="Give a call" >Call</button>
                                    </td>
                                    </tr>
 
@@ -869,7 +868,7 @@
             <button id="subsbtn" class="subsbtn"
                     onmouseover="$(this).attr('class','subsbtn_over');"
                     onmouseout="$(this).attr('class','subsbtn');" type="button"
-                    onclick="toggleSubscribe();"></button>
+                    onclick="toggleSubscribe();" title="Toggle Subscription Window"></button>
 
 
             <div id="subct" style="display:none;padding:15px;margin-top:-255px;">
