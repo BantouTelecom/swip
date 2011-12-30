@@ -65,6 +65,15 @@ function refuseCall()
 	
 }
 
+
+function autoreg() {
+
+  document.getElementById("PHDial").jsSetUsername(document.getElementById("username_param").value);
+  document.getElementById("PHDial").jsSetPassword(document.getElementById("password_param").value);
+  document.getElementById("PHDial").set_event(101);
+
+}
+
 function register()
 {
 	document.getElementById("PHDial").jsSetUsername(document.getElementById("username").value);

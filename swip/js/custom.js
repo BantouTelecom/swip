@@ -117,6 +117,13 @@ function customOnRegistrationSuccess(s){
 	//statusBar("Ready. Using transport: "+s);
 	statusBar("Ready.");
 
+	//auto dial just after registering, if callto_param has been set.
+	if ( $('#callTo_param').val() != "" ) {
+
+       setCallTo(document.getElementById("callTo_param").value);
+
+	}
+
 }
 function customOnRegistrationFailure(x){
 	//statusBar(strings[22].item);
@@ -130,7 +137,19 @@ function customOnLoaded()
 {
 	//statusBar("Waiting for user action");
 	$('#loadwindow').hide();
-	$('#login').show();
+
+    //start registering directly, mainly  for embedded version
+	if ($('#username_param').val() != "" && $('#password_param').val() != "" ) {
+
+       statusBar("Starting register..");
+	   autoreg();
+	}
+
+	else {
+
+
+	   $('#login').show();
+	}
 
 
 }

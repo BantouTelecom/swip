@@ -411,7 +411,7 @@ public class UserAgent extends CallListenerAdapter
 		debugjs.debug("UA is listening");
 		changeStatus(UA_IDLE);
 		call = new ExtendedCall(sip_provider, user_profile.from_url, user_profile.contact_url, user_profile.username, user_profile.realm, user_profile.passwd, this);
-		debugjs.paranoia("       call="+call);
+		debugjs.paranoia("Listen|call="+call);
 		call.listen();
 		
 	}

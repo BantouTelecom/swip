@@ -559,7 +559,10 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 	public void set_event(int event)
 	{
-		this.eventFromJavascript = event;
+
+        this.eventFromJavascript = event;
+        debugjs.paranoia("set_event() called w/ event " + this.eventFromJavascript);
+
 	}
 
     
@@ -747,18 +750,28 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	{
 		registered = true;
 		commJs.onReady(protocol);
+
 		//commJs.sendMessageToHTML("lang_ready");
 		//commJs.activate_dial_button();
 		ua.listen();
+
+        debugjs.hysteria("User Agent Listen() method OK");
+
 		//pa.subscribeInDialog(600,"juha.niemi@sip.idial.fi");
 		//pa.publish("open", "hei", 600);
 		
 		//if (!callingIsPossible) commJs.commandJavaScript("callingNotPossible()");
 
-		//Audiosettings
-		
-		
-		checkAudio();
+		//Audiosetting
+        //* HAD TO DISABLE checkAudio() FOR ESTABLISHING DIRECT CALLS ...WEIRD !! */
+		//checkAudio();
+        //debugjs.hysteria("Audio Check OK");
+
+
+        //we put the autocall inside the applet because it doesn't seem to work through commjs , may be moved back to js later
+        if (callTo != "") handle_event(102);
+        else debugjs.hysteria("POST Register CallTo is empty");
+
 	}
 
 	private void checkAudio()
@@ -821,7 +834,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 		catch (LineUnavailableException e)
 		{
 			// TODO Auto-generated catch block
+            debugjs.error("Problem with Audio configuration, please verify it");
 			e.printStackTrace();
+
 		}
 
 	}
@@ -1011,6 +1026,9 @@ class checkJavaScriptEvent extends Thread
 
 			if(applet.eventFromJavascript != 0)
 			{
+                
+                debugjs.paranoia("eventFromJavascript changed state: " + applet.eventFromJavascript);
+                
 				if(applet.eventFromJavascript != 999)
 					applet.handle_event(applet.eventFromJavascript);
 				applet.eventFromJavascript = 0;

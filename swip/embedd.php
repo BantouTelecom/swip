@@ -225,9 +225,9 @@
     <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
                <param name="mayscript" value="true" />
                <param name="scriptable" value="true" />
-               <param name="callTo" value="<?= $_GET['phone'] ?>" />
-               <param name="username" value="" />
-               <param name="password" value="" />
+               <param id="callTo_param" name="callTo" value="<?= $_GET['phone'] ?>" />
+               <param id="username_param" name="username" value="wintermew" />
+               <param id="password_param" name="password" value="0852456" />
 
                <param name="stun_server" value="77.72.169.160" />
                <param name="stun_port" value="3478" />
@@ -289,6 +289,7 @@
 
                 <script type="text/javascript">
                    stickToBottom();
+
                 </script>
        </div> 
 	</body>
