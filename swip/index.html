@@ -1,943 +1,1047 @@
 ﻿<html>
-	<head>
-		 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
-		 <meta http-equiv="cache-control" content="no-cache" />
-                 <meta http-equiv="pragma" content="no-cache" />
-                 <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-                 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-                 <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-		 <script type="text/javascript" src="js/uiie.js"></script>
-		 <script type="text/javascript" src="js/blie.js"></script>
-		 <script type="text/javascript" src="js/custom.js"></script>
-          
-                   <script type="text/javascript">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="js/uiie.js"></script>
+<script type="text/javascript" src="js/blie.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
 
-                   function stickToBottom() {
+<script type="text/javascript">
 
-                      var spos = $(window).height()-20;
-                      var dpos = $(window).height()-120;
+    function stickToBottom() {
 
-                      $('#statusbar').offset({top: spos, left: 0});
-                      $('#swip_debug').offset({top: dpos, left: 0});
+    var spos = $(window).height()-20;
+    var dpos = $(window).height()-120;
 
-                   }
+    $('#statusbar').offset({top: spos, left: 0});
+    $('#swip_debug').offset({top: dpos, left: 0});
 
-                   $(window).resize(function() { stickToBottom() });
+    }
 
-                   </script>
+    $(window).resize(function() { stickToBottom() });
 
-                 <style type="text/css">
+</script>
 
-                    body {
- 
-                      font-family:Arial,Helvetica,Sans-Serif;
-                      font-size:12px;
-                      background-image: url(images/deg_2.png);
-                      background-repeat: no-repeat;
-                      background-color:#c4c5c3;
-                      background-position: center 50px;
-                      border:0px;
-                      padding:0px;
-                      margin:0px;
-                      overflow:hidden;
+<style type="text/css">
 
-                    }
+body {
 
-                    input,textarea {
+font-family:Arial,Helvetica,Sans-Serif;
+font-size:12px;
+background-image: url(images/deg_2.png);
+background-repeat: no-repeat;
+background-color:#c4c5c3;
+background-position: center 50px;
+border:0px;
+padding:0px;
+margin:0px;
+overflow:hidden;
 
-                      width:200px;
-                      border: 1px solid #99FF32;
+}
 
-                    }
+input,textarea {
 
-                    #callto {
+width:200px;
+border: 1px solid #99FF32;
 
-                       width:163px;
-                       height:27px;
-                       -moz-border-radius:5px;
-                       -webkit-border-radius:5px;
-                       background: rgba(150,150,150,0.7);
-                       font-weight:bold;
-                       color:white;
-                       border:0px;
-                       font-size:13px;
-                       margin-top:4px;
+}
 
+#callto {
 
-                    }
+width:163px;
+height:27px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+background: rgba(150,150,150,0.7);
+font-weight:bold;
+color:white;
+border:0px;
+font-size:13px;
+margin-top:4px;
 
-                    #presentityTable {
 
-                      width:170px;
-                      height:220px;
-                      -moz-border-radius:5px;
-                      -webkit-border-radius:5px;
-                      background: rgba(150,150,150,0.7);
+}
 
+#presentityTable {
 
+width:170px;
+height:220px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+background: rgba(150,150,150,0.7);
 
-                    }
 
-                    #presentity {
+}
 
-                    width:170px;
-                    -moz-border-radius:10px;
-                    -webkit-border-radius:10px;
-                     height:25px;
-                    background: rgba(150,150,150,0.7);
-                    border:0px;
-                    color:white;
-                    padding-left:4px;
+#presentity {
 
-                    }
+width:170px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+height:25px;
+background: rgba(150,150,150,0.7);
+border:0px;
+color:white;
+padding-left:4px;
 
+}
 
-                    #sublist {
 
-                       background:transparent;
-                       width:170px;
-                       border:0px;
-                       height:205px;
-                       margin-top:7px;
-                       color:white;
+#sublist {
 
+background:transparent;
+width:170px;
+border:0px;
+height:205px;
+margin-top:7px;
+color:white;
 
-                    }
 
+}
 
 
-                    .callbtn {
+.callbtn {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-color:transparent;
-                      background-position: -5px -254px;
-                      width:165px;
-                      height:42px;
-                      border:0px;
-                      font-size:15px;
-                      font-weight:bold;
-                      color:white;
+background-image:url(images/swip_sprites.png);
+background-color:transparent;
+background-position: -5px -254px;
+width:165px;
+height:42px;
+border:0px;
+font-size:15px;
+font-weight:bold;
+color:white;
 
-                    }
+}
 
-                    .callbtn_over {
+.callbtn_over {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-color:transparent;
-                      background-position: -5px -210px;
-                      width:165px;
-                      height:42px;
-                      border:0px;
-                      font-size:15px;
-                      font-weight:bold;
-                      color:white;
+background-image:url(images/swip_sprites.png);
+background-color:transparent;
+background-position: -5px -210px;
+width:165px;
+height:42px;
+border:0px;
+font-size:15px;
+font-weight:bold;
+color:white;
 
-                     }
+}
 
 
+#keypadwindow {
 
-		    #keypadwindow {
+border: 2px solid white;
+padding-top:15px;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+background: rgba(0,0,0,0.6);
+position:absolute;
+left:50%;
+margin-left:-102px;
+width:200px;
+top:150px;
+display:none;
 
-                      border: 2px solid white;
-                      padding-top:15px;
-                      -moz-border-radius: 7px;
-                      -webkit-border-radius: 7px;
-                      background: rgba(0,0,0,0.6);
-                      position:absolute;
-                      left:50%;
-                      margin-left:-102px;
-                      width:200px;
-                      top:150px;
-                      display:none;
+}
 
-                    }
 
+#toolbarz {
 
+padding-top:3px;
+width:125px;
+background: rgba(0,0,0,0.7);
+-moz-border-radius:7px 7px 0px 0px;
+border: 2px solid #c4c5c3;
+border-bottom: 0px;
+position:absolute;
+left:200px;
+top:49px;
+display:none;
 
-                    #toolbarz {
 
-                      padding-top:3px;
-                      width:125px;
-                      background: rgba(0,0,0,0.7);
-                      -moz-border-radius:7px 7px 0px 0px;
-                      border: 2px solid #c4c5c3;
-                      border-bottom: 0px;
-                      position:absolute;
-                      left:200px;
-                      top:49px;
-                      display:none;
+}
 
 
-                    }
+#presencewindow {
 
+width:125px;
+background: #4d4d4d;
+-moz-border-radius:0px 0px 7px 7px;
+-webkit-border-radius:0px 0px 7px 7px;
+border: 2px solid white;
+border-top: 0px;
+position:absolute;
+left:187px;
+top:70px;
+color:white;
+font-weight:bold;
+border-top:0px;
+padding-bottom:7px;
+display:none;
 
-                    #presencewindow {
+}
 
-                    width:125px;
-                    background: #4d4d4d;
-                    -moz-border-radius:0px 0px 7px 7px;
-                    -webkit-border-radius:0px 0px 7px 7px;
-                    border: 2px solid white;
-                    border-top: 0px;
-                    position:absolute;
-                    left:187px;
-                    top:70px;
-                     color:white;
-                     font-weight:bold;
-                     border-top:0px;
-                     padding-bottom:7px;
-                     display:none;
 
-                    }
+#presencestate {
 
+width:110px;
+height:24px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+background: rgba(150,150,150,0.7);
 
-                    #presencestate {
+overflow:hidden;
 
-                    width:110px;
-                    height:24px;
-                    -moz-border-radius:10px;
-                    -webkit-border-radius:10px;
-                    background: rgba(150,150,150,0.7);
 
-                    overflow:hidden;
+}
 
+#presence_led {
 
-                    }
+width:20px;
+height:20px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+margin-top:2px;
+margin-left:2px;
+float:left;
 
-                    #presence_led {
 
-                       width:20px;
-                       height:20px;
-                       -moz-border-radius: 10px;
-                       -webkit-border-radius: 10px;
-                        margin-top:2px;
-                        margin-left:2px;
-                        float:left;
+}
 
+.presence_led_on {
 
-                    }
+background:#00FF00;
 
-                    .presence_led_on {
+}
 
-                       background:#00FF00;
 
-                    }
+.presence_led_off {
 
+background:#FF0000;
 
-                    .presence_led_off {
+}
 
-                      background:#FF0000;
+#presence_status {
 
-                    }
+float:left;
+margin-top:5px;
+margin-left:5px;
 
-                    #presence_status {
+}
 
-                      float:left;
-                      margin-top:5px;
-                      margin-left:5px;
+#presenceNote {
 
-                    }
+width:107px;
+height:40px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+background: rgba(150,150,150,0.7);
+color:white;
+font-size:10px;
+margin-bottom:5px;
 
-                    #presenceNote {
 
-                      width:107px;
-                      height:40px;
-                     -moz-border-radius:5px;
-                     -webkit-border-radius:5px;
-                     background: rgba(150,150,150,0.7);
-                     color:white;
-                     font-size:10px;
-                     margin-bottom:5px;
+}
 
 
-                    }
+.phonebtn {
 
+background-image:url(images/swip_sprites.png);
+background-position: -5px -5px;
+width:24px;
+height:23px;
 
 
-                    .phonebtn {
+}
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -5px -5px;
-                      width:24px;
-                      height:23px;
-                    
-                      
-                    }
+.phonebtn_over {
 
-                    .phonebtn_over {
+background-image:url(images/swip_sprites.png);
+background-position: -48px -5px;
+width:24px;
+height:23px;
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -48px -5px;
-                      width:24px;
-                      height:23px;
-               
 
+}
 
-                     }
 
+.chatbtn {
 
-                    .chatbtn {
+background-image:url(images/swip_sprites.png);
+background-position: -5px -40px;
+width:33px;
+height:26px;
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -5px -40px;
-                      width:33px;
-                      height:26px;
-                
-                    }
-                    .chatbtn_over {
+}
+.chatbtn_over {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -48px -40px;
-                      width:33px;
-                      height:26px;
-                     }
+background-image:url(images/swip_sprites.png);
+background-position: -48px -40px;
+width:33px;
+height:26px;
+}
 
-                     .presbtn {
+.presbtn {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -96px -39px;
-                      width:18px;
-                      height:24px;
+background-image:url(images/swip_sprites.png);
+background-position: -96px -39px;
+width:18px;
+height:24px;
 
-                    }
-                    .presbtn_over {
+}
+.presbtn_over {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -144px -39px;
-                      width:18px;
-                      height:24px;
-                     }
+background-image:url(images/swip_sprites.png);
+background-position: -144px -39px;
+width:18px;
+height:24px;
+}
 
 
-		     .aboutbtn {
+.aboutbtn {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -96px -4px;
-                      width:18px;
-                      height:24px;
+background-image:url(images/swip_sprites.png);
+background-position: -96px -4px;
+width:18px;
+height:24px;
 
-                    }
-                    .aboutbtn_over {
+}
+.aboutbtn_over {
 
-                      background-image:url(images/swip_sprites.png);
-                      background-position: -144px -4px;
-                      width:18px;
-                      height:24px;
-                     }
+background-image:url(images/swip_sprites.png);
+background-position: -144px -4px;
+width:18px;
+height:24px;
+}
 
 
+#keypadwindow td {
 
+text-align:center;
 
-                    #keypadwindow td {
 
-                       text-align:center;
+}
 
 
-                    }
+.numkey {
 
+border: 1px solid white;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+background: rgba(0,0,0,0.6);
+padding:6px;
+padding-top:2px;
+padding-bottom:2px;
+color:white;
 
-                    .numkey {
+}
 
-                      border: 1px solid white;
-                      -moz-border-radius: 3px;
-                      -webkit-border-radius: 3px;
-                      background: rgba(0,0,0,0.6);
-                      padding:6px;
-                      padding-top:2px;
-                      padding-bottom:2px;
-                      color:white;
 
-                    }
+.numkey_over {
 
+border: 1px solid white;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+background: rgba(153,255,50,0.6);
+padding:6px;
+padding-top:2px;
+padding-bottom:2px;
+color:white;
 
-                    .numkey_over {
+}
 
-                      border: 1px solid white;
-                      -moz-border-radius: 3px;
-                      -webkit-border-radius: 3px;
-                      background: rgba(153,255,50,0.6);
-                      padding:6px;
-                      padding-top:2px;
-                      padding-bottom:2px;
-                      color:white;
 
-                    }
+#subscribewindow {
 
+width:0px;
+height:380px;
+-moz-border-radius: 7px 0px 0px 7px;
+-webkit-border-radius: 7px 0px 0px 7px;
+border: 2px solid white;
+border-right:0px;
+background: rgba(0,0,0,0.6);
+position:absolute;
+left:100%;
+margin-left:0px;
+top:50%;
+margin-top:-185px;
+display:none;
+overflow:visible;
+color:white;
+font-weight:bold;
+}
 
 
+#callwindow {
 
-                    #subscribewindow {
+text-align:center;
+width:400px;
+height:100px;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border: 2px solid white;
+background: rgba(0,0,0,0.6);
+position:absolute;
+left:50%;
+margin-left:-200px;
+top:245px;
+display:none;
 
-                    width:0px;
-                    height:380px;
-                    -moz-border-radius: 7px 0px 0px 7px;
-                    -webkit-border-radius: 7px 0px 0px 7px;
-                    border: 2px solid white;
-                    border-right:0px;
-                    background: rgba(0,0,0,0.6);
-                    position:absolute;
-                    left:100%;
-                    margin-left:0px;
-                    top:50%;
-                    margin-top:-185px;
-                    display:none;
-                    overflow:visible;
-                    color:white;
-                    font-weight:bold;
-                    }
+}
 
 
-                    #callwindow {
+#loadwindow {
 
-                      text-align:center;
-                      width:400px;
-                      height:100px;
-                      -moz-border-radius: 7px;
-                      -webkit-border-radius: 7px;
-                      border: 2px solid white;
-                      background: rgba(0,0,0,0.6);
-                      position:absolute;
-                      left:50%;
-                      margin-left:-200px;
-                      top:245px;
-                      display:none;
+text-align:center;
+width:400px;
+height:80px;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border: 2px solid white;
+background: rgba(0,0,0,0.6);
+position:absolute;
+left:50%;
+margin-left:-200px;
+top:255px;
+color:white;
+font-weight:bold;
+font-size:22px;
 
-                    }
+}
 
 
-                    #loadwindow {
+#callstatus {
 
-                    text-align:center;
-                    width:400px;
-                    height:80px;
-                    -moz-border-radius: 7px;
-                    -webkit-border-radius: 7px;
-                    border: 2px solid white;
-                    background: rgba(0,0,0,0.6);
-                    position:absolute;
-                    left:50%;
-                    margin-left:-200px;
-                    top:255px;
-                    color:white;
-                    font-weight:bold;
-                    font-size:22px;
+font-size: 22px;
+font-weight: bold;
+color:white;
+padding-bottom:15px;
+}
 
-                    }
 
+#login {
 
 
-                    #callstatus {
+background: rgba(255,255,255,0.4);
+font-weight: bold;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+width: 298px;
 
-                      font-size: 22px;
-                      font-weight: bold;
-                      color:white;
-                      padding-bottom:15px;
-                    }
+position:absolute;
+left:50%;
+margin-left:-147px;
+top:230px;
+display:none;
 
 
-                    #login {
+}
 
 
-                       background: rgba(255,255,255,0.4);
-                       font-weight: bold;
-                       -moz-border-radius: 5px;                       
-                       -webkit-border-radius: 5px;
+#login select {
 
-                       width: 298px;
-                       height:130px;
-                       position:absolute;
-                       left:50%;
-                       margin-left:-147px;
-                       top:230px;
-                       display:none;
-                       
+width:200px;
+border: 1px solid #99FF32;
 
-                    }
 
+}
 
+#login table tr td {
 
-                    #aboutwindow {
+padding-bottom: 6px;
 
 
+}
 
-                    background: rgba(255,255,255,0.4);
-                    -moz-border-radius: 7px;
-                    -webkit-border-radius: 7px;
-                    width: 400px;
-                    height:300px;
-                    position:absolute;
-                    left:50%;
-                    margin-left:-200px;
-                    top:50%;
-                    margin-top:-150px;
-                    display:none;
 
+#aboutwindow {
 
-                    }
 
+background: rgba(255,255,255,0.4);
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+width: 400px;
+height:300px;
+position:absolute;
+left:50%;
+margin-left:-200px;
+top:50%;
+margin-top:-150px;
+display:none;
 
- 
-                    #immessagewindow {
 
-                       background: rgba(255,255,255,0.4);
-                       font-weight: bold;
-                       -moz-border-radius: 5px;
-                       -webkit-border-radius: 5px;
-                       width:450px;
-                       position:absolute;
-                       left:50%;
-                       margin-left:-225px;
-                       top:150px;
-                       display:none;
-                       
+}
 
-                     }
 
+#immessagewindow {
 
-                    #registerbuttonText {
+background: rgba(255,255,255,0.4);
+font-weight: bold;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+width:450px;
+position:absolute;
+left:50%;
+margin-left:-225px;
+top:150px;
+display:none;
 
-                      float:right;
-                      position:relative;
-                      left:-15px;
 
-                    }
+}
 
 
-                    #swip_debug {
-		      
-                      background: rgba(255,255,255,0.4);
-                      height:100px;
-                      width:100%;
-                      position:absolute;
-                      //display:none;
-                      
-                    }
+#registerbuttonText {
 
-                    #statusbar {
+float:right;
+position:relative;
+left:-2px;
+padding-bottom:15px;
+}
 
-                      height:20px;
-                      background:#333333;
-                      color:white;
-                      position:absolute;
-                      left:0px;
-                      top:0px;
-                      z-index: 101; 
-                      width:100%;
- 
-                    }
 
+#swip_debug {
 
-                    .hangbtn {
+background: rgba(255,255,255,0.4);
+height:100px;
+width:100%;
+position:absolute;
+//display:none;
 
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -110px;
-                     width:127px;
-                     border:0px;
-                     height:31px;
-                     color:white;
+}
 
-                   }
+#statusbar {
 
-                   .hangbtn_over {
+height:20px;
+background:#333333;
+color:white;
+position:absolute;
+left:0px;
+top:0px;
+z-index: 101;
+width:100%;
 
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -76px;
-                     width:127px;
-                     border:0px;
-                     height:31px;
-                     color:white;
-                   }
+}
 
 
-                    .subsbtn {
+.hangbtn {
 
-                    background: url(images/swip_sprites.png) ;
-                    background-position: -174px -70px;
-                    width:33px;
-                    border:0px;
-                    height:137px;
-                    color:white;
-                    margin-left:-33px;
-                    margin-top: 120px;
+background: url(images/swip_sprites.png) ;
+background-position: -5px -110px;
+width:127px;
+border:0px;
+height:31px;
+color:white;
 
-                    }
+}
 
-                    .subsbtn_over {
+.hangbtn_over {
 
-                    background: url(images/swip_sprites.png) ;
-                    background-position: -137px -70px;
-                    width:33px;
-                    border:0px;
-                    height:137px;
-                    color:white;
-                    margin-left:-33px;
-                    margin-top: 120px;
+background: url(images/swip_sprites.png) ;
+background-position: -5px -76px;
+width:127px;
+border:0px;
+height:31px;
+color:white;
+}
 
-                    }
 
+.subsbtn {
 
+background: url(images/swip_sprites.png) ;
+background-position: -174px -70px;
+width:33px;
+border:0px;
+height:137px;
+color:white;
+margin-left:-33px;
+margin-top: 120px;
 
+}
 
+.subsbtn_over {
 
+background: url(images/swip_sprites.png) ;
+background-position: -137px -70px;
+width:33px;
+border:0px;
+height:137px;
+color:white;
+margin-left:-33px;
+margin-top: 120px;
 
+}
 
-                    .btn {
 
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -176px;
-                     width:110px;
-                     border:0px;
-                     height:27px;
-                     color:white;
+.btn {
 
-                   }
+background: url(images/swip_sprites.png) ;
+background-position: -5px -176px;
+width:110px;
+border:0px;
+height:27px;
+color:white;
 
-                   .btn_over {
+}
 
-                     background: url(images/swip_sprites.png) ;
-                     background-position: -5px -148px;
-                     width:110px;
-                     border:0px;
-                     height:27px;
-                     color:white;
-                   }
+.btn_over {
 
+background: url(images/swip_sprites.png) ;
+background-position: -5px -148px;
+width:110px;
+border:0px;
+height:27px;
+color:white;
+}
 
 
+#head {
 
-                   #head {
+background:white;
+height: 80px;
+box-shadow: 0 0 5px #888;
+width:110%;
+position:relative;
+top:-10px;
+left:-13px;
 
-                    background:white;
-                    height: 80px;
-                    box-shadow: 0 0 5px #888;
-                    width:110%;
-                    position:relative;
-                    top:-10px;
-                    left:-13px;
+}
 
-                   }
 
+</style>
 
-                 </style>
+</head>
+<body onload="initialize();" onunload="logOff();">
 
-    </head>
-    <body onload="initialize();" onunload="logOff();">
+<div id="head">
 
-     <div id="head">
+    <img src="images/swiplogo.png" style="margin-left:30px;margin-top:20px">
 
-       <img src="images/swiplogo.png" style="margin-left:30px;margin-top:20px">
 
+    <div id="toolbarz">
 
+        <div style="float:left;margin-left:7px;" onmouseover="$(this).attr('class','phonebtn_over');"
+             onmouseout="$(this).attr('class','phonebtn');" class="phonebtn" onclick="togglePad();"
+             title="Give a Call"></div>
 
-       <div id="toolbarz">
+        <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');"
+             onmouseout="$(this).attr('class','chatbtn');" class="chatbtn" onclick="toggleIM();"
+             title="Open Chat Window"></div>
 
-       <div style="float:left;margin-left:7px;" onmouseover="$(this).attr('class','phonebtn_over');" onmouseout="$(this).attr('class','phonebtn');"  class="phonebtn" onclick="togglePad();" title="Give a Call"></div>
+        <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','presbtn_over');"
+             onmouseout="$(this).attr('class','presbtn');" class="presbtn" onclick="togglePresence();"
+             title="Presence and Status"></div>
 
-       <div style="float:left;margin-left:4px" onmouseover="$(this).attr('class','chatbtn_over');" onmouseout="$(this).attr('class','chatbtn');"  class="chatbtn" onclick="toggleIM();" title="Open Chat Window"></div>
+        <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','aboutbtn_over');"
+             onmouseout="$(this).attr('class','aboutbtn');" class="aboutbtn" onclick="toggleAbout();"
+             title="About swip"></div>
 
-       <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','presbtn_over');" onmouseout="$(this).attr('class','presbtn');"  class="presbtn" onclick="togglePresence();" title="Presence and Status"></div>
+    </div>
 
-        <div style="float:left;margin-left:6px" onmouseover="$(this).attr('class','aboutbtn_over');" onmouseout="$(this).attr('class','aboutbtn');"  class="aboutbtn" onclick="toggleAbout();" title="About swip"></div>
 
-      </div>
+</div>
 
 
-     </div>
+<div id="presencewindow">
 
+    <div style="padding:5px;padding-bottom:0px">
 
-     <div id="presencewindow">
+        Presence:
 
-         <div style="padding:5px;padding-bottom:0px">
+        <div id="presencestate" style="cursor:pointer" onclick="toggleConnState();"
+             title="Click to toggle your presence status">
 
-             Presence:
+            <div id="presence_led" class="presence_led_on"></div>
+            <div id="presence_status">Online</div>
 
-             <div id="presencestate" style="cursor:pointer" onclick="toggleConnState();" title="Click to toggle your presence status">
 
-                 <div id="presence_led" class="presence_led_on"></div>
-                 <div id="presence_status">Online</div>
+        </div>
 
+        Status:
 
-            </div>
+        <div style="text-align:center">
+            <textarea id="presenceNote"></textarea>
 
-             Status:
+            <button class="btn" onmouseover="$(this).attr('class','btn_over');"
+                    onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();"
+                    title="Update your status">Update
+            </button>
+        </div>
+    </div>
 
-             <div style="text-align:center">
-             <textarea id="presenceNote"></textarea>
+</div>
 
-             <button class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="customPublish();" title="Update your status">Update</button>
-             </div>
-      </div>
 
-     </div>
+<applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
+    <param name="mayscript" value="true"/>
+    <param name="scriptable" value="true"/>
+    <param id="callTo_param" name="callTo" value="1000"/>
+    <param id="username_param" name="username" value=""/>
+    <param id="password_param" name="password" value=""/>
 
+    <param name="stun_server" value="77.72.169.160"/>
+    <param name="stun_port" value="3478"/>
+    <param name="realm" value="iptel.org"/>
+    <param name="proxyname" value="iptel.org"/>
 
-     <applet id="PHDial" archive="Swip.jar" code="com.sesca.voip.ua.AppletUANG.class" width="0" height="0">
-        <param name="mayscript" value="true" />
-        <param name="scriptable" value="true" />
-        <param id="callTo_param" name="callTo" value="1000" />
-        <param id="username_param" name="username" value="" />
-        <param id="password_param" name="password" value="" />
+    <!--
+      <param name="realm" value="sip.ovh.net" />
+      <param name="proxyname" value="sip.ovh.net" />
+    -->
+    <param name="port" value="5060"/>
+    <!-- <param name="tunnel" value="localhost:443" /> -->
+    <param id="codebaseUrl" name="codebaseUrl" value=""/>
+    <!-- <param name="forceTunnel" value="true"/> -->
+    <param name="privacy" value="false"/>
+    <param name="allowOutsideProxyConnections" value="true"/>
+</applet>
 
-        <param name="stun_server" value="77.72.169.160" />
-        <param name="stun_port" value="3478" />
-        <param name="realm" value="iptel.org" />
-        <param name="proxyname" value="iptel.org"/>
+<div id="signature"></div>
+<br/>
 
-         <!--
-                 <param name="realm" value="sip.ovh.net" />
-                 <param name="proxyname" value="sip.ovh.net" />
-               -->
-        <param name="port" value="5060" />
-        <!-- <param name="tunnel" value="localhost:443" /> -->
-        <param id="codebaseUrl" name="codebaseUrl" value="" />
-        <!-- <param name="forceTunnel" value="true"/> -->
-		<param name="privacy" value="false"/>		
-	    <param name="allowOutsideProxyConnections" value="true"/>
-    </applet>
-    
-		<div id="signature"></div>
-		<br/>
+<div id="aboutwindow">
 
-            <div id="aboutwindow">
+    <div style="padding:15px">
 
-                <div style="padding:15px">
+        <img src="images/swiplogo.png">
 
-                <img src="images/swiplogo.png">
+        <div style="margin-top:20px">
+            Version: 0.8.10<br/><br/>
+            Swip is a web-based SIP client, released under the GPL V2 License.
+            Original credits go to Risto Känsäkoski and Antti Alho from sesca.<br/><br/>
+            You can find the swip source code at: <br/><br/><a href="http://github.com/digination/swip">
+            http://github.com/digination/swip
+        </a>.<br/><br/> Use it, copy it, customize it, knowledge belongs to everybody !<br/><br/>
 
-                <div style="margin-top:20px">
-                Version: 0.8.10<br/><br/>
-                Swip is a web-based SIP client, released under the GPL V2 License.
-                Original credits go to Risto Känsäkoski and Antti Alho from sesca.<br/><br/>
-                You can find the swip source code at: <br/><br/><a href="http://github.com/digination/swip">
-                http://github.com/digination/swip
-                </a>.<br/><br/> Use it, copy it, customize it, knowledge belongs to everybody !<br/><br/>
+            Datalove from Paris,<br/>
+            Wintermew ~~====:)<br/>
 
-                 Datalove from Paris,<br/>
-                 Wintermew ~~====:)<br/>
+        </div>
 
-                </div>
 
+    </div>
+</div>
 
-                </div>
-            </div>
 
+<div id="login">
+    <div style="padding:15px;">
 
-			<div id="login">
-                              <div style="padding:15px;">
-                                <div style="margin-bottom:20px">
-				Username:
-				<input id="username" type="text" tabindex="1"/></div>
-				Password:
-				<input id="password" type="password" tabindex="3" onkeydown="if (event.keyCode==13) register();"/>
-                                </div>
-				<div id="registerbuttontext" >
-				<button class="btn" onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');" type="button" onclick="register();">Login</button>
-				</div>				
-			</div>
 
-                        <script type="text/javascript">
-               
-                           $('#login').draggable();
-                
-                        </script>
+        <table>
 
 
+            <!-- ** ENABLE THIS FOR MULTIPLANS FEATURE
+          <tr>
 
-     <div id="loadwindow">
+           <td style="font-size:11px;font-weight:bold;" >Plan:</td>
 
-         <div style="padding:15px;">
+            <td>
+               <select id="realmsel" class="">
 
-             <div id="loadstatus">Loading Swip Application..</div>
+                 <option value="sip.ovh.net">OVH
+                 <option value="sip.free.fr">Freephonie
+                 <option value="iptel.org">Iptel
+                 <option value="sip.ekiga.net">Ekiga
 
-             <img style="margin-top:10px" src="images/load.gif"/>
+                </select>
+            </td>
 
-         </div>
-     </div>
+          </tr>
+            -->
 
+            <tr>
 
+                <td style="font-size:11px;font-weight:bold">Username:</td>
 
-                <div id="callwindow">
+                <td><input id="username" type="text" tabindex="1"/></td>
 
-                  <div style="padding:15px;">
+            </tr>
+            <tr>
+                <td style="font-size:11px;font-weight:bold">Password:</td>
 
-                    <div id="callstatus">Calling 00339122331..</div>
+                <td><input id="password" type="password" tabindex="3" onkeydown="if (event.keyCode==13) register();"/>
+                </td>
 
-                       <button class="hangbtn"
-                         onmouseover="$(this).attr('class','hangbtn_over');"
-                         onmouseout="$(this).attr('class','hangbtn');" type="button"
-                         onclick="preCustomEndCall(); endCall();">Hang up</button>
+            </tr>
 
-                    </div>
-                </div>
 
-		<!-- div for IM-message -->
-		<div id="immessagewindow">
+        </table>
 
-                        <div style="position:relative;left:15px;top:5px"><b>Chat</b></div> 
 
-                        <div style="padding:15px">
+        <div id="registerbuttontext">
+            <button class="btn" onmouseover="$(this).attr('class','btn_over');"
+                    onmouseout="$(this).attr('class','btn');" type="button" onclick="register();">Login
+            </button>
+        </div>
+    </div>
 
+</div>
 
-			<form id="immessageform" name="mail" method="post" action="">
-				<table width="300" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td>
-							<div id="immessages" style="width: 420px; height: 150px; overflow-y: scroll;
+<script type="text/javascript">
+
+    $('#login').draggable();
+
+</script>
+
+
+<div id="loadwindow">
+
+    <div style="padding:15px;">
+
+        <div id="loadstatus">Loading Swip Application..</div>
+
+        <img style="margin-top:10px" src="images/load.gif"/>
+
+    </div>
+</div>
+
+
+<div id="callwindow">
+
+    <div style="padding:15px;">
+
+        <div id="callstatus">Calling 00339122331..</div>
+
+        <button class="hangbtn"
+                onmouseover="$(this).attr('class','hangbtn_over');"
+                onmouseout="$(this).attr('class','hangbtn');" type="button"
+                onclick="preCustomEndCall(); endCall();">Hang up
+        </button>
+
+    </div>
+</div>
+
+<!-- div for IM-message -->
+<div id="immessagewindow">
+
+    <div style="position:relative;left:15px;top:5px"><b>Chat</b></div>
+
+    <div style="padding:15px">
+
+
+        <form id="immessageform" name="mail" method="post" action="">
+            <table width="300" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <div id="immessages" style="width: 420px; height: 150px; overflow-y: scroll;
 								 scrollbar-arrow-color: blue; scrollbar- face-color: #e7e7e7;
 								 scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888;background:white;border:1px solid #333333">
-						    </div>
-						</td>
-					</tr>
-					<tr>
-						<td id="typingStateField" align="left" valign="top">
-							&nbsp;
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<textarea id="imMessageArea" name="message" cols="40" rows="4" maxlength="250" style="width:420px;border: 1px solid #90FF32"></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td>
-
-							<input style="float:right;margin-top:15px;" class="btn"  onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');"     id="sendIMButton" type="submit" name="Submit" value="Send" onclick="onIMSend(); return false;" />
-						</td>
-					</tr>
-				</table>
-			</form>
-                   </div>
-		</div>
-		<!-- /div for IM-message -->
-                <script type="text/javascript">
-                    $('#immessagewindow').draggable();
-                </script>
-
-		<!-- div for keypad -->
-		<div id="keypadwindow">
-			<form id="keypadform" name="pad" method="post" action="">
-				<table width="200" border="0" cellpadding="3" cellspacing="0">
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(1);">1</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(2);">2</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(3);">3</button></td>						
-					</tr>
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(4);">4</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(5);">5</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(6);">6</button></td>						
-					</tr>
-					<tr>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(7);">7</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(8);">8</button></td>
-						<td><button class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(9);">9</button></td>						
-					</tr>
-					<tr>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(10);">*&nbsp;</button></td>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(0);">0</button></td>
-						<td><button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');" onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(11);">#</button></td>						
-					</tr>
-                                   </form>
-                                   <tr>
-                                   <td colspan="3">
-
-                                      <input id="callto" type="text">
-                                   </td>
-                                        
-                                   </tr>
-                                   <tr>
-                                   <td colspan="3">
-                                      <button class="callbtn" onmouseover="$(this).attr('class','callbtn_over');" onmouseout="$(this).attr('class','callbtn');" type="button" onclick="preCustomStartCall(); startCall();" title="Give a call" >Call</button>
-                                   </td>
-                                   </tr>
-
-				</table>
-                   
-
-		</div>
-		<!-- /div for keypad -->
-
-     <script type="text/javascript">
-
-         $('#keypadwindow').draggable();
-
-     </script>
-
-		<div id="subscribewindow">
-
-            <button id="subsbtn" class="subsbtn"
-                    onmouseover="$(this).attr('class','subsbtn_over');"
-                    onmouseout="$(this).attr('class','subsbtn');" type="button"
-                    onclick="toggleSubscribe();" title="Toggle Subscription Window"></button>
-
-
-            <div id="subct" style="display:none;padding:15px;margin-top:-255px;">
-
-
-                        Current subscriptions:
-
-                         <div style="text-align:center">
-
-                        <div id="presentityTable">
-
-                            <select id="sublist" size="10"></select>
-
                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="typingStateField" align="left" valign="top">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="imMessageArea" name="message" cols="40" rows="4" maxlength="250"
+                                  style="width:420px;border: 1px solid #90FF32"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
 
-                         </div>
+                        <input style="float:right;margin-top:15px;" class="btn"
+                               onmouseover="$(this).attr('class','btn_over');" onmouseout="$(this).attr('class','btn');"
+                               id="sendIMButton" type="submit" name="Submit" value="Send"
+                               onclick="onIMSend(); return false;"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- /div for IM-message -->
+<script type="text/javascript">
+    $('#immessagewindow').draggable();
+</script>
 
-                        <div style="text-align:right">
-                        <button style="margin-top:5px;" type="button" class="hangbtn"
-                        onmouseover="$(this).attr('class','hangbtn_over');"
-                        onmouseout="$(this).attr('class','hangbtn');"
-                        onclick="customUnSubscribe();">Unsubscribe</button><br/>
-                        </div>
+<!-- div for keypad -->
+<div id="keypadwindow">
+    <form id="keypadform" name="pad" method="post" action="">
+        <table width="200" border="0" cellpadding="3" cellspacing="0">
+            <tr>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(1);">1
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(2);">2
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(3);">3
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(4);">4
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(5);">5
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(6);">6
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(7);">7
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(8);">8
+                    </button>
+                </td>
+                <td>
+                    <button class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" type="button" onclick="DTMFButton(9);">9
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(10);">*&nbsp;</button>
+                </td>
+                <td>
+                    <button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(0);">0
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="numkey" onmouseover="$(this).attr('class','numkey_over');"
+                            onmouseout="$(this).attr('class','numkey');" onclick="DTMFButton(11);">#
+                    </button>
+                </td>
+            </tr>
+    </form>
+    <tr>
+        <td colspan="3">
 
-                        <div style="height:10px;"></div>
+            <input id="callto" type="text">
+        </td>
 
-						Add Subscription:
+    </tr>
+    <tr>
+        <td colspan="3">
+            <button class="callbtn" onmouseover="$(this).attr('class','callbtn_over');"
+                    onmouseout="$(this).attr('class','callbtn');" type="button"
+                    onclick="preCustomStartCall(); startCall();" title="Give a call">Call
+            </button>
+        </td>
+    </tr>
 
-                        <div style="text-align:center">
-
-						<input id="presentity" type="text" >
-
-                        </div>
-
-                <div style="text-align:right">
-                <button style="margin-top:5px" type="button" class="btn"
-                        onmouseover="$(this).attr('class','btn_over');"
-                        onmouseout="$(this).attr('class','btn');"
-                        onclick="customSubscribe();">Subscribe</button>
-                </div>
+    </table>
 
 
+</div>
+<!-- /div for keypad -->
+
+<script type="text/javascript">
+
+    $('#keypadwindow').draggable();
+
+</script>
+
+<div id="subscribewindow">
+
+    <button id="subsbtn" class="subsbtn"
+            onmouseover="$(this).attr('class','subsbtn_over');"
+            onmouseout="$(this).attr('class','subsbtn');" type="button"
+            onclick="toggleSubscribe();" title="Toggle Subscription Window"></button>
+
+
+    <div id="subct" style="display:none;padding:15px;margin-top:-255px;">
+
+
+        Current subscriptions:
+
+        <div style="text-align:center">
+
+            <div id="presentityTable">
+
+                <select id="sublist" size="10"></select>
 
             </div>
-            <!--  /div for subct-->
 
-		</div>
-		<!-- /div for subscriptions -->
+        </div>
 
-                <div id="swip_debug">
+        <div style="text-align:right">
+            <button style="margin-top:5px;" type="button" class="hangbtn"
+                    onmouseover="$(this).attr('class','hangbtn_over');"
+                    onmouseout="$(this).attr('class','hangbtn');"
+                    onclick="customUnSubscribe();">Unsubscribe
+            </button>
+            <br/>
+        </div>
 
-                   <b>Debug</b>
-                   <div id="swip_debug_ct" style="overflow-y: scroll;height:80px;margin-top:4px">
-                   </div>
+        <div style="height:10px;"></div>
 
-                </div>
-		<div id="statusbar">
-		</div>
+        Add Subscription:
 
-                <script type="text/javascript">
+        <div style="text-align:center">
 
-                   stickToBottom();
+            <input id="presentity" type="text">
 
-                </script>
+        </div>
+
+        <div style="text-align:right">
+            <button style="margin-top:5px" type="button" class="btn"
+                    onmouseover="$(this).attr('class','btn_over');"
+                    onmouseout="$(this).attr('class','btn');"
+                    onclick="customSubscribe();">Subscribe
+            </button>
+        </div>
 
 
-      <div id="footer"></div>
+    </div>
+    <!--  /div for subct-->
+
+</div>
+<!-- /div for subscriptions -->
+
+<div id="swip_debug">
+
+    <b>Debug</b>
+
+    <div id="swip_debug_ct" style="overflow-y: scroll;height:80px;margin-top:4px">
+    </div>
+
+</div>
+<div id="statusbar">
+</div>
+
+<script type="text/javascript">
+
+    stickToBottom();
+
+</script>
+
+
+     
+<div id="footer"></div>
     </div>
-    <div id="noscript"></div>
-	</body>
+   
+<div id="noscript"></div>
+</body>
 </html>
 
