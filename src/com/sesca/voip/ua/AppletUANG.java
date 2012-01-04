@@ -103,7 +103,8 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	
 	private String protocol="";
 	public String callTo = null;
-
+    private String autocall = null;
+    
 	private String username = null;
 //	private boolean usernameIsSet = false;
 	private String password = null;
@@ -447,6 +448,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 	private void config(boolean firstTry)
 	{
 		callTo = getParameter("callTo");
+        autocall = getParameter("autocall");
+        debugjs.hysteria("autocal:" + autocall);
+        
 		if (username==null || password.length()==0) username = getParameter("username");
 		firstname = getParameter("firstname");
 		lastname = getParameter("lastname");
@@ -769,8 +773,9 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 
 
         //we put the autocall inside the applet because it doesn't seem to work through commjs , may be moved back to js later
-        if (callTo != "") handle_event(102);
-        else debugjs.hysteria("POST Register CallTo is empty");
+        if (autocall.equalsIgnoreCase("true")) handle_event(102);
+        else debugjs.hysteria("autocall not enabled( autocal:" + autocall + ")");
+
 
 	}
 

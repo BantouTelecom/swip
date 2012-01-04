@@ -76,6 +76,15 @@ function autoreg() {
 
 function register()
 {
+
+    if ( $('#realmsel').val() != null) {
+
+       document.getElementById("PHDial").jsSetRealm($('#realmsel').val());
+       document.getElementById("PHDial").jsSetSipProxy($('#realmsel').val());
+
+    }
+
+
 	document.getElementById("PHDial").jsSetUsername(document.getElementById("username").value);
 	document.getElementById("PHDial").jsSetPassword(document.getElementById("password").value);
 	document.getElementById("PHDial").set_event(101);
@@ -120,7 +129,16 @@ function removeHTMLTags(message)
 */
 function DTMFButton(number)
 {
+
+    var str_repr;
+
+    if (number == 10) str_repr = '*';
+    else if (number == 11) str_repr = '#';
+    else str_repr = number;
+
+    $('#callto').val($('#callto').val() + str_repr);
 	document.getElementById("PHDial").handleKeyPadEvent(number);
+
 }
 function dialingPageDeactivate(){document.getElementById("PHDial").set_event(999);}//Not used but must be defined
 

@@ -7,8 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69142578-a51f-42c7-ac91-a53575f16563" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/Swip.jar" afterPath="$PROJECT_DIR$/swip/Swip.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" afterPath="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/index.html" afterPath="$PROJECT_DIR$/swip/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/js/custom.js" afterPath="$PROJECT_DIR$/swip/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swip/js/uiie.js" afterPath="$PROJECT_DIR$/swip/js/uiie.js" />
     </list>
     <ignored path="Swip.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,64 +71,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AudioTranscoder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PCMACodec.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMACodec.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PCMUCodec.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PCMUCodec4.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="59" selection-start="7009" selection-end="7009" vertical-scroll-proportion="-8.68">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_multirealms.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swip/index_multirealms.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="427" selection-end="427" vertical-scroll-proportion="-23.62745">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PCMUCodec3.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AudioDestination.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/AudioDestination.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,7 +92,52 @@
       <file leaf-file-name="RtpFileSender.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/RtpFileSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="13" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0">
+            <state line="49" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swip/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="680" column="41" selection-start="10622" selection-end="10622" vertical-scroll-proportion="-4.591837">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swip/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="102" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-2.84">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uiie.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swip/js/uiie.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="9" selection-start="873" selection-end="873" vertical-scroll-proportion="-5.32">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppletUANG.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="499" column="28" selection-start="13898" selection-end="13898" vertical-scroll-proportion="-11.4">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAgent.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1308" column="31" selection-start="39208" selection-end="39208" vertical-scroll-proportion="0.43396226">
               <folding />
             </state>
           </provider>
@@ -176,23 +168,19 @@
         <option value="$PROJECT_DIR$/src/org/zoolu/sip/provider/SipProvider.java" />
         <option value="$PROJECT_DIR$/src/org/zoolu/sip/message/BaseMessageFactory.java" />
         <option value="$PROJECT_DIR$/swip/embedd.php" />
+        <option value="$PROJECT_DIR$/swip/index_multirealms.html" />
         <option value="$PROJECT_DIR$/swip/js/uiie.js" />
         <option value="$PROJECT_DIR$/swip/js/custom.js" />
-        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
         <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java" />
         <option value="$PROJECT_DIR$/swip/index.html" />
-        <option value="$PROJECT_DIR$/swip/index_multirealms.html" />
+        <option value="$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java" />
       </list>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="#JAVA_INTERNAL" />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="97" />
-    <option name="y" value="564" />
-    <option name="width" value="1680" />
-    <option name="height" value="1002" />
+    <option name="y" value="29" />
+    <option name="width" value="1440" />
+    <option name="height" value="842" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -220,7 +208,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,6 +250,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swip" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -288,6 +293,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,26 +488,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="564" width="1680" height="1002" extended-state="0" />
+    <frame x="0" y="29" width="1440" height="842" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293979" sideWeight="0.8380717" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.79913914" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293979" sideWeight="0.15760198" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1994302" sideWeight="0.64634144" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1994302" sideWeight="0.348637" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.49753392" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34301606" sideWeight="0.25265643" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34146342" sideWeight="0.23219374" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34301606" sideWeight="0.40968123" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34146342" sideWeight="0.55840456" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20070839" sideWeight="0.37206426" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -562,120 +568,94 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/dialog/ExtendedInviteDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="20" selection-start="6769" selection-end="6776" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/zoolu/sip/dialog/InviteDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="25" selection-start="5781" selection-end="5781" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swip/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="8" selection-start="1619" selection-end="1621" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="168" column="25" selection-start="5781" selection-end="5781" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/modules/commandJs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="21" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="790" column="49" selection-start="20086" selection-end="20086" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#25722#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="230" column="21" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/AudioCodecInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="13" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/AudioTranscoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="17" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMACodec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="13" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/RtpSender.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/RtpFileSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="13" selection-start="1174" selection-end="1174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="200" column="59" selection-start="7009" selection-end="7009" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="32" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/AudioDestination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
+        <state line="24" column="17" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/RtpSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/RtpFileSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swip/js/uiie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="9" selection-start="873" selection-end="873" vertical-scroll-proportion="-5.32">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swip/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="455" column="0" selection-start="12883" selection-end="12883" vertical-scroll-proportion="0.64668095">
+        <state line="680" column="41" selection-start="10622" selection-end="10622" vertical-scroll-proportion="-4.591837">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sesca/audio/PCMUCodec4.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/AppletUANG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="59" selection-start="7009" selection-end="7009" vertical-scroll-proportion="-8.68">
+        <state line="499" column="28" selection-start="13898" selection-end="13898" vertical-scroll-proportion="-11.4">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swip/index_multirealms.html">
+    <entry file="file://$PROJECT_DIR$/swip/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="427" selection-end="427" vertical-scroll-proportion="-23.62745">
+        <state line="127" column="102" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-2.84">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sesca/voip/ua/UserAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1308" column="31" selection-start="39208" selection-end="39208" vertical-scroll-proportion="0.43396226">
           <folding />
         </state>
       </provider>

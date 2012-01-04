@@ -121,7 +121,6 @@ function customOnRegistrationSuccess(s){
 	if ( $('#callTo_param').val() != "" ) {
 
        setCallTo(document.getElementById("callTo_param").value);
-
 	}
 
 }

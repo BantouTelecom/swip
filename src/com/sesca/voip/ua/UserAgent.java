@@ -1288,7 +1288,7 @@ public class UserAgent extends CallListenerAdapter
 	}
 	void generateTone(int i, int duration)
 	{
-		
+
 
 //		System.out.println("UserAgent.generateTone("+i+","+duration+")");		
 		if (audio_app instanceof JAudioLauncher)
@@ -1303,9 +1303,17 @@ public class UserAgent extends CallListenerAdapter
 			TunneledAudioLauncher tau = (TunneledAudioLauncher)audio_app;
 			tau.walker(i,duration);
 		}
-		else
-			System.out.println("audio_app ei tue dtmf:ää");
-			
+		else  {
+			//System.out.println("audio_app ei tue dtmf:ää");
+		    debugjs.info("Audio_app is not an instance of JaudioLauncher/TunneledAudioLauncher");
+            if (audio_app == null) {
+
+                debugjs.info("audio_app is NULL");
+
+            }
+            
+        }
+        
 //		System.out.println("generatetone loppuu");		
 	}
 	
