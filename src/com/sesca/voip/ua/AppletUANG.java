@@ -656,6 +656,8 @@ public class AppletUANG extends Applet implements RegisterAgentListener, TimerLi
 			initSIP();
 			break;
 		case 102:
+            
+            commJs.setCallStatus("Calling " + callTo + ".." );
 			// callbutton clicked
 			cm.callButtonclicked();
 

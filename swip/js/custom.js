@@ -191,10 +191,20 @@ function customOnRinging()
 }
 function customOnCalling()
 {
+
+    $('#keypadwindow').hide();
 	statusBar("Calling");
 	$('#callwindow').show();
 
 }
+
+function setCallStatus(status)
+{
+
+   $('#callstatus').html(status);
+
+}
+
 function customOnWrongAddress()
 {
 	statusBar("Wrong address");

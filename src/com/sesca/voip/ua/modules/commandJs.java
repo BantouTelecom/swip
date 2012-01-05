@@ -100,6 +100,23 @@ public class commandJs implements SipProviderListener
 
 	}
 
+    
+    
+    public void setCallStatus(String status) {
+
+        try
+        {
+            hostApplet.getAppletContext().showDocument(new URL("javascript:setCallStatus('" + status + "');" ));
+        }
+        catch (MalformedURLException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+    
+    
+    
 	public void remotePartyStateChange(String state, String from)
 	{
 		try
